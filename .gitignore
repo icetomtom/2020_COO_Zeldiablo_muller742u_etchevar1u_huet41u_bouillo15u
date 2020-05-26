@@ -1,0 +1,15 @@
+*.bat
+*.tcp
+*.tps
+*.uls
+*.ucls
+*~
+*.class
+
+.metadata
+.classpath
+.settings
+.project
+.idea
+out/
+bin/
