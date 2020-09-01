@@ -29,7 +29,7 @@ public class TestAffichageAvecSprite {
 
     @Test
     public void test_ChargementImages() {
-        Sprites.chargerFeuille("personnages", "projet_zeldiablo/images/test_sprites.png", 6, 3);
+        Sprites.chargerFeuille("personnages", "./images/test_sprites.png", 6, 3);
 
         int i=0,j=0;
         try {
