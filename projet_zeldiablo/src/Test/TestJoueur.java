@@ -1,7 +1,7 @@
 package Test;
 import org.junit.Test;
 
-import Joueur;
+import Elements.Joueur;
 
 public class TestJoueur {
 	public static boolean succes_test;

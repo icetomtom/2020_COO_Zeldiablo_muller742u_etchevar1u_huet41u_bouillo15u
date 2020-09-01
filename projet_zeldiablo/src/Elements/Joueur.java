@@ -1,3 +1,4 @@
+package Elements;
 
 public class Joueur {
 	private int[][] coordonnes;
