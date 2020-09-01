@@ -1,12 +1,14 @@
 * Fonctionnalités version 1
 
 - fonctionnalité 1 : Déplacements du joueur
+- responsables : muller742u, huet41u
 - descriptif texte : Le joueur doit pouvoir se déplacer dans les quatres directions cardinales et ne doit pas pouvoir passer à travers un mur
 - critères de validation :
     - critère 1 : Possibilité de bouger vers le nord, l'est, l'ouest et le sud.
     - critère 2 : Mouvements bloqué par les murs
 
 - fonctionnalité 2 : Création du labyrinthe
+- responsables : bouillo15u, etchevar1u
 - descriptif texte : Le labyrinthe doit se créer avec les dimensions voulues, des murs autour et ne doit pas être impossible
 - critères de validation :
     - critère 1 : Labyrinthe généré de la taille voulue
