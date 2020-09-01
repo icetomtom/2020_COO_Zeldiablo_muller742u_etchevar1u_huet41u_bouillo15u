@@ -7,8 +7,8 @@ public class CasePiege extends CaseAEffet {
 	}
 
 	@Override
-	public void activerEffet(Joueur j) {
-		//TODO
+	public void activerEffet(Entite e) {
+		System.out.println("L'entite a ete blesse");
 	}
 
 }

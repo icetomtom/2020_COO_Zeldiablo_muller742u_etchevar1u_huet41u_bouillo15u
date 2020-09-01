@@ -6,5 +6,5 @@ public abstract class CaseAEffet extends Case {
 		super(x, y, type);
 	}
 	
-	public abstract void activerEffet(Joueur j);
+	public abstract void activerEffet(Entite e);
 }
