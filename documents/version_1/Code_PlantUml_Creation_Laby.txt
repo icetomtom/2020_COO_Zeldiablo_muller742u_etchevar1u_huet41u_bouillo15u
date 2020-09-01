@@ -1,0 +1,41 @@
+@startuml
+create main
+create "j : Joueur" as Joueur
+
+activate main
+
+create "laby : Labyrinthe" as Labyrinthe
+
+main -> Labyrinthe : new
+
+activate Labyrinthe
+
+Labyrinthe -> Labyrinthe : chargerNiveauParDefaut()
+
+Labyrinthe --> main
+
+deactivate Labyrinthe
+
+main -> Labyrinthe : getEntreeX()
+activate Labyrinthe
+Labyrinthe --> main : entree_x
+deactivate Labyrinthe
+
+main -> Labyrinthe : getEntreeY()
+activate Labyrinthe
+Labyrinthe --> main : entree_y
+deactivate Labyrinthe
+
+main -> Joueur : setX(entree_x)
+activate Joueur
+Joueur --> main
+deactivate Joueur 
+
+
+main -> Joueur : setY(entree_y)
+activate Joueur
+Joueur --> main
+deactivate Joueur 
+
+deactivate main
+@enduml
