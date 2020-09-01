@@ -1,4 +1,5 @@
 @startuml
+
 activate Main
 Main -> Jeu : deplacerJoueur(int direction)
 activate Jeu
@@ -23,6 +24,9 @@ deactivate Labyrinthe
 
 alt if type == vide
     Jeu -> Joueur : deplacer(int x, int y)
+    activate Joueur
+    Joueur --> Jeu
+    deactivate Joueur
 end
 
 Jeu --> Main
