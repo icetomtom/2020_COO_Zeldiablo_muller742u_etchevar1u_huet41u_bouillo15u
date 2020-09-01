@@ -21,6 +21,16 @@ public class Niveau {
 	public void ajouterLaby(Labyrinthe l) {
 		labyrinthes.add(l);
 	}
+	
+	
+	 public Labyrinthe getCurentLaby() {
+	        for (Labyrinthe l : labyrinthes) {
+	            if (l.getCase(1, 1) != null) {
+	                return l;
+	            }
+	        }
+	        return null;
+	    }
 
 	public boolean isFinish() {
 		return fin;
