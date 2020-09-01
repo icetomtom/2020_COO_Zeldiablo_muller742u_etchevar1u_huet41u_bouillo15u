@@ -1,61 +1,54 @@
 package Test;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
 import Elements.Joueur;
 
 public class TestJoueur {
-	public static boolean succes_test;
+	
+	
 	@Test
-	public static void testConstructeurVide() {
+	public void testConstructeurVide() {
 		Joueur j = new Joueur();
-		if(j.getPosY() ==0 && j.getPosX()==0) {
-			succes_test=true;
-		}else {
-			succes_test=false;
-		}
+		assertEquals("Le joueur n'est pas à la bonne abscisse",0,j.getPosX());
+		assertEquals("Le joueur n'est pas à la bonne ordonnee",0,j.getPosY());
+		
 	}
 	
 	@Test
-	public static void testConstructeur() {
+	public void testConstructeur() {
 		int x=4;
 		int y=4;
 		Joueur j= new Joueur(x,y);
-		if(j.getPosY() ==y && j.getPosX()==x) {
-			succes_test= true;
-		}else {
-			succes_test= false;
-		}
+		assertEquals("Le joueur n'est pas à la bonne abscisse",x,j.getPosX());
+		assertEquals("Le joueur n'est pas à la bonne ordonnee",y,j.getPosY());
 	}
 	
 	@Test
-	public static void testSeDeplacer() {
+	public  void testSeDeplacer() {
 		Joueur j = new Joueur();
 		int x=j.getPosX()+1;
 		int y=j.getPosY();
 		
 		j.seDeplacer(x, y);
 		
-		if(j.getPosX()==x &&j.getPosY()==y) {
-			succes_test=true;
-		}else {
-			succes_test= false;
-		}
+		assertEquals("Le joueur ne s'est pas deplace à la bonne abscisse",x,j.getPosX());
+		assertEquals("Le joueur ne s'est pas deplace à la bonne ordonnee",y,j.getPosY());
 	}
 	
 	public static void main(String[] args) {
-		
-		testConstructeurVide();
-		if(!succes_test) {
-			System.out.println("Probleme dans le constructeur vide");
+		boolean succes = true;
+		Result result = JUnitCore.runClasses(Joueur.class);
+		for(Failure failure: result.getFailures()) {
+			System.out.println(failure.toString());
+			succes=false;
 		}
-		testConstructeur();
-		if(!succes_test) {
-			System.out.println("Probleme dans le constructeur vide");
-		}
-		testSeDeplacer();
-		
-		if(!succes_test) {
-			System.out.println("Probleme dans le constructeur vide");
+		if(succes) {
+			System.out.println("les tests se sont bien passes");
 		}
 	}
 }
