@@ -8,9 +8,16 @@ import org.junit.runner.notification.Failure;
 
 import Elements.Joueur;
 
+/**
+ * 
+ * @author Huet Guillaume
+ * classe de test de la classe joueur
+ */
 public class TestJoueur {
 	
-	
+	/**
+	 * Methode qui permet de tester le contructeur vide d'un joueur
+	 */
 	@Test
 	public void testConstructeurVide() {
 		Joueur j = new Joueur();
@@ -19,6 +26,9 @@ public class TestJoueur {
 		
 	}
 	
+	/**
+	 * Methode qui permet de tester le constructeur avec parametres d'un joueur
+	 */
 	@Test
 	public void testConstructeur() {
 		int x=4;
@@ -28,6 +38,9 @@ public class TestJoueur {
 		assertEquals("Le joueur n'est pas à la bonne ordonnee",y,j.getPosY());
 	}
 	
+	/**
+	 * Methode qui teste si le joueur se deplace correctement
+	 */
 	@Test
 	public  void testSeDeplacer() {
 		Joueur j = new Joueur();
@@ -40,6 +53,10 @@ public class TestJoueur {
 		assertEquals("Le joueur ne s'est pas deplace à la bonne ordonnee",y,j.getPosY());
 	}
 	
+	/**
+	 * Lance les tests 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		boolean succes = true;
 		Result result = JUnitCore.runClasses(Joueur.class);
