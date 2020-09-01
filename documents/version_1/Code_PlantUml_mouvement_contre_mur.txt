@@ -1,0 +1,36 @@
+@startuml
+
+activate Main
+Main -> Jeu : deplacerJoueur(int direction)
+activate Jeu
+
+Jeu -> Joueur : getPosX()
+activate Joueur
+Joueur --> Jeu : posX : int
+Jeu -> Joueur : getPosY()
+Joueur --> Jeu : posY : int
+deactivate Joueur
+
+Jeu -> Labyrinthe : getCase(int x, int y)
+activate Labyrinthe
+
+Labyrinthe -> Case : getType()
+activate Case
+Case --> Labyrinthe : type : int
+deactivate Case
+
+Labyrinthe --> Jeu : type : int
+deactivate Labyrinthe
+
+alt if type == vide
+    Jeu -> Joueur : deplacer(int x, int y)
+    activate Joueur
+    Joueur --> Jeu
+    deactivate Joueur
+end
+
+Jeu --> Main
+deactivate Jeu
+deactivate Main
+
+@enduml
