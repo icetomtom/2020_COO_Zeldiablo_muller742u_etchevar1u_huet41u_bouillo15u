@@ -1,0 +1,30 @@
+@startuml
+activate main
+
+main -> Sprites : chargerFeuille("entities","fichier.png",3,2)
+activate Sprites
+
+Sprites --> main
+deactivate Sprites
+
+main -> "j : JPanel" as j : repaint()
+activate j
+
+j -> "s : Sprite" as s : dessiner(g : Graphics)
+activate s
+
+s -> Sprites : dessiner(g : Graphics, img_nom : String, x : int, y : int)
+activate Sprites
+
+Sprites -> Sprites : getImage(img_nom)
+
+Sprites --> s
+deactivate Sprites
+
+s --> j
+deactivate s
+
+j --> main
+deactivate main
+deactivate j
+@enduml

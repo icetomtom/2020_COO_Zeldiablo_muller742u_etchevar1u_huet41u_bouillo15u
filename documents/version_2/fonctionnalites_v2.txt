@@ -1,0 +1,21 @@
+* Fonctionnalités version 2
+
+- fonctionnalité 1 : Affichage avec des sprites
+- responsables : bouillo15u
+- descriptif texte : Pouvoir afficher des sprites sur un JPanel
+- critères de validation :
+    - critère 1 : Les sprites concernent les murs, les monstres et le héros. (NOTE : Monstres pas encore opérationnels)
+    - critère 2 : Ils sont chargés une fois pour tout eau lancement de l'application et ils peuvent être affichés dans le JPanel grâce à la méthode drawImage.
+    - critère 3 : Il est possible de charger une image (de type BufferedImage en mémoire grâce à la classe ImageIO et la méthode statique read).
+
+
+* réalisation
+
+- Classe Principale
+- responsables
+    - bouillo15u
+
+- Tests de la classe Sprites
+- responsables
+    - bouillo15u
+
