@@ -61,9 +61,19 @@ public class Labyrinthe {
      */
     public Case getCase(int x, int y) {
         int i = x + y * longeur;
-        if(i < this.longeur * this.longeur)
+        if(i < this.longeur * this.longeur && i >= 0)
             return cases.get(i);
         return null;
+    }
+
+    /**
+     * Remplace une Case par une autre, se base sur les coordonnees de la cases
+     * @param c la case qui remplace l'ancienne
+     */
+    public void setCase(Case c) {
+        int i = c.getX() + c.getY() * longeur;
+        if(i < this.longeur * this.longeur && i >= 0)
+            cases.set(i, c);
     }
 
     /**

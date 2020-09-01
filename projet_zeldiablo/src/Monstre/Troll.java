@@ -6,11 +6,9 @@ public class Troll extends Entite {
 	
 	private boolean est_attaque;
 	
-	public Troll(String nom) {
-		super(nom);
+	public Troll() {
+		super("");
 		this.vie = 4;
 	}
-	
-	
 
 }

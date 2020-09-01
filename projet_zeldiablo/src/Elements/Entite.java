@@ -47,6 +47,6 @@ public class Entite extends Sprite {
     }
     
     public int getVie() {
-		return this.getVie();
+		return this.vie;
 	}
 }
