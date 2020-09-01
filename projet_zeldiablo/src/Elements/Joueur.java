@@ -1,30 +1,32 @@
 package Elements;
 
 public class Joueur {
-	private int[][] coordonnes;
+	private int PosX;
+	private int PosY;
 	
 	
 	public Joueur() {
-		this.coordonnes= new int[1][2];
+		this.PosX=0;
+		this.PosY=0;
 		
 	}
 	
 	public Joueur(int x,int y) {
-		this.coordonnes= new int[1][2];
-		this.coordonnes[0][0]=x;
-		this.coordonnes[0][1]=y;
+		this.PosX=x;
+		this.PosY=y;
+
 	}
 	
 	public void seDeplacer(int x,int y) {
-		this.coordonnes[0][0]=x;
-		this.coordonnes[0][1]=y;
+		this.PosX=x;
+		this.PosY=y;
 	}
 	
 	public int getPosX() {
-		return this.coordonnes[0][0];
+		return this.PosX;
 	}
 	
 	public int getPosY() {
-		return this.coordonnes[0][1];
+		return this.PosY;
 	}
 }
