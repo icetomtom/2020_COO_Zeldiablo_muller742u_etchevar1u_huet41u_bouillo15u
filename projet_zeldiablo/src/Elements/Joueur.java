@@ -5,11 +5,12 @@ public class Joueur {
 	
 	
 	public Joueur() {
-		this.coordonnes= new int[1][1];
+		this.coordonnes= new int[1][2];
 		
 	}
 	
 	public Joueur(int x,int y) {
+		this.coordonnes= new int[1][2];
 		this.coordonnes[0][0]=x;
 		this.coordonnes[0][1]=y;
 	}
