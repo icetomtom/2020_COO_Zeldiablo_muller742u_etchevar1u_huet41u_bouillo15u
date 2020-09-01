@@ -15,3 +15,28 @@
     - critère 2 : Apparation du joueur seulement à l'entrée
     - critère 3 : Murs autour du labyrinthe
     - critère 4 : Labyrinthe possible
+
+* réalisation
+- classe Case
+- responsable : bouillo15u
+
+- test de la classe Case
+- responsable : etchevar1u
+
+- classe Jeu
+- reponsable : muller742u
+
+- test de la classe Jeu
+- reponsable : muller742u
+
+- classe Joueur
+- reponsable : huet41u
+
+- test de la classe Joueur
+- reponsable : huet41u
+
+- classe Labyrinthe
+- responsable : bouillo15u
+
+- test de la classe Labyrinthe
+- responsable : bouillo15u
