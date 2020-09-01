@@ -23,11 +23,16 @@ public class Case {
      * Type représentant un mur
      */
     public static final int TYPE_MUR = 2;
+    
+    /**
+     * Type representante un case a effet
+     */
+    public static final int TYPE_EFFET = 3;
 
     /**
      * Types disponibles
      */
-    private static final int[] types_dispo = {TYPE_VIDE, TYPE_MUR};
+    private static final int[] types_dispo = {TYPE_VIDE, TYPE_MUR, TYPE_EFFET};
 
     /**
      * Constructeur

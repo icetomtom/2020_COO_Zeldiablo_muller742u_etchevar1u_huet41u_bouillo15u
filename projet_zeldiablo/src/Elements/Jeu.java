@@ -1,5 +1,7 @@
 package Elements;
 
+import java.util.ArrayList;
+
 /**
  * 
  * classe permettant de gerer le jeu
@@ -9,7 +11,7 @@ public class Jeu {
 	/**
 	 * attribut qui represente le joueur
 	 */
-	private Joueur joueur;
+	private ArrayList<Entite> entites;
 	
 	/**
 	 * attribut qui represente le labyrinthe
@@ -28,6 +30,7 @@ public class Jeu {
 	 * constructeur par defaut
 	 */
 	public Jeu() {
+		this.entites = new ArrayList<Entite>();
 		this.laby = new Labyrinthe();
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 	}
@@ -62,12 +65,14 @@ public class Jeu {
 				break;
 		} 
 		
-		//on recupere le type de la case sur laquelle on veut avancer
-		int type = this.laby.getCase(xNewPos, yNewPos).getType();
+		//on recupere la case sur laquelle on veut avancer
+		Case c = this.laby.getCase(xNewPos, yNewPos);
 		
 		//le joueur ne poeut avancer que si la case est vide
-		if(type == Case.TYPE_VIDE) {
+		if(c.getType() != Case.TYPE_MUR) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
+		}else if(c.getType() == Case.TYPE_EFFET) {
+			((CaseAEffet)c).activerEffet(this.joueur);
 		}
 	}
 	
