@@ -7,8 +7,8 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+import Elements.Entite;
 import Elements.Joueur;
-import Monstre.Monstre;
 import Monstre.MonstreImmobile;
 
 public class TestMonstreImmobile {
@@ -18,10 +18,10 @@ public class TestMonstreImmobile {
 	 */
 	@Test
 	public void testConstructeur(){
-		Monstre m  = new MonstreImmobile(0,0);
+		Entite m  = new MonstreImmobile("Monstre");
 		
-		assertEquals("Le monstre n'est pas a la bonne abscisse",0,m.getPosMonstX());
-		assertEquals("Le monstre n'est pas a la bonne ordonnee",0,m.getPosMonstY());
+		assertEquals("Le monstre n'est pas a la bonne abscisse",0,m.getPosX());
+		assertEquals("Le monstre n'est pas a la bonne ordonnee",0,m.getPosY());
 	}
 	
 	/**
