@@ -1,0 +1,28 @@
+@startuml
+
+activate Jeu
+
+alt if type != mur
+    Jeu -> Joueur : deplacer(int x, int y)
+    activate Joueur
+    Joueur --> Jeu
+    deactivate Joueur
+    alt if type == effet
+    Jeu -> Labyrinthe : getCase(int x, int y)
+    activate Labyrinthe
+    Labyrinthe -> CaseAEffet : activerEffet(Entite e)
+    activate CaseAEffet
+    CaseAEffet -> CasePiege : activerEffet(Entite e)
+    activate CasePiege
+    CasePiege --> CaseAEffet
+    deactivate CasePiege
+    CaseAEffet --> Labyrinthe
+    deactivate CaseAEffet
+    Labyrinthe --> Jeu
+    deactivate Labyrinthe
+end
+end
+
+deactivate Jeu
+
+@enduml
