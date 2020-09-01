@@ -18,7 +18,7 @@ public class TestJeu {
 		
 		//test de la methode
 		int yOld = j.getJoueur().getPosY();
-		j.deplacerJoueur(1);
+		j.deplacerJoueur(Jeu.DOWN);
 		
 		assertEquals("Le joueur doit s'etre deplace vers le bas", yOld + 1, j.getJoueur().getPosY());
 	}
@@ -33,7 +33,7 @@ public class TestJeu {
 		
 		//test de la methode, on avance le personnage assez pour etre sur d'avoir rencontre un mur
 		for(int i = 0; i < 20; i++) {
-			j.deplacerJoueur(2);
+			j.deplacerJoueur(Jeu.LEFT);
 		}
 		
 		assertEquals("Le joueur doit etre au bord du labyrinthe, donc a x = 1", 1, j.getJoueur().getPosX());
