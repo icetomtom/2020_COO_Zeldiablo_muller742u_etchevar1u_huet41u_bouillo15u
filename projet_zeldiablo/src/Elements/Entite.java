@@ -3,6 +3,8 @@ package Elements;
 import moteurJeu.sprite.Sprite;
 
 public class Entite extends Sprite {
+	
+	protected int vie;
     /**
      * creation du sprite
      *
@@ -43,4 +45,8 @@ public class Entite extends Sprite {
     public void setPosY(int y) {
         this.y=y;
     }
+    
+    public int getVie() {
+		return this.getVie();
+	}
 }
