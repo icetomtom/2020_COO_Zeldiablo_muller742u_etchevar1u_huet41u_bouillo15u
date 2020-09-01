@@ -3,7 +3,7 @@ package Elements;
  * 
  * classe representant un joueur
  */
-public class Joueur {
+public class Joueur extends Entite{
 	/**
 	 * attribut prive d'un entier correspondant a l'abscisse du joueur
 	 */
