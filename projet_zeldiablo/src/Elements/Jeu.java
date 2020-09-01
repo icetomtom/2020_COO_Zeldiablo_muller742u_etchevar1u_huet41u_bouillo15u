@@ -17,6 +17,14 @@ public class Jeu {
 	private Labyrinthe laby;
 	
 	/**
+	 * constantes de direction
+	 */
+	public static final int UP = 0;
+	public static final int DOWN = 1;
+	public static final int LEFT = 2;
+	public static final int RIGHT = 3;
+	
+	/**
 	 * constructeur par defaut
 	 */
 	public Jeu() {
@@ -33,26 +41,20 @@ public class Jeu {
 		int xNewPos = this.joueur.getPosX();
 		int yNewPos = this.joueur.getPosY();
 		
-		/**
-		 * 0 : Up
-		 * 1 : Down
-		 * 2 : Left
-		 * 3 : Right
-		 */
 		switch(direction) {
-			case 0:
+			case UP:
 				yNewPos--;
 				break;
 				
-			case 1:
+			case DOWN:
 				yNewPos++;
 				break;
 				
-			case 2:
+			case LEFT:
 				xNewPos--;
 				break;
 				
-			case 3:
+			case RIGHT:
 				xNewPos++;
 				break;
 				
