@@ -1,0 +1,29 @@
+@startuml
+
+create main
+activate main
+create "jeu : Jeu" as Jeu
+
+main -> Jeu : new
+
+activate Jeu
+
+create "j : joueur" as Joueur
+
+Jeu -> Joueur : deplacer(int direction)
+
+Activate Joueur
+
+Joueur -> Joueur : seDeplacer(int x, inty)
+
+Joueur --> Jeu : boolean a_bouge
+
+Jeu --> main
+
+deactivate Joueur
+deactivate Jeu
+deactivate main
+
+
+
+@enduml
