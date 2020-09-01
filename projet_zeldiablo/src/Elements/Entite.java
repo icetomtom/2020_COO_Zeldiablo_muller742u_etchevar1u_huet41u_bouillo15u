@@ -1,7 +1,5 @@
 package Elements;
 
-import com.sun.jdi.Type;
-
 import moteurJeu.sprite.Sprite;
 
 public class Entite extends Sprite {
@@ -12,22 +10,17 @@ public class Entite extends Sprite {
 	protected int vie;
 
 	/**
-	 * Degats de l'entité
+	 * Degats de l'entitï¿½
 	 */
 	protected int degats;
 
 	/**
-	 * Labyrinthe où se situe l'entité
+	 * Labyrinthe oï¿½ se situe l'entitï¿½
 	 */
 	protected Labyrinthe labyrinthe;
 
 	/**
-	 * Type de l'entité
-	 */
-	protected Type entiteType;
-
-	/**
-	 * Nombre maximum de points de vie d'une entité
+	 * Nombre maximum de points de vie d'une entitï¿½
 	 */
 	private int maxPV;
 
@@ -87,7 +80,7 @@ public class Entite extends Sprite {
 	}
 
 	/**
-	 * Méthode permettant de subir des dégats
+	 * Mï¿½thode permettant de subir des dï¿½gats
 	 *
 	 * @param d degats subis
 	 */
@@ -97,10 +90,10 @@ public class Entite extends Sprite {
 	}
 	
 	  /**
-     * Méthode permettant de savoir si le personnage
-     * est décédé
+     * Mï¿½thode permettant de savoir si le personnage
+     * est dï¿½cï¿½dï¿½
      *
-     * @return booléen si le personnage est mort
+     * @return boolï¿½en si le personnage est mort
      */
     public boolean etreMort() {
         return this.vie == 0;
@@ -113,14 +106,5 @@ public class Entite extends Sprite {
      */
     public void setLabyrinthe(Labyrinthe l) {
         this.labyrinthe = l;
-    }
-    
-    /**
-     * Getter pour le type de l'entité
-     *
-     * @return
-     */
-    public Type getType() {
-        return entiteType;
     }
 }
