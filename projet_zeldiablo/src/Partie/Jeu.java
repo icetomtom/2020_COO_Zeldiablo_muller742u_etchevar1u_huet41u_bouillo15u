@@ -1,6 +1,8 @@
 package Partie;
 
 import Elements.Case;
+import Elements.CaseAEffet;
+import Elements.Entite;
 import Elements.Joueur;
 import Elements.Labyrinthe;
 import moteurJeu.moteur.CClavier;
@@ -18,7 +20,7 @@ public class Jeu implements JeuAbstract {
 	/**
 	 * attribut qui represente le joueur
 	 */
-	private ArrayList<Entite> entites;
+	private Joueur joueur;
 
 	/**
 	 * attribut qui represente le labyrinthe
@@ -37,7 +39,6 @@ public class Jeu implements JeuAbstract {
 	 * constructeur par defaut
 	 */
 	public Jeu() {
-		this.entites = new ArrayList<Entite>();
 		this.laby = new Labyrinthe();
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 	}
@@ -79,8 +80,10 @@ public class Jeu implements JeuAbstract {
 		//le joueur ne poeut avancer que si la case est vide
 		if(c.getType() != Case.TYPE_MUR) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
-		}else if(c.getType() == Case.TYPE_EFFET) {
-			((CaseAEffet)c).activerEffet(this.joueur);
+			
+			if(c.getType() == Case.TYPE_EFFET) {
+				((CaseAEffet)c).activerEffet(this.joueur);
+			}
 		}
 	}
 
