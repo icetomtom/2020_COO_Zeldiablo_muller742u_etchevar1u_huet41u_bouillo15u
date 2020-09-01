@@ -43,5 +43,7 @@ public class TestCase {
 		for(int i = 0; i < 4; i++) {
 			j.deplacerJoueur(Jeu.UP);
 		}
+		
+		assertEquals("Le joueur doit avoir perdu un pdv", 9, j.getJoueur().getVie());
 	}
 }
