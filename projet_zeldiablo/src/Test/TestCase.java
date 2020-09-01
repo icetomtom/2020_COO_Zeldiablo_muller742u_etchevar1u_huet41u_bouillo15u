@@ -15,11 +15,11 @@ public class TestCase {
 	 */
 	@Test
 	public void test_ConstructeurDefaut() {
-		Case c = new Case(int x, int y, int type);
+		Case c = new Case(0, 0, 0);
 		Boolean trouve = false;
 		
-		assertEquals("la valeur par defaut n est pas bonne",1, c.getX());
-		assertEquals("la valeur par defaut n est pas bonne",1,c.getY());
+		assertEquals("la valeur par defaut n est pas bonne",0, c.getX());
+		assertEquals("la valeur par defaut n est pas bonne",0,c.getY());
 		
 	}
 }
