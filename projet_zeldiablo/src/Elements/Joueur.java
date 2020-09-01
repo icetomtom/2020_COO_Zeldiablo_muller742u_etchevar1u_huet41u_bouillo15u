@@ -13,7 +13,6 @@ public class Joueur extends Entite{
 	 */
 	public Joueur() {
 		this(0, 0);
-		
 	}
 	
 	/**
@@ -23,6 +22,7 @@ public class Joueur extends Entite{
 	 */
 	public Joueur(int x,int y) {
 		super("");
+		super.vie = 10;
 		this.x=x;
 		this.y=y;
 
