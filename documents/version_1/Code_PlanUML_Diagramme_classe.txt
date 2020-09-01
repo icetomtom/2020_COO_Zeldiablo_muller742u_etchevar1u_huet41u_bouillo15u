@@ -1,0 +1,43 @@
+@startuml
+title Zeldiablo 1ere Itération
+
+'''classes
+class Jeu{
+  + déplacer(int direction)
+}
+class Joueur{
+  - xPos : int
+  - yPos : int
+  + seDéplacer(int direction)
+}
+class Labyrinthe {
+    -entree_x : int
+    -entree_y : int 
+    -longeur : int
+    -largeur : int
+    -cases : ArrayList<Case>
+    
+    + Labyrinthe()
+    + getEntreeX() : int
+    + getEntreeY() : int
+    + getEntreeLongeur() : int
+    + getEntreeLargeur() : int
+    + getCase(int x, int y) : Case
+}
+
+class Case {
+    -x : int
+    -y : int
+    -type : int
+    
+    + Case()
+    + getType() : Type
+    + getX() : int
+    + getY() : int
+}
+
+'''relations
+Jeu "1" --> "1" Joueur : - joueur
+Jeu "1" --> "1" Labyrinthe : - laby
+Case "*" <-"1" Labyrinthe : - cases
+@enduml
