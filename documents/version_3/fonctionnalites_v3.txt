@@ -41,3 +41,6 @@
 
 - Tests Porte et CaseSecrete
   - responsable : muller742u
+
+-Ecriture méthode attaque 
+  - responsable : etchevar1u
