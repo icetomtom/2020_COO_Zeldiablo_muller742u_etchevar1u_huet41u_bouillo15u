@@ -31,7 +31,7 @@ public class TestCase {
 	@Test
 	public void test_CasePiege() {
 		//initialisation
-		CasePiege c = new CasePiege(1, 1, 3);
+		CasePiege c = new CasePiege(1, 1);
 		Jeu j = new Jeu();
 		j.getLaby().setCase(c);
 		
