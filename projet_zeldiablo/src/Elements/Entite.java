@@ -112,4 +112,8 @@ public class Entite extends Sprite {
     public void setLabyrinthe(Labyrinthe l) {
         this.labyrinthe = l;
     }
+    
+    public void attaquer(Entite e) {
+    	e.subirDegats(vie);
+    }
 }
