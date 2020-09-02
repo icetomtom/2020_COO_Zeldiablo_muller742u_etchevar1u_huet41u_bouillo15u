@@ -15,7 +15,7 @@ public class Principale {
         Porte p = new Porte(2,2);
         CaseSecrete cs = new CaseSecrete(8, 8, p);
         j.getLaby().setCase(cs);
-        j.getLaby().setCase(p);;
+        j.getLaby().setCase(p);
 
         Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
 
