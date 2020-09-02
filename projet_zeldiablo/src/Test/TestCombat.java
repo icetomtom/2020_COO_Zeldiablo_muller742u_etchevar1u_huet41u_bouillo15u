@@ -20,15 +20,29 @@ public class TestCombat {
 		
 		Entite troll = new Troll("leo");
 		
-		
+		System.out.println(j.getJoueur().getPosX());
+		System.out.println(j.getJoueur().getPosY());
 		j.deplacerJoueur(Jeu.UP);
+		System.out.println(j.getJoueur().getPosX());
+		System.out.println(j.getJoueur().getPosY());
+		System.out.println(j.getJoueur().getDirection());
 		j.ajouter(troll);
 		j.getEntite(1).setPosX(5);
 		j.getEntite(1).setPosY(3);
 		
-		j.combat();
+		j.ajouter(new Troll("leo2"));
+		j.getEntite(2).setPosX(5);
+		j.getEntite(2).setPosY(7);
 		
+		j.combat();
+	
 		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(1).getVie());
+		assertEquals("la direction n'est pas bonne",4,j.getEntite(2).getVie());
+		
+		j.deplacerJoueur(Jeu.DOWN);
+		j.deplacerJoueur(Jeu.DOWN);
+		j.combat();
+		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(2).getVie());
 	}
 	
 	@Test
@@ -38,10 +52,14 @@ public class TestCombat {
 		j.ajouter(troll);
 		j.getEntite(1).setPosX(5);
 		j.getEntite(1).setPosY(6);
+		j.ajouter(new Troll("leo2"));
+		
+		j.getEntite(2).setPosX(5);
+		j.getEntite(2).setPosY(4);
 		
 		j.attaqueMonstre();
 		
-		assertEquals("Le joueur ne s'est pas fait attaque",9,j.getJoueur().getVie());
+		assertEquals("Le joueur ne s'est pas fait attaque",8,j.getJoueur().getVie());
 		
 	}
 	public static void main(String[] args) {
