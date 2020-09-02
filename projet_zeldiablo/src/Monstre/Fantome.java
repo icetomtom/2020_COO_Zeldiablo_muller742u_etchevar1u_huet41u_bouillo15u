@@ -5,8 +5,8 @@ import Elements.Entite;
 public class Fantome extends Entite {
 	
 	
-	public Fantome(int x, int y) {
-		super("");
+	public Fantome(String nom) {
+		super(nom);
 		this.vie = 2;	
 	}
 	
