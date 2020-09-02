@@ -84,7 +84,7 @@ public class Jeu implements JeuAbstract {
 		Case c = this.laby.getCase(xNewPos, yNewPos);
 
 		//le joueur ne peut avancer que si la case est vide
-		if(c.getType() != Case.TYPE_MUR || (c.getType() == Case.TYPE_PORTE && ((Porte)c).estOuverte())) {
+		if(c.estTraversable()) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
 			this.joueur.setDirection(direction);
 			
