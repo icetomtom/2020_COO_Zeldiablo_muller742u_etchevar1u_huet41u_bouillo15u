@@ -84,6 +84,7 @@ public class Jeu implements JeuAbstract {
 		//le joueur ne poeut avancer que si la case est vide
 		if(c.getType() != Case.TYPE_MUR) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
+			this.joueur.setDirection(direction);
 			
 			if(c.getType() == Case.TYPE_EFFET) {
 				((CaseAEffet)c).activerEffet(this.joueur);
@@ -124,9 +125,33 @@ public class Jeu implements JeuAbstract {
 		this.entites.add(e);
 	}
 	
-	public void combat(Entite e1, Entite e2) {
-		ArrayList<Case> c = laby.getCases();
-		
+	public void combat() {
+		Joueur j = (Joueur) entites.get(0);
+		for(int i =1;i<entites.size();i++) {
+			switch(j.getDirection()) {
+			case UP:
+				if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()-1) {
+					entites.get(i).subirDegats(1);					}
+					break;
+			case LEFT:
+				if(entites.get(i).getPosX()==j.getPosX()-1 && entites.get(i).getPosY()==j.getPosY()) {
+					entites.get(i).subirDegats(1);
+				}
+				break;
+			case RIGHT:
+				if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
+					entites.get(i).subirDegats(1);				
+				}
+				break;
+			case DOWN:
+				if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
+					entites.get(i).subirDegats(1);
+				}
+				break;
+		}
+		}
+			
+						
 	}
 	
 }

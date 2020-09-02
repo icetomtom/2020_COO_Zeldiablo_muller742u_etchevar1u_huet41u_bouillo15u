@@ -7,7 +7,11 @@ import moteurJeu.sprite.Sprite;
  * classe representant un joueur
  */
 public class Joueur extends Entite{
-
+	
+	/**
+	 *  attribut correspondant à la derniere direction du joueur
+	 */
+	private int direction;
 	/**
 	 * contructeur vide de la classe joueur
 	 */
@@ -36,6 +40,22 @@ public class Joueur extends Entite{
 	public void seDeplacer(int x,int y) {
 		this.x=x;
 		this.y=y;
+	}
+	
+	/**
+	 * methode permettant de se souvenir de la dernière direction du joueur
+	 * @param n
+	 */
+	public void setDirection(int n) {
+		this.direction =n;
+	}
+	
+	/**
+	 * methode permettant de recuperer la direction
+	 * @return un entier correspondant à la direction
+	 */
+	public int getDirection() {
+		return this.direction;
 	}
 
 }
