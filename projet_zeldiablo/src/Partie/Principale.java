@@ -15,20 +15,17 @@ public class Principale {
      * Fonction appelée pour lancer le jeu
      */
     public static void main(String[] args) {
-        Joueur joueur = new Joueur();
-        Labyrinthe l = new Labyrinthe();
+        Jeu j = new Jeu();
 
         Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
 
         DessinPartie dessin = new DessinPartie();
-        for(Case c : l.getCases())
+        for(Case c : j.getLaby().getCases())
             dessin.addSprite(c);
-        dessin.addSprite(joueur);
+        dessin.addSprite(j.getJoueur());
 
-        Jeu j = new Jeu();
         MoteurGraphique m = new MoteurGraphique(j, dessin);
 
-        m.lancerJeu(600, 600, 60);
-
+        m.lancerJeu(600, 600, 8);
     }
 }

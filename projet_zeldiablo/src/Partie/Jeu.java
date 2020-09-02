@@ -1,5 +1,6 @@
 package Partie;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import Elements.Case;
@@ -110,6 +111,22 @@ public class Jeu implements JeuAbstract {
 
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
+		if(clavier.isPressed(KeyEvent.VK_UP)) {
+			this.deplacerJoueur(UP);
+		}
+		
+		if(clavier.isPressed(KeyEvent.VK_DOWN)) {
+			this.deplacerJoueur(DOWN);
+		}
+		
+		if(clavier.isPressed(KeyEvent.VK_LEFT)) {
+			this.deplacerJoueur(LEFT);
+		}
+		
+		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
+			this.deplacerJoueur(RIGHT);
+		}
+		
 		return null;
 	}
 
