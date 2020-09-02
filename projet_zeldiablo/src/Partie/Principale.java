@@ -12,12 +12,10 @@ public class Principale {
      */
     public static void main(String[] args) {
         Jeu j = new Jeu();
-        Porte p = new Porte(1, 2);
-        Porte d = new Porte(2, 1);
+        Porte p = new Porte(2,2);
         CaseSecrete cs = new CaseSecrete(8, 8, p);
         j.getLaby().setCase(cs);
         j.getLaby().setCase(p);
-        j.getLaby().setCase(d);
 
         Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
 
