@@ -11,7 +11,6 @@ public abstract class CaseAEffet extends Case {
 	 * 
 	 * @param x abscisse de la case
 	 * @param y ordonnee de la case
-	 * @param type type de la case
 	 */
 	public CaseAEffet(int x, int y) {
 		super(x, y, Case.TYPE_EFFET);

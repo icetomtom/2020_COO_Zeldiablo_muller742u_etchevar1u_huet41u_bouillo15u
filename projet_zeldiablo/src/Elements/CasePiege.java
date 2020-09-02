@@ -15,7 +15,6 @@ public class CasePiege extends CaseAEffet {
 	 * 
 	 * @param x abscisse de la case
 	 * @param y ordonnee de la case
-	 * @param type type de la case
 	 */
 	public CasePiege(int x, int y) {
 		super(x, y);

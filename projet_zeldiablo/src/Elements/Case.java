@@ -27,15 +27,15 @@ public class Case extends Sprite {
     public static final int TYPE_MUR = 2;
     
     /**
-     * Type representante un case a effet
+     * Type representante une case a effet
      */
     public static final int TYPE_EFFET = 3;
-
+    
     /**
-     * Types disponibles
+     * Type representante une porte
      */
-    private static final int[] types_dispo = {TYPE_VIDE, TYPE_MUR, TYPE_EFFET};
-
+    public static final int TYPE_PORTE = 4;
+    
     /**
      * Constructeur
      */
@@ -50,6 +50,8 @@ public class Case extends Sprite {
             case TYPE_EFFET:
                 setNomImage("entities_0_3");
                 break;
+            case TYPE_PORTE:
+            	break;
             default:
                 throw new IllegalArgumentException("Type inconnu : " + type);
         }
