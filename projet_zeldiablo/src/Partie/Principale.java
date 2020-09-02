@@ -18,7 +18,7 @@ public class Principale {
         Joueur joueur = new Joueur();
         Labyrinthe l = new Labyrinthe();
 
-        Sprites.chargerFeuille("entities", "images/test_sprites.png", 6, 3);
+        Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
 
         DessinPartie dessin = new DessinPartie();
         for(Case c : l.getCases())
