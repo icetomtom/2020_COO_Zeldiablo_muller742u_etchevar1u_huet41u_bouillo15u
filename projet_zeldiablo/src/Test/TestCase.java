@@ -19,8 +19,8 @@ public class TestCase {
 	public void test_ConstructeurDefaut() {
 		Case c = new Case(0, 1, Case.TYPE_VIDE);
 		
-		assertEquals("la valeur par defaut n est pas bonne", 0, c.getX());
-		assertEquals("la valeur par defaut n est pas bonne", 1, c.getY());
+		assertEquals("la valeur par defaut n est pas bonne", 0, c.getPosX());
+		assertEquals("la valeur par defaut n est pas bonne", 1, c.getPosY());
 		assertEquals("la valeur n'est pas bonne", Case.TYPE_VIDE, c.getType());
 		
 	}

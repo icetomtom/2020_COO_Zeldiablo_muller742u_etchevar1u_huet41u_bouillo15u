@@ -5,6 +5,11 @@ import moteurJeu.sprite.Sprite;
 public class Entite extends Sprite {
 
 	/**
+	 * Position de l'entite dans un labyrinthe
+	 */
+	protected int x, y;
+
+	/**
 	 * point de vie de l entite
 	 */
 	protected int vie;

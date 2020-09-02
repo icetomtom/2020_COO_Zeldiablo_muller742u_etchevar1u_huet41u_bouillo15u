@@ -1,12 +1,14 @@
 package Elements;
 
+import moteurJeu.sprite.Sprite;
+
 /**
  * Classe représentant une case
  */
-public class Case {
+public class Case extends Sprite {
 
     /**
-     * Coordonnées de la case
+     * Position de la case
      */
     private int x, y;
 
@@ -38,35 +40,23 @@ public class Case {
      * Constructeur
      */
     public Case(int x, int y, int type) {
-        boolean trouve = false;
-        for(int t : types_dispo) {
-            if (t == type) {
-                trouve = true;
+        super("entities_0_1");
+        switch (type){
+            case TYPE_VIDE:
                 break;
-            }
+            case TYPE_MUR:
+                setNomImage("entities_0_2");
+                break;
+            case TYPE_EFFET:
+                setNomImage("entities_0_3");
+                break;
+            default:
+                throw new IllegalArgumentException("Type inconnu : " + type);
         }
-        if(!trouve)
-            throw new IllegalArgumentException("Type inconnu : " + type);
 
         this.x = x;
         this.y = y;
         this.type = type;
-    }
-
-    /**
-     * Getter de l'attibut x
-     * @return position x
-     */
-    public int getX() {
-        return x;
-    }
-
-    /**
-     * Getter de l'attibut y
-     * @return position y
-     */
-    public int getY() {
-        return y;
     }
 
     /**
@@ -75,5 +65,15 @@ public class Case {
      */
     public int getType() {
         return type;
+    }
+
+    @Override
+    public int getPosX() {
+        return x;
+    }
+
+    @Override
+    public int getPosY() {
+        return y;
     }
 }

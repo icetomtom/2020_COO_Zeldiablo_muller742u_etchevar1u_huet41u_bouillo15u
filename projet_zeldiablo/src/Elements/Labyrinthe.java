@@ -1,6 +1,9 @@
 package Elements;
 
+import moteurJeu.sprite.Sprite;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe représentant un labyrinthe
@@ -71,7 +74,7 @@ public class Labyrinthe {
      * @param c la case qui remplace l'ancienne
      */
     public void setCase(Case c) {
-        int i = c.getX() + c.getY() * longeur;
+        int i = c.getPosX() + c.getPosY() * longeur;
         if(i < this.longeur * this.longeur && i >= 0)
             cases.set(i, c);
     }
@@ -106,5 +109,9 @@ public class Labyrinthe {
      */
     public int getEntreeY() {
         return entree_y;
+    }
+
+    public ArrayList<Case> getCases() {
+        return cases;
     }
 }

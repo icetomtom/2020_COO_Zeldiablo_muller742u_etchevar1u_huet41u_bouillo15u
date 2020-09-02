@@ -1,5 +1,7 @@
 package moteurJeu.sprite;
 
+import Partie.DessinPartie;
+
 import java.awt.Graphics;
 
 /**
@@ -8,17 +10,12 @@ import java.awt.Graphics;
  * @author vthomas
  *
  */
-public class Sprite {
+public abstract class Sprite {
 
 	/**
 	 * le nom de l'image stock�e dans Images
 	 */
 	String nomImage;
-
-	/**
-	 * la position du sprite
-	 */
-	protected int x, y;
 
 	/**
 	 * creation du sprite
@@ -28,8 +25,14 @@ public class Sprite {
 	 */
 	public Sprite(String nom) {
 		this.nomImage = nom;
-		this.x = 0;
-		this.y = 0;
+	}
+
+	/**
+	 * Permet de changer l'image du sprite
+	 * @param nomImage
+	 */
+	public void setNomImage(String nomImage) {
+		this.nomImage = nomImage;
 	}
 
 	/**
@@ -39,7 +42,18 @@ public class Sprite {
 	 *            graphics pour dessiner
 	 */
 	public void dessiner(Graphics g) {
-		Sprites.dessiner(g, this.nomImage, this.x, this.y);
+		Sprites.dessiner(g, this.nomImage, getPosX() * DessinPartie.TAILLE_CASE, getPosY() * DessinPartie.TAILLE_CASE);
 	}
+
+	/**
+	 * Permet d'obtenir la position X du sprite dans le labyrinthe
+	 */
+	public abstract int getPosX();
+
+
+	/**
+	 * Permet d'obtenir la position Y du sprite dans le labyrinthe
+	 */
+	public abstract int getPosY();
 
 }
