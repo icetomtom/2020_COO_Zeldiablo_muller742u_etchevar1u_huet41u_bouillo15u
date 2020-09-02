@@ -7,6 +7,20 @@
    - critère 1 : Pouvoir afficher une liste de sprites
    - critère 2 : Afficher chaque sprite à la position qui lui correspond
 
+- fonctionnalité 2 : Ouverture passage secret
+- responsable : muller742u
+- descriptif texte : Ouvre une porte quand on marche sur une case ouverture
+- critères de validation :
+  - critère 1 : Une porte est un type de case particulière. Une porte n'a pas d'orientation et
+		occupe toute une case.
+  - critère 2 : Une porte peut être fermée ou ouverte. Une porte fermée bloque le trajet et une
+		porte ouverte est traversable.
+  - critère 3 : La porte s'ouvre au passage du personnage sur la case qui déclenche son ouverture.
+  - critère 3 : Une fois la porte ouverte, elle reste ouverte.
+  - critère 4 : Les portes sont achées d'une manière particulière : elles sont de couleur noire et
+		sont représentées par des carrés qui occupent toute la case. Le carré est plein ou
+		vide en fonction de l'état de la porte (ouverte/fermée).
+
 
 * réalisation
 
@@ -18,3 +32,12 @@
     - responsables
         - bouillo15u
     - Affichage d'un labyrinthe et d'un joueur
+
+- Classe CaseSecrete
+  - responsable : muller742u
+
+- Classe Porte
+  - reponsable : muller42u
+
+- Tests Porte et CaseSecrete
+  - responsable : muller742u
