@@ -8,7 +8,6 @@ import Elements.CaseAEffet;
 import Elements.Entite;
 import Elements.Joueur;
 import Elements.Labyrinthe;
-import Elements.Porte;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
@@ -88,7 +87,7 @@ public class Jeu implements JeuAbstract {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
 			this.joueur.setDirection(direction);
 			
-			if(c.getType() == Case.TYPE_EFFET) {
+			if(c instanceof CaseAEffet) {
 				((CaseAEffet)c).activerEffet(this.joueur);
 			}
 		}

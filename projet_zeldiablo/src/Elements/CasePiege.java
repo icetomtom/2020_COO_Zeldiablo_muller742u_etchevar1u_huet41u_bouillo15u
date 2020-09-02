@@ -17,7 +17,7 @@ public class CasePiege extends CaseAEffet {
 	 * @param y ordonnee de la case
 	 */
 	public CasePiege(int x, int y) {
-		super(x, y);
+		super(x, y, Case.TYPE_PIEGE);
 		this.active = false;
 	}
 

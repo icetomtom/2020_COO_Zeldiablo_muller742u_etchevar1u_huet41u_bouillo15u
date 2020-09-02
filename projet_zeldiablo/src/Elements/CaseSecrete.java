@@ -18,7 +18,7 @@ public class CaseSecrete extends CaseAEffet {
 	 * @param y ordonnee de la case
 	 */
 	public CaseSecrete(int x, int y, Porte p) {
-		super(x, y);
+		super(x, y, Case.TYPE_SECRET);
 		this.porteLiee = p;
 	}
 
