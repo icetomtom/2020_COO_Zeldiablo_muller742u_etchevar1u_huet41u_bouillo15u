@@ -112,4 +112,12 @@ public class Entite extends Sprite {
     public void setLabyrinthe(Labyrinthe l) {
         this.labyrinthe = l;
     }
+    
+    /**
+     * methode d attaque 
+     * @param e Entite
+     */
+    public void attaquer(Entite e) {
+    	e.subirDegats(vie);
+    }
 }

@@ -25,7 +25,7 @@ public class Joueur extends Entite{
 	 * @param y entier correspondant a l'ordonnee du joueur
 	 */
 	public Joueur(int x,int y) {
-		super("entities_3_2");
+		super("entities_4_8");
 		this.vie = 10;
 		this.x=x;
 		this.y=y;
