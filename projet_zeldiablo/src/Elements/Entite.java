@@ -118,6 +118,23 @@ public class Entite extends Sprite {
      * @param e Entite
      */
     public void attaquer(Entite e) {
-    	e.subirDegats(vie);
+    	e.subirDegats(degats);
+    }
+    
+    public void seDeplacer(int n) {
+    	switch(n) {
+    	case 0:
+    		this.y--;
+    		break;
+    	case 1:
+    		this.y++;
+    		break;
+    	case 2:
+    		this.x--;
+    		break;
+    	case 3:
+    		this.x++;
+    		break;
+    	}
     }
 }
