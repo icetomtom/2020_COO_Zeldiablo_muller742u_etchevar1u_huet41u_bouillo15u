@@ -4,18 +4,49 @@
 - responsables : bouillo15u
 - descriptif texte : Pouvoir afficher des sprites sur un JPanel
 - critères de validation :
-    - critère 1 : Les sprites concernent les murs, les monstres et le héros. (NOTE : Monstres pas encore opérationnels)
-    - critère 2 : Ils sont chargés une fois pour tout eau lancement de l'application et ils peuvent être affichés dans le JPanel grâce à la méthode drawImage.
-    - critère 3 : Il est possible de charger une image (de type BufferedImage en mémoire grâce à la classe ImageIO et la méthode statique read).
+   - critère 1 : Les sprites concernent les murs, les monstres et le héros. (NOTE : Monstres pas encore opérationnels)
+   - critère 2 : Ils sont chargés une fois pour tout eau lancement de l'application et ils peuvent être affichés dans le JPanel grâce à la méthode drawImage.
+   - critère 3 : Il est possible de charger une image (de type BufferedImage en mémoire grâce à la classe ImageIO et la méthode statique read).
+
+- fonctionnalité 2 : Case à effet
+- reponsable : muller742u
+- descriptif texte : Gestion de cases ayant un effet quand une entité marche dessus
+- critères de validation :
+  - critère 1 : Les cases avec eet sont des cases traversables.
+  - critère 2 : Lorsqu'un personnage (héros ou monstre) marche sur cette case, elle déclenche
+		immédiatement un effet
+  - critère 3 : cet effet se traduit pour le moment, par un achage dans la console à préciser.
+
+- fonctionnalité 3 : Case piège
+- responsable : muller742u
+- descriptif texte : Création d'une case qui blesse les entités qui marchent dessus
+- critères de validation :
+  - critère 1 : Les dégâts ne se déclenchent que lorsque le joueur arrive sur la case, il peut ensuite
+		rester sur cette case aussi longtemps qu'il le souhaite sans subir d'autres dégâts.
+  - critère 2 : Lorsque la case devient à nouveau vide, le piège se réamorce.
+  - critère 3 : Lorsqu'une case a été détectée comme un piège, elle s'ache diéremment dans le labyrinthe (en brun) ce qui permet au joueur d'en tenir compte
+		ensuite.
 
 
 * réalisation
 
 - Classe Principale
 - responsables
-    - bouillo15u
+   - bouillo15u
 
 - Tests de la classe Sprites
 - responsables
-    - bouillo15u
+   - bouillo15u
+
+- Classe CaseAEffet
+- responsable
+  - muller742u
+
+- Classe CasePiege
+- responsable
+  - muller742u
+
+- Ajout de test dans la classe TestCase
+- responsable
+  - muller742u
 
