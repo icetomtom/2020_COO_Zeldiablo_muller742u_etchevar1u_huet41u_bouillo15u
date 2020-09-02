@@ -18,7 +18,7 @@ public class TestMonstreImmobile {
 	 */
 	@Test
 	public void testConstructeur(){
-		Entite m  = new MonstreImmobile("Monstre");
+		Entite m  = new MonstreImmobile();
 		
 		assertEquals("Le monstre n'est pas a la bonne abscisse",0,m.getPosX());
 		assertEquals("Le monstre n'est pas a la bonne ordonnee",0,m.getPosY());

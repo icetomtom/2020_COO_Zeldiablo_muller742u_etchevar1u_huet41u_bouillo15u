@@ -3,6 +3,7 @@ package moteurJeu.sprite;
 import Partie.DessinPartie;
 
 import java.awt.Graphics;
+import java.io.Serializable;
 
 /**
  * un sprite correspond � une image positionn�e � un endroit de la scene
@@ -10,7 +11,7 @@ import java.awt.Graphics;
  * @author vthomas
  *
  */
-public abstract class Sprite {
+public abstract class Sprite implements Serializable {
 
 	/**
 	 * le nom de l'image stock�e dans Images
