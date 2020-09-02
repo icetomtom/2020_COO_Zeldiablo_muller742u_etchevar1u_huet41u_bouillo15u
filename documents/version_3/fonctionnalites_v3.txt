@@ -1,0 +1,20 @@
+* Fonctionnalités version 3
+
+- fonctionnalité 1 : Gestion de l'affichage d'une partie
+- responsables : bouillo15u
+- descriptif texte : Pouvoir afficher tous les sprites d'une partie sur une fenetre
+- critères de validation :
+   - critère 1 : Pouvoir afficher une liste de sprites
+   - critère 2 : Afficher chaque sprite à la position qui lui correspond
+
+
+* réalisation
+
+- Classe Dessin
+    - responsables
+       - bouillo15u
+
+- Classe TestDessin
+    - responsables
+        - bouillo15u
+    - Affichage d'un labyrinthe et d'un joueur

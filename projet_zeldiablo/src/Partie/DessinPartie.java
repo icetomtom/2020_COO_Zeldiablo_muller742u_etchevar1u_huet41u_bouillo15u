@@ -24,6 +24,9 @@ public class DessinPartie implements DessinAbstract {
 
     public void addSprite(Sprite s) {
         sprites.add(s);
+        System.out.println(s);
+//        for(Sprite a: sprites)
+//            System.out.println(a);
     }
 
     public void removeSprite(Sprite s) {

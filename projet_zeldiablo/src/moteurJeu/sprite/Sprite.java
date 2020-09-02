@@ -42,6 +42,7 @@ public abstract class Sprite {
 	 *            graphics pour dessiner
 	 */
 	public void dessiner(Graphics g) {
+//		System.out.println("Dessine : "+this);
 		Sprites.dessiner(g, this.nomImage, getPosX() * DessinPartie.TAILLE_CASE, getPosY() * DessinPartie.TAILLE_CASE);
 	}
 
