@@ -1,5 +1,7 @@
 package moteurJeu.sprite;
 
+import Partie.DessinPartie;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -128,6 +130,13 @@ public class Sprites {
 		} catch (IOException e) {
 			throw new Error("probleme de lecture de fichier " + nomFichier);
 		}
+
+		int w = DessinPartie.TAILLE_CASE * nx;
+		int h = DessinPartie.TAILLE_CASE * ny;
+
+		BufferedImage tmp = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+		tmp.getGraphics().drawImage(res.getScaledInstance(w, h, Image.SCALE_DEFAULT), 0, 0, null);
+		res = tmp;
 
 		// calcule taille des sprites
 		int tx = res.getWidth() / nx;

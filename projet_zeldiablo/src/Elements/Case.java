@@ -40,12 +40,12 @@ public class Case extends Sprite {
      * Constructeur
      */
     public Case(int x, int y, int type) {
-        super("entities_0_1");
+        super("entities_5_0");
         switch (type){
             case TYPE_VIDE:
                 break;
             case TYPE_MUR:
-                setNomImage("entities_0_2");
+                setNomImage("entities_0_1");
                 break;
             case TYPE_EFFET:
                 setNomImage("entities_0_3");
