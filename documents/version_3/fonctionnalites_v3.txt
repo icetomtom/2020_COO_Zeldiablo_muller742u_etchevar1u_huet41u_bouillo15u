@@ -21,7 +21,9 @@
 		sont reprÃ©sentÃ©es par des carrÃ©s qui occupent toute la case. Le carrÃ© est plein ou
 		vide en fonction de l'Ã©tat de la porte (ouverte/fermÃ©e).
 
- - Fonctionnalité 3 : Attaque 
+ - Fonctionnalité 3 : Attaque du joueur et des monstres au corps à corps
+ 	critere 1 : le joueur n'attaque que devant lui 
+ 	critere 2 : les monstres attaquent tout autour d'eux mais seulement le joueur
 * rÃ©alisation
 
 - Classe Dessin
@@ -44,3 +46,6 @@
 
 -Ecriture méthode attaque 
   - responsable : etchevar1u
+  
+  Methodes d'attaques et tests des combats:
+  - responsable : huet41u
