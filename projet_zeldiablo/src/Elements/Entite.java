@@ -36,6 +36,7 @@ public class Entite extends Sprite {
 	 */
 	public Entite(String nom) {
 		super(nom);
+		this.degats=1;
 	}
 
 

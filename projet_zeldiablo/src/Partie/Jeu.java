@@ -159,13 +159,13 @@ public class Jeu implements JeuAbstract {
 		Joueur j = (Joueur)entites.get(0);
 		for(int i =1;i<entites.size();i++) {
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}
 		}
 	}
