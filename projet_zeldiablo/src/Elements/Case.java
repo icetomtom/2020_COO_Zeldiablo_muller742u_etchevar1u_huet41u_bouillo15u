@@ -16,6 +16,11 @@ public class Case extends Sprite {
      * Type de la case
      */
     private int type;
+    
+    /**
+     * Si la case est traversable ou non 
+     */
+    private boolean traversable;
 
     /**
      * Type représentant un vide
@@ -59,6 +64,12 @@ public class Case extends Sprite {
         this.x = x;
         this.y = y;
         this.type = type;
+        
+        if(type == TYPE_MUR || type == TYPE_PORTE) {
+        	this.traversable = false;
+        }else {
+        	this.traversable = true;
+        }
     }
 
     /**
@@ -67,6 +78,20 @@ public class Case extends Sprite {
      */
     public int getType() {
         return type;
+    }
+    
+    /**
+     * Getter de l'attribut traversable
+     * @return l'attribut traversable
+     */
+    public boolean estTraversable() { return this.traversable; }
+    
+    /**
+     * Setter de l'attribut traversable
+     * @param t la nouvelle valeur de traverable
+     */
+    public void setTraversable(boolean t) {
+    	this.traversable = t;	
     }
 
     @Override

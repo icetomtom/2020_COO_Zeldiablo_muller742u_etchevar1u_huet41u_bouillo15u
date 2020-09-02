@@ -5,11 +5,6 @@ package Elements;
  */
 public class Porte extends Case {
 	/**
-	 * attribut qui permet de savoir si la porte est ouverte ou fermee
-	 */
-	private boolean ouverte;
-	
-	/**
 	 * constructeur d'une porte
 	 * 
 	 * @param x abscisse de la case
@@ -23,17 +18,10 @@ public class Porte extends Case {
 	 * permet d'ouvrir la porte
 	 */
 	public void ouvrirPorte() {
-		if(!this.ouverte) {
-			this.ouverte = true;
+		if(!this.estTraversable()) {
+			this.setTraversable(true);
 		}
 		
 		//a faire : chgmt de sprite
 	}
-	
-	/**
-	 * getter de l'attribut ouverte
-	 * 
-	 * @return l'attribut ouverte
-	 */
-	public boolean estOuverte() { return this.ouverte; }
 }

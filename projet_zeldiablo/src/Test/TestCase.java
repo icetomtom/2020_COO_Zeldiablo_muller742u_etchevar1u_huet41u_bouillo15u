@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import Elements.Case;
 import Elements.CasePiege;
+import Elements.CaseSecrete;
+import Elements.Porte;
 import Partie.Jeu;
 
 /** 
@@ -45,5 +47,55 @@ public class TestCase {
 		}
 		
 		assertEquals("Le joueur doit avoir perdu un pdv", 9, j.getJoueur().getVie());
+	}
+	
+	/**
+	 * test d'une porte fermee
+	 */
+	@Test
+	public void test_Porte_fermee() {
+		//initialisation
+		Porte p = new Porte(1, 1);
+		CaseSecrete cs = new CaseSecrete(8, 8, p);
+		Jeu j = new Jeu();
+		j.getLaby().setCase(cs);
+		j.getLaby().setCase(p);
+		
+		//verif
+		for(int i = 0; i < 20; i++) {
+			j.deplacerJoueur(Jeu.LEFT);
+		}
+		
+		for(int i = 0; i < 20; i++) {
+			j.deplacerJoueur(Jeu.UP);
+		}
+		
+		//le joueur doit etre bloque par la porte fermee
+		assertEquals("L'ordonnee du joueur doit etre 2", 2, j.getJoueur().getPosY());
+	}
+	
+	/**
+	 * test d'une porte ouverte
+	 */
+	@Test
+	public void test_Porte_ouverte() {
+		//initialisation
+		Porte p = new Porte(1, 1);
+		CaseSecrete cs = new CaseSecrete(3, 5, p);
+		Jeu j = new Jeu();
+		j.getLaby().setCase(cs);
+		j.getLaby().setCase(p);
+		
+		//verif
+		for(int i = 0; i < 20; i++) {
+			j.deplacerJoueur(Jeu.LEFT);
+		}
+		
+		for(int i = 0; i < 20; i++) {
+			j.deplacerJoueur(Jeu.UP);
+		}
+		
+		//le joueur doit pouvoir traverser la porte
+		assertEquals("L'ordonnee du joueur doit etre 1", 1, j.getJoueur().getPosY());
 	}
 }
