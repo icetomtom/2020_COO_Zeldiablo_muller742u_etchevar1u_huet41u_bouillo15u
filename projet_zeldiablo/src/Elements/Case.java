@@ -32,14 +32,19 @@ public class Case extends Sprite {
     public static final int TYPE_MUR = 2;
     
     /**
-     * Type representante une case a effet
+     * Type representante une case piege
      */
-    public static final int TYPE_EFFET = 3;
+    public static final int TYPE_PIEGE = 3;
     
     /**
      * Type representante une porte
      */
     public static final int TYPE_PORTE = 4;
+    
+    /**
+     * Type representante une case secrete
+     */
+    public static final int TYPE_SECRET = 5;
     
     /**
      * Constructeur
@@ -52,11 +57,14 @@ public class Case extends Sprite {
             case TYPE_MUR:
                 setNomImage("entities_0_1");
                 break;
-            case TYPE_EFFET:
-                setNomImage("entities_0_3");
+            case TYPE_PIEGE:
+                //setNomImage("entities_3_3");
                 break;
             case TYPE_PORTE:
             	setNomImage("entities_4_6");
+            	break;
+            case TYPE_SECRET:
+            	setNomImage("entities_0_3");
             	break;
             default:
                 throw new IllegalArgumentException("Type inconnu : " + type);
