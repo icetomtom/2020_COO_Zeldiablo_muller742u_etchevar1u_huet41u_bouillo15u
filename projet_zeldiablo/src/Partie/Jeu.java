@@ -111,4 +111,13 @@ public class Jeu implements JeuAbstract {
 	public boolean etreFini() {
 		return false;
 	}
+	
+	/**
+	 * methode qui permet d'ajouter des entites au jeu
+	 * @param e
+	 */
+	public void ajouter(Entite e) {
+		entites.add(e);
+	}
+	
 }

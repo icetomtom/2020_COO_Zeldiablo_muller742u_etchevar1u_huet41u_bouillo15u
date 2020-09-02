@@ -50,3 +50,6 @@
 - responsable
   - muller742u
 
+ Ajout des differents monstres et de la classe entite 
+ responsable
+ - huet41u
