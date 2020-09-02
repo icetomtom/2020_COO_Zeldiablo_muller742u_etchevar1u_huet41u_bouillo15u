@@ -14,11 +14,11 @@ public class CasePiege extends CaseAEffet {
 	 * constructeur d'une case piege
 	 * 
 	 * @param x abscisse de la case
-	 * @param y ordonne de la case
+	 * @param y ordonnee de la case
 	 * @param type type de la case
 	 */
-	public CasePiege(int x, int y, int type) {
-		super(x, y, type);
+	public CasePiege(int x, int y) {
+		super(x, y);
 		this.active = false;
 	}
 
