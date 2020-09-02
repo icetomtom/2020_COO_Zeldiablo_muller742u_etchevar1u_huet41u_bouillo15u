@@ -21,7 +21,7 @@
 		sont représentées par des carrés qui occupent toute la case. Le carré est plein ou
 		vide en fonction de l'état de la porte (ouverte/fermée).
 
-
+ - Fonctionnalit� 3 : Attaque 
 * réalisation
 
 - Classe Dessin

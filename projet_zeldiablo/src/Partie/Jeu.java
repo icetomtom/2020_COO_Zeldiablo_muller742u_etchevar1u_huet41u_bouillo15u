@@ -83,8 +83,8 @@ public class Jeu implements JeuAbstract {
 		//on recupere la case sur laquelle on veut avancer
 		Case c = this.laby.getCase(xNewPos, yNewPos);
 
-		//le joueur ne peut avancer que si la case est traversable
-		if(c.estTraversable()) {
+		//le joueur ne peut avancer que si la case est vide
+		if(c.getType() != Case.TYPE_MUR || (c.getType() == Case.TYPE_PORTE && ((Porte)c).estOuverte())) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
 			this.joueur.setDirection(direction);
 			
@@ -176,15 +176,19 @@ public class Jeu implements JeuAbstract {
 		Joueur j = (Joueur)entites.get(0);
 		for(int i =1;i<entites.size();i++) {
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.subirDegats(1);
+				j.attaquer(entites.get(i));
 			}
 		}
+	}
+	
+	public Entite getEntite(int index) {
+		return this.entites.get(index);
 	}
 	
 }
