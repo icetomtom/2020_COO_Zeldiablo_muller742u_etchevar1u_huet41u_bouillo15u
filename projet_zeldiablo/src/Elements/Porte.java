@@ -20,6 +20,7 @@ public class Porte extends Case {
 	public void ouvrirPorte() {
 		if(!this.estTraversable()) {
 			this.setTraversable(true);
+			super.setNomImage("entities_4_7");
 		}
 		
 		//a faire : chgmt de sprite

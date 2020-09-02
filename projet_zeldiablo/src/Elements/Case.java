@@ -56,6 +56,7 @@ public class Case extends Sprite {
                 setNomImage("entities_0_3");
                 break;
             case TYPE_PORTE:
+            	setNomImage("entities_4_6");
             	break;
             default:
                 throw new IllegalArgumentException("Type inconnu : " + type);

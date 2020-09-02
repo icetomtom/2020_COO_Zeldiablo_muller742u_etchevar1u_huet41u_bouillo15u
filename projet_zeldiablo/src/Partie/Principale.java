@@ -1,14 +1,10 @@
 package Partie;
 
 import Elements.Case;
-import Elements.Joueur;
-import Elements.Labyrinthe;
-import moteurJeu.moteur.DessinAbstract;
+import Elements.CaseSecrete;
+import Elements.Porte;
 import moteurJeu.moteur.MoteurGraphique;
 import moteurJeu.sprite.Sprites;
-
-import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class Principale {
     /**
@@ -16,6 +12,10 @@ public class Principale {
      */
     public static void main(String[] args) {
         Jeu j = new Jeu();
+        Porte p = new Porte(1, 1);
+        CaseSecrete cs = new CaseSecrete(8, 8, p);
+        j.getLaby().setCase(cs);
+        j.getLaby().setCase(p);;
 
         Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
 
