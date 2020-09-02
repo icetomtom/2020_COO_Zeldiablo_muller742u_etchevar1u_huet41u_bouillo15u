@@ -1,15 +1,16 @@
 package Partie;
 
+import java.util.ArrayList;
+
 import Elements.Case;
 import Elements.CaseAEffet;
 import Elements.Entite;
 import Elements.Joueur;
 import Elements.Labyrinthe;
+import Elements.Porte;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
-
-import java.util.ArrayList;
 
 /**
  *
@@ -81,8 +82,8 @@ public class Jeu implements JeuAbstract {
 		//on recupere la case sur laquelle on veut avancer
 		Case c = this.laby.getCase(xNewPos, yNewPos);
 
-		//le joueur ne poeut avancer que si la case est vide
-		if(c.getType() != Case.TYPE_MUR) {
+		//le joueur ne peut avancer que si la case est vide
+		if(c.getType() != Case.TYPE_MUR || (c.getType() == Case.TYPE_PORTE && ((Porte)c).estOuverte())) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
 			this.joueur.setDirection(direction);
 			
