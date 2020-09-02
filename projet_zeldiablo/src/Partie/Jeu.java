@@ -149,21 +149,22 @@ public class Jeu implements JeuAbstract {
 			switch(j.getDirection()) {
 			case UP:
 				if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()-1) {
-					entites.get(i).subirDegats(1);					}
+					j.attaquer(entites.get(i));
+				}
 					break;
 			case LEFT:
 				if(entites.get(i).getPosX()==j.getPosX()-1 && entites.get(i).getPosY()==j.getPosY()) {
-					entites.get(i).subirDegats(1);
+					j.attaquer(entites.get(i));
 				}
 				break;
 			case RIGHT:
 				if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
-					entites.get(i).subirDegats(1);				
+					j.attaquer(entites.get(i));		
 				}
 				break;
 			case DOWN:
 				if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-					entites.get(i).subirDegats(1);
+					j.attaquer(entites.get(i));
 				}
 				break;
 		}
@@ -176,13 +177,13 @@ public class Jeu implements JeuAbstract {
 		Joueur j = (Joueur)entites.get(0);
 		for(int i =1;i<entites.size();i++) {
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.attaquer(entites.get(i));
+				entites.get(i).attaquer(entites.get(0));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.attaquer(entites.get(i));
+				entites.get(i).attaquer(entites.get(0));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.attaquer(entites.get(i));
+				entites.get(i).attaquer(entites.get(0));
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				j.attaquer(entites.get(i));
+				entites.get(i).attaquer(entites.get(0));
 			}
 		}
 	}
