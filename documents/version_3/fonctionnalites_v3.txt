@@ -21,9 +21,17 @@
 		sont reprÃ©sentÃ©es par des carrÃ©s qui occupent toute la case. Le carrÃ© est plein ou
 		vide en fonction de l'Ã©tat de la porte (ouverte/fermÃ©e).
 
- - Fonctionnalité 3 : Attaque du joueur et des monstres au corps à corps
- 	critere 1 : le joueur n'attaque que devant lui 
- 	critere 2 : les monstres attaquent tout autour d'eux mais seulement le joueur
+- Fonctionnalité 3 : attaque directionnelle
+- reponsable : huet41u
+- descriptif texte : quand le joueur demande a attaque, le heros attaque devant lui
+			et ne blesse que le monstre dans cette direction
+- critere de validation :
+ 	- critere 1 : l'attaque a lieu dans la dernière direction suivie par le heros
+ 	- critere 2 : l'attaque ne peut toucherau maximum un monstre et seulement si ce monstre se trouve juste devant le personnage
+	- critere 3 : les monstres situés a cote du personnage dans une autre direction ne subissent pas de degats
+	- critere 4 : si aucun monstre n'est present devant le heros, aucune monstre ne subit de degats
+
+
 * rÃ©alisation
 
 - Classe Dessin
