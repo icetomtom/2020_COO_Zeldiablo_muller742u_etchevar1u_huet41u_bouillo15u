@@ -10,10 +10,9 @@ public class MonstreImmobile extends Entite{
 	
 	/**
 	 * Constructeur avec un string en parametre
-	 * @param nom correspondant au nom du monstre
 	 */
-	public MonstreImmobile(String nom) {
-		super(nom);
+	public MonstreImmobile() {
+		super("entities_5_13");
 	}
 
 }

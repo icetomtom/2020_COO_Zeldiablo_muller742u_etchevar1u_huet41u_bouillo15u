@@ -2,10 +2,12 @@ package Elements;
 
 import moteurJeu.sprite.Sprite;
 
+import java.io.Serializable;
+
 /**
  * Classe représentant une case
  */
-public class Case extends Sprite {
+public class Case extends Sprite implements Serializable {
 
     /**
      * Position de la case

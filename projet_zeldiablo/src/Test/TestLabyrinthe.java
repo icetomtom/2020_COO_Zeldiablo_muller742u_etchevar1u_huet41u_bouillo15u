@@ -24,8 +24,8 @@ public class TestLabyrinthe {
         assertEquals("La longeur par défaut n'est pas bonne", 10, laby.getLongeur());
         assertEquals("La largeur par défaut n'est pas bonne", 10, laby.getLargeur());
 
-        assertEquals("La position en X d'entree du joueur par défaut n'est pas bonne", 5, laby.getEntreeX());
-        assertEquals("La position en Y d'entree du joueur par défaut n'est pas bonne", 5, laby.getEntreeY());
+        assertEquals("La position en X d'entree du joueur par défaut n'est pas bonne", 4, laby.getEntreeX());
+        assertEquals("La position en Y d'entree du joueur par défaut n'est pas bonne", 4, laby.getEntreeY());
 
         Case c = null;
         for(int i=0; i<10; i++) {
