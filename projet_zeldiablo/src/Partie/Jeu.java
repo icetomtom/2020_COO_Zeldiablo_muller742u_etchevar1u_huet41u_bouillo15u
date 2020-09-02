@@ -21,7 +21,9 @@ public class Jeu implements JeuAbstract {
 	 * attribut qui represente le joueur
 	 */
 	private Joueur joueur;
-
+	
+	private ArrayList<Entite> entites;
+	
 	/**
 	 * attribut qui represente le labyrinthe
 	 */
@@ -41,6 +43,8 @@ public class Jeu implements JeuAbstract {
 	public Jeu() {
 		this.laby = new Labyrinthe();
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
+		this.entites = new ArrayList<Entite>();
+		this.entites.add(joueur);
 	}
 
 	/**
@@ -117,7 +121,12 @@ public class Jeu implements JeuAbstract {
 	 * @param e
 	 */
 	public void ajouter(Entite e) {
-		entites.add(e);
+		this.entites.add(e);
+	}
+	
+	public void combat(Entite e1, Entite e2) {
+		ArrayList<Case> c = laby.getCases();
+		
 	}
 	
 }
