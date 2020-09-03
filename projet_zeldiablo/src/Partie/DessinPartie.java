@@ -12,7 +12,7 @@ public class DessinPartie implements DessinAbstract {
 
     private final List<Sprite> sprites;
 
-    public static final int TAILLE_CASE = 60;
+    public static final int TAILLE_CASE = 40;
 
     public DessinPartie() {
         this.sprites = new ArrayList<>();

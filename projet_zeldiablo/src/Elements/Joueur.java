@@ -1,7 +1,6 @@
 package Elements;
 
 import Partie.Jeu;
-import moteurJeu.sprite.Sprite;
 
 /**
  * 

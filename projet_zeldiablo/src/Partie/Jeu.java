@@ -46,7 +46,7 @@ public class Jeu implements JeuAbstract {
 	 * constructeur par defaut
 	 */
 	public Jeu() {
-		this.laby = new Labyrinthe();
+		this.laby = new Labyrinthe(13, 10);
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 		this.entites = new ArrayList<Entite>();
 		this.entites.add(joueur);
@@ -124,22 +124,22 @@ public class Jeu implements JeuAbstract {
 		if(clavier.isPressed(KeyEvent.VK_UP)) {
 			this.deplacerEntite(joueur,UP);
 		}
-		
+
 		if(clavier.isPressed(KeyEvent.VK_DOWN)) {
 			this.deplacerEntite(joueur,DOWN);
 		}
-		
+
 		if(clavier.isPressed(KeyEvent.VK_LEFT)) {
 			this.deplacerEntite(joueur,LEFT);
 		}
-		
+
 		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
 			this.deplacerEntite(joueur,RIGHT);
 		}if(clavier.isPressed(KeyEvent.VK_SPACE)) {
 			this.combat();
 		}
-		this.actionMonstre();
-		
+//		this.actionMonstre();
+
 		return null;
 	}
 
