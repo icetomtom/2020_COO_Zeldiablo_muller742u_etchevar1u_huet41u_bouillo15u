@@ -122,6 +122,10 @@ public class Entite extends Sprite {
     	e.subirDegats(degats);
     }
     
+    /**
+     * methode qui permet de deplacer une entite dans une direction donnee
+     * @param n correspond a une direction
+     */
     public void seDeplacer(int n) {
     	switch(n) {
     	case 0:

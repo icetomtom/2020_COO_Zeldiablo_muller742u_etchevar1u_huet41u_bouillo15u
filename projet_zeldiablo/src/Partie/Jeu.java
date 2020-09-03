@@ -142,6 +142,9 @@ public class Jeu implements JeuAbstract {
 		this.entites.add(e);
 	}
 	
+	/**
+	 * methode qui permet de faire combattre le joueur si un monstre est en face de lui et dans sa direction
+	 */
 	public void combat() {
 		Joueur j = (Joueur) entites.get(0);
 		for(int i =1;i<entites.size();i++) {
@@ -166,12 +169,13 @@ public class Jeu implements JeuAbstract {
 					j.attaquer(entites.get(i));
 				}
 				break;
-		}
-		}
-			
-						
+			}
+		}		
 	}
 	
+	/**
+	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur
+	 */
 	public void attaqueMonstre() {
 		Joueur j = (Joueur)entites.get(0);
 		for(int i =1;i<entites.size();i++) {
