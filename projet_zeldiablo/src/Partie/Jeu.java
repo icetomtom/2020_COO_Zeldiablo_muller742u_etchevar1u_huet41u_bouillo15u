@@ -132,6 +132,7 @@ public class Jeu implements JeuAbstract {
 		}if(clavier.isPressed(KeyEvent.VK_SPACE)) {
 			this.combat();
 		}
+		this.actionMonstre();
 		
 		return null;
 	}
