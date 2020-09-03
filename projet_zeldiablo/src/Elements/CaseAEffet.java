@@ -5,7 +5,11 @@ package Elements;
  *
  */
 public abstract class CaseAEffet extends Case {
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2787040553195876389L;
+
 	/**
 	 * constructeur d'une case a effet
 	 * 

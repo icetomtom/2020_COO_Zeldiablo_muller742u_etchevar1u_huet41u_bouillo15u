@@ -10,6 +10,11 @@ import java.io.Serializable;
 public class Case extends Sprite implements Serializable {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5972635160189174690L;
+
+	/**
      * Position de la case
      */
     private int x, y;
@@ -34,19 +39,24 @@ public class Case extends Sprite implements Serializable {
     public static final int TYPE_MUR = 2;
     
     /**
-     * Type representante une case piege
+     * Type representant une case piege
      */
     public static final int TYPE_PIEGE = 3;
     
     /**
-     * Type representante une porte
+     * Type representant une porte
      */
     public static final int TYPE_PORTE = 4;
     
     /**
-     * Type representante une case secrete
+     * Type representant une case qui ouvre une porte
      */
-    public static final int TYPE_SECRET = 5;
+    public static final int TYPE_OUVERTURE = 5;
+    
+    /**
+     * Type representant une case qui ferme une porte
+     */
+    public static final int TYPE_FERMETURE = 6;
     
     /**
      * Constructeur
@@ -65,7 +75,10 @@ public class Case extends Sprite implements Serializable {
             case TYPE_PORTE:
             	setNomImage("entities_4_6");
             	break;
-            case TYPE_SECRET:
+            case TYPE_OUVERTURE:
+            	setNomImage("entities_0_3");
+            	break;
+            case TYPE_FERMETURE:
             	setNomImage("entities_0_3");
             	break;
             default:
@@ -114,4 +127,8 @@ public class Case extends Sprite implements Serializable {
     public int getPosY() {
         return y;
     }
+    
+    public void setType(int newType) {
+		this.type = newType;
+	}
 }

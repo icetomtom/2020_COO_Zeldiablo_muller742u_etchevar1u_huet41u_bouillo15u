@@ -5,6 +5,11 @@ package Elements;
  */
 public class Porte extends Case {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 450910692541530219L;
+
+	/**
 	 * constructeur d'une porte
 	 * 
 	 * @param x abscisse de la case
@@ -15,14 +20,19 @@ public class Porte extends Case {
 	}
 	
 	/**
-	 * permet d'ouvrir la porte
+	 * permet d'ouvrir ou de fermer une porte
+	 * 
+	 * @param b true = ouvrir, false = fermer
 	 */
-	public void ouvrirPorte() {
-		if(!this.estTraversable()) {
-			this.setTraversable(true);
-			super.setNomImage("entities_4_7");
+	public void changerEtat(boolean b) {
+		if(b != this.estTraversable()) {
+			this.setTraversable(b);
+			
+			if(b) {
+				super.setNomImage("entities_4_7");
+			}else {
+				setNomImage("entities_4_6");
+			}
 		}
-		
-		//a faire : chgmt de sprite
 	}
 }
