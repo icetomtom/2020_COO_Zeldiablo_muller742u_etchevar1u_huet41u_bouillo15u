@@ -116,5 +116,8 @@ public class Joueur extends Entite{
 			break;
 		}
 	}
-
+	
+	public List<Objet> getInventaire() {
+		return this.inventaire;
+	}
 }
