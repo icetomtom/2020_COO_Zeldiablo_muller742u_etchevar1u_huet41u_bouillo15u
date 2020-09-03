@@ -158,9 +158,9 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	/**
-	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur
+	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur ou alors de se deplacer
 	 */
-	public void attaqueMonstre() {
+	public void actionMonstre() {
 		Joueur j = (Joueur)entites.get(0);
 		for(int i =1;i<entites.size();i++) {
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
@@ -171,6 +171,8 @@ public class Jeu implements JeuAbstract {
 				entites.get(i).attaquer(entites.get(0));
 			}else if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
 				entites.get(i).attaquer(entites.get(0));
+			}else {
+				entites.get(i).deplacementAleatoire();
 			}
 		}
 	}
