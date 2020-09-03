@@ -14,5 +14,9 @@ public class MonstreImmobile extends Entite{
 	public MonstreImmobile() {
 		super("entities_5_13");
 	}
-
+	
+	@Override
+	public void seDeplacer(int n) {
+		return;
+	}
 }

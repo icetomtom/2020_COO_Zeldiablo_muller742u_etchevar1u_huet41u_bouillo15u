@@ -8,6 +8,8 @@ import Elements.CaseAEffet;
 import Elements.Entite;
 import Elements.Joueur;
 import Elements.Labyrinthe;
+import Usine.TYPE_MONSTRE;
+import Usine.UsineMonstre;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
@@ -46,6 +48,9 @@ public class Jeu implements JeuAbstract {
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 		this.entites = new ArrayList<Entite>();
 		this.entites.add(joueur);
+		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.MONSTRE_IMMO));
+		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.TROLL));
+		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.FANTOME));
 	}
 
 	/**
