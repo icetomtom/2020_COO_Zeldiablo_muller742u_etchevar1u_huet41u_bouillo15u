@@ -129,6 +129,8 @@ public class Jeu implements JeuAbstract {
 		
 		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
 			this.deplacerJoueur(RIGHT);
+		}if(clavier.isPressed(KeyEvent.VK_SPACE)) {
+			this.combat();
 		}
 		
 		return null;
