@@ -2,13 +2,9 @@ package Partie;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.List;
 
-import Elements.Case;
-import Elements.CaseAEffet;
-import Elements.Entite;
-import Elements.Joueur;
-import Elements.Labyrinthe;
-import Elements.Niveau;
+import Elements.*;
 import Monstre.Monstre;
 import Usine.TYPE_MONSTRE;
 import Usine.UsineMonstre;
@@ -29,9 +25,10 @@ public class Jeu implements JeuAbstract {
 	private Joueur joueur;
 	
 	private boolean fini;
-	
+
 	private ArrayList<Entite> entites;
-	
+	private ArrayList<Sprite> sprites;
+
 	/**
 	 * attribut qui represente le labyrinthe
 	 */
@@ -49,11 +46,10 @@ public class Jeu implements JeuAbstract {
 	 * constructeur par defaut
 	 */
 	public Jeu() {
-
 		this.laby = new Labyrinthe(10, 10);
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
-		this.entites = new ArrayList<Entite>();
-		this.entites.add(joueur);
+		this.entites = new ArrayList<>();
+
 		ArrayList<Monstre> m = new ArrayList<Monstre>();
 		for(int i =0;i<5;i++) {
 			int nb = (int)(Math.random()*(4-1)+1);
@@ -69,12 +65,29 @@ public class Jeu implements JeuAbstract {
 					break;
 			}
 		}
+
 		Niveau n =new Niveau(laby,m);
 		for(int j=0;j<m.size();j++) {
 			entites.add(n.getMonstres().get(j));
-			
+
 		}
-		System.out.println(entites.size());
+
+		CasePiege cp = new CasePiege(1, 1);
+		Porte p = new Porte(5, 6);
+		CaseSecrete o = new CaseSecrete(8, 8, p, Case.TYPE_OUVERTURE);
+		CaseSecrete f = new CaseSecrete(8, 7, p, Case.TYPE_FERMETURE);
+
+		this.laby.setCase(cp);
+		this.laby.setCase(p);
+		this.laby.setCase(o);
+		this.laby.setCase(f);
+
+		this.entites.add(joueur);
+
+		this.sprites = new ArrayList<>();
+		sprites.addAll(this.laby.getCases());
+		sprites.add(laby.getAmulette());
+		sprites.addAll(this.entites);
 		this.fini = false;
 	}
 
@@ -84,6 +97,9 @@ public class Jeu implements JeuAbstract {
 	 * @param direction la direction prise par le joueur (direction cardinale representee par un entier)
 	 */
 	public void deplacerEntite(Entite e,int direction) {
+		if(e == null)
+			return;
+
 		int xNewPos = e.getPosX();
 		int yNewPos = e.getPosY();
 		switch(direction) {
@@ -175,7 +191,7 @@ public class Jeu implements JeuAbstract {
 			System.out.println("tu as fini gg");
 		}
 		
-		return null;
+		return JeuPrincipale.MODE_PARTIE;
 	}
 
 	@Override
@@ -247,5 +263,8 @@ public class Jeu implements JeuAbstract {
 			}
 		}
 	}
-	
+
+	public List<Sprite> getSprites() {
+		return sprites;
+	}
 }

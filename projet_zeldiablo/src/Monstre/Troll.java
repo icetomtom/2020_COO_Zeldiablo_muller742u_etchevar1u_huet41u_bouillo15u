@@ -15,8 +15,8 @@ public class Troll extends Monstre {
 	 * Constructeur avec un string en parametre
 	 * @param nom correspondant au nom du monstre
 	 */
-	public Troll(String nom) {
-		super(nom);
+	public Troll() {
+		super("entities_1_10");
 		this.vie = 5;
 		this.est_attaque=false;
 		this.maxPV=5;

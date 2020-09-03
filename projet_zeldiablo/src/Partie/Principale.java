@@ -14,9 +14,6 @@ public class Principale {
     public static void main(String[] args) {
         Jeu j = new Jeu();
 
-        Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
-
-
         CasePiege cp = new CasePiege(1, 1);
         Porte p = new Porte(5, 6);
         CaseSecrete o = new CaseSecrete(8, 6, p, Case.TYPE_OUVERTURE);
@@ -26,7 +23,6 @@ public class Principale {
         j.getLaby().setCase(p);
         j.getLaby().setCase(o);
         j.getLaby().setCase(f);
-
         
         DessinPartie dessin = new DessinPartie();
 
