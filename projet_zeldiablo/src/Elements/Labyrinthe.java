@@ -1,11 +1,7 @@
 package Elements;
 
-import moteurJeu.sprite.Sprite;
-
-import java.io.Console;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Classe représentant un labyrinthe
