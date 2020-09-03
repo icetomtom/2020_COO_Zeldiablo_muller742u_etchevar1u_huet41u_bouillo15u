@@ -50,7 +50,7 @@ public class Jeu implements JeuAbstract {
 	 */
 	public Jeu() {
 
-		this.laby = new Labyrinthe(10, 11);
+		this.laby = new Labyrinthe(10, 10);
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 		this.entites = new ArrayList<Entite>();
 		this.entites.add(joueur);
