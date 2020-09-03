@@ -38,3 +38,6 @@ description texte : lorsque le héros appuie sur la touche d'utilisation ("E" pa
 
 - Modification classe Joueur 
 - responsable : etchevar1u
+
+- modification classe Jeu, Monstres
+- responsable : huet41u
