@@ -39,11 +39,11 @@ public class TestCase {
 		
 		//verification
 		for(int i = 0; i < 4; i++) {
-			j.deplacerJoueur(Jeu.LEFT);
+			j.deplacerEntite(j.getJoueur(),Jeu.LEFT);
 		}
 		
 		for(int i = 0; i < 4; i++) {
-			j.deplacerJoueur(Jeu.UP);
+			j.deplacerEntite(j.getJoueur(),Jeu.UP);
 		}
 		
 		assertEquals("Le joueur doit avoir perdu un pdv", 9, j.getJoueur().getVie());
@@ -63,11 +63,11 @@ public class TestCase {
 		
 		//verif
 		for(int i = 0; i < 20; i++) {
-			j.deplacerJoueur(Jeu.LEFT);
+			j.deplacerEntite(j.getJoueur(),Jeu.LEFT);
 		}
 		
 		for(int i = 0; i < 20; i++) {
-			j.deplacerJoueur(Jeu.UP);
+			j.deplacerEntite(j.getJoueur(),Jeu.UP);
 		}
 		
 		//le joueur doit etre bloque par la porte fermee
@@ -88,11 +88,11 @@ public class TestCase {
 		
 		//verif
 		for(int i = 0; i < 20; i++) {
-			j.deplacerJoueur(Jeu.LEFT);
+			j.deplacerEntite(j.getJoueur(),Jeu.LEFT);
 		}
 		
 		for(int i = 0; i < 20; i++) {
-			j.deplacerJoueur(Jeu.UP);
+			j.deplacerEntite(j.getJoueur(),Jeu.UP);
 		}
 		
 		//le joueur doit pouvoir traverser la porte
@@ -112,7 +112,7 @@ public class TestCase {
 		j.getLaby().setCase(p);
 		
 		//verif
-		j.deplacerJoueur(Jeu.LEFT);
+		j.deplacerEntite(j.getJoueur(),Jeu.LEFT);
 		
 		assertEquals("La porte doit etre ouverte", true, p.estTraversable());
 	}
@@ -132,8 +132,8 @@ public class TestCase {
 		j.getLaby().setCase(p);
 		
 		//verif
-		j.deplacerJoueur(Jeu.LEFT); //la porte s'ouvre
-		j.deplacerJoueur(Jeu.LEFT); //puis se ferme
+		j.deplacerEntite(j.getJoueur(),Jeu.LEFT); //la porte s'ouvre
+		j.deplacerEntite(j.getJoueur(),Jeu.LEFT); //puis se ferme
 		
 		assertEquals("La porte doit etre fermee", false, p.estTraversable());
 	}

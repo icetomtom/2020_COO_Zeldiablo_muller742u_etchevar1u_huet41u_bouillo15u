@@ -64,7 +64,6 @@ public class Jeu implements JeuAbstract {
 	public void deplacerEntite(Entite e,int direction) {
 		int xNewPos = e.getPosX();
 		int yNewPos = e.getPosY();
-
 		switch(direction) {
 			case UP:
 				yNewPos--;
@@ -86,7 +85,6 @@ public class Jeu implements JeuAbstract {
 				break;
 
 		}
-		
 		//on recupere la case sur laquelle on veut avancer
 		Case c = this.laby.getCase(xNewPos, yNewPos);
 
