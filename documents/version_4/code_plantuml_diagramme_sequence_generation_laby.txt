@@ -1,0 +1,23 @@
+@startuml
+create "l : Labyrinthe" as l
+
+activate main
+main -> l : new Labyrinthe(longeur: int, largeur: int)
+activate l
+
+create "c : CaseGeneration" as c
+
+loop
+   l->c : murAlea()
+   activate c
+   c --> l : mur : int
+   deactivate c
+end
+
+
+
+l --> main
+
+deactivate l
+deactivate main
+@enduml
