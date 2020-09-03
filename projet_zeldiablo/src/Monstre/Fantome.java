@@ -1,11 +1,9 @@
 package Monstre;
 
-import Elements.Entite;
-
 /**
  * classe representant un monstre de type fantome
  */
-public class Fantome extends Entite {
+public class Fantome extends Monstre {
 	
 	/**
 	 * Constructeur avec un string en parametre
