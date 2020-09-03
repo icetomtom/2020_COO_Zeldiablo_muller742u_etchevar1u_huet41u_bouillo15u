@@ -12,6 +12,7 @@ public class Joueur extends Entite{
 	 *  attribut correspondant � la derniere direction du joueur
 	 */
 	private int direction;
+	
 	/**
 	 * contructeur vide de la classe joueur
 	 */
