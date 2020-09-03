@@ -6,8 +6,12 @@ public class Epee extends Arme {
 		this.degats = 6;
 	}
 
-	@Override
 	public String getNomObjet() {
 		return "Epee";
+	}
+
+	@Override
+	public boolean etreUtilise(Joueur j) {
+		return false;
 	}
 }

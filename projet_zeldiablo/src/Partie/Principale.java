@@ -34,6 +34,7 @@ public class Principale {
             dessin.addSprite(c);
         }
         
+        dessin.addSprite(j.getLaby().getAmulette());
         dessin.addSprite(j.getJoueur());
 
         MoteurGraphique m = new MoteurGraphique(j, dessin);
