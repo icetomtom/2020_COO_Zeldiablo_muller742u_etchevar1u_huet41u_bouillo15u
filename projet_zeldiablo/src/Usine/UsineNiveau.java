@@ -3,6 +3,7 @@ package Usine;
 import Elements.Entite;
 import Elements.Labyrinthe;
 import Elements.Niveau;
+import Monstre.Monstre;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -20,11 +21,11 @@ public class UsineNiveau {
     }
 
     public static Niveau getNiveau(HashMap<TYPE_MONSTRE, Integer> nb_monstres) {
-        List<Entite> entites = new ArrayList<>();
+        List<Monstre> entites = new ArrayList<>();
 
         for(TYPE_MONSTRE type : nb_monstres.keySet()) {
             for (int i=0; i<nb_monstres.get(type); i++)
-                entites.add(UsineMonstre.getMonstre(type));
+                entites.add((Monstre) UsineMonstre.getMonstre(type));
         }
 
         return new Niveau(new Labyrinthe(), entites);
