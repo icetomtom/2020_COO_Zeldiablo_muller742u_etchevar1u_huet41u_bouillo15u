@@ -175,6 +175,11 @@ public class Jeu implements JeuAbstract {
 		}
 	}
 	
+	/**
+	 * methode qui permet d'avoir une entite de la liste en fonction de son index
+	 * @param index entier correspondant a la place de lentite dans la liste
+	 * @return une entite 
+	 */
 	public Entite getEntite(int index) {
 		return this.entites.get(index);
 	}

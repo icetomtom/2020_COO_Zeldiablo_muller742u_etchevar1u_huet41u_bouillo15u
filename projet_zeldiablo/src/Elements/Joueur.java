@@ -59,6 +59,10 @@ public class Joueur extends Entite{
 		return this.direction;
 	}
 	
+	/**
+	 * attaque du joueur en focntion de sa direction
+	 * @param e correspond a l'entite qu'il attaque
+	 */
 	@Override
 	public void attaquer(Entite e) {
 		switch(this.getDirection()) {
