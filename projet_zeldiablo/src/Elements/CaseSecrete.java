@@ -37,7 +37,7 @@ public class CaseSecrete extends CaseAEffet {
 		}else if(type == Case.TYPE_OUVERTURE) {
 			this.effet = true;
 		}else {
-			throw new Error("Aie");
+			throw new Error("Le type ne correspond pas a cette case");
 		}
 	}
 
