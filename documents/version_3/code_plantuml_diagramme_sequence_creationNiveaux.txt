@@ -1,0 +1,17 @@
+@startuml
+main -> "NiveauFactory" as f : getNiveau(types_monstres)
+
+create "monstre : Entite" as m
+
+loop
+f -> m : new MonstreImmobile()
+end
+
+create "laby: Labyrinthe" as l
+f -> l : new Labyrinthe()
+
+create "niveau Niveau" as n
+f -> n : new Niveau(laby, monstres)
+
+f --> main : niveau
+@enduml
