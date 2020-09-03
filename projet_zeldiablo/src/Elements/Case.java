@@ -62,7 +62,7 @@ public class Case extends Sprite implements Serializable {
      * Constructeur
      */
     public Case(int x, int y, int type) {
-        super("entities_5_0");
+        super("entities_2_3");
         switch (type){
             case TYPE_VIDE:
                 break;
@@ -70,16 +70,15 @@ public class Case extends Sprite implements Serializable {
                 setNomImage("entities_0_1");
                 break;
             case TYPE_PIEGE:
-                setNomImage("entities_5_1");
                 break;
             case TYPE_PORTE:
             	setNomImage("entities_4_6");
             	break;
             case TYPE_OUVERTURE:
-            	setNomImage("entities_0_3");
+            	setNomImage("entities_2_6");
             	break;
             case TYPE_FERMETURE:
-            	setNomImage("entities_0_3");
+            	setNomImage("entities_1_6");
             	break;
             default:
                 throw new IllegalArgumentException("Type inconnu : " + type);

@@ -32,6 +32,7 @@ public class CasePiege extends CaseAEffet {
 		
 		if(!this.active) {
 			this.active = true;
+			this.setNomImage("entities_3_6");
 		}
 	}
 	
