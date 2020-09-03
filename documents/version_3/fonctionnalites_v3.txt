@@ -46,7 +46,7 @@
     - critere 2 : Il est possible de choisir le niveau au demarrage ( via args dans main )
 =======
 - Fonctionnalite 4: attaque monstre 
-- reponsable : huet41u
+- reponsable : huet41u / etchevar1u
 - descriptif texte : lorsqu'un monstre doit agir, si le monstre à côté du heros, alors il ne se deplace pas mais il attaque celui-ci
 	- critere 1 : lorsque le monstre est a cote du joueur, il attaque et ne se deplace pas. Par defaut, le heros perd 1 point de vie
 	- critere 2 : lorsque le monstre est loin du joueur il n'attaque pas mais se deplace
