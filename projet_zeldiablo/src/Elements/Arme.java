@@ -3,6 +3,7 @@ package Elements;
 public abstract class Arme implements Objet {
 	
 	protected int degats;
+	protected int resistance;
 	
 	
 	public String getType() {
@@ -16,5 +17,9 @@ public abstract class Arme implements Objet {
 	
 	public int getDegats(){
 		return degats;
+	}
+	
+	public int getResistance() {
+		return resistance;
 	}
 }
