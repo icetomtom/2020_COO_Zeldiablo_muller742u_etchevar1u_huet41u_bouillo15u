@@ -99,7 +99,7 @@ public class Entite extends Sprite {
 	 * @param d degats subis
 	 */
 	public void subirDegats(int d) {
-		vie = vie -d;
+		vie = vie - d;
 		if (vie<=0) {
 			vie =0;
 			this.vivant=false;
@@ -115,7 +115,7 @@ public class Entite extends Sprite {
      * @return bool�en si le personnage est mort
      */
     public boolean etreMort() {
-        return this.vivant;
+        return !this.vivant;
     }
     
     /**
@@ -160,6 +160,6 @@ public class Entite extends Sprite {
      * deplacement aleatoire d'un monstre
      */
     public int deplacementAleatoire() {
-    	return (int)(Math.random())*4;
+    	return (int)(Math.random()*4);
     }
 }

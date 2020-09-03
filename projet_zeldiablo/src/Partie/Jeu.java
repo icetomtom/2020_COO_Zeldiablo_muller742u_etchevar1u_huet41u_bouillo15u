@@ -131,7 +131,7 @@ public class Jeu implements JeuAbstract {
 			if(e.getClass().isInstance(joueur)) {
 				this.joueur.seDeplacer(xNewPos, yNewPos);
 				this.joueur.setDirection(direction);
-				
+ 
 				if(xNewPos == this.laby.getEntreeX() && yNewPos == this.laby.getEntreeY() 
 						&& this.laby.getAmulette().etreUtilise(this.joueur)) {
 					this.fini = true;
@@ -187,7 +187,8 @@ public class Jeu implements JeuAbstract {
 			}
 		}
 		
-//		this.actionMonstre();
+		this.actionMonstre();
+		morts();
 
 		if(this.fini) {
 			System.out.println("tu as fini gg");
@@ -213,9 +214,8 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet de faire combattre le joueur si un monstre est en face de lui et dans sa direction
 	 */
 	public void combat() {
-		Joueur j = (Joueur) entites.get(0);
 		for(int i =1;i<entites.size();i++) {
-			j.attaquer(entites.get(i));
+			joueur.attaquer(entites.get(i));
 		}		
 	}
 	
@@ -223,16 +223,18 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur ou alors de se deplacer
 	 */
 	public void actionMonstre() {
-		Joueur j = (Joueur)entites.get(0);
-		for(int i =1;i<entites.size();i++) {
+		Joueur j = joueur;
+		for(int i =0;i<entites.size();i++) {
+			if(!(entites.get(i) instanceof Monstre))
+				continue;
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-				entites.get(i).attaquer(entites.get(0));
+				entites.get(i).attaquer(joueur);
 			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()-1) {
-				entites.get(i).attaquer(entites.get(0));
+				entites.get(i).attaquer(joueur);
 			}else if(entites.get(i).getPosX()==j.getPosX()-1&& entites.get(i).getPosY()==j.getPosY()) {
-				entites.get(i).attaquer(entites.get(0));
+				entites.get(i).attaquer(joueur);
 			}else if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
-				entites.get(i).attaquer(entites.get(0));
+				entites.get(i).attaquer(joueur);
 			}else {
 				this.deplacerEntite(entites.get(i), entites.get(i).deplacementAleatoire());
 			}
@@ -256,14 +258,10 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet de supprimer de la liste des entites les monstre ou joueur si ils sont morts
 	 */
 	public void morts() {
-		if(entites.get(0).etreMort()) {
+		if(joueur.etreMort()) {
 			this.fini=true;
 		}
-		for(int i=1;i<entites.size();i++) {
-			if(entites.get(i).etreMort()) {
-				entites.remove(i);
-			}
-		}
+		entites.removeIf(Entite::etreMort);
 	}
 
 	public List<Sprite> getSprites() {
