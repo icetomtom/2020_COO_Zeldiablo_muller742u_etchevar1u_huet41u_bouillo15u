@@ -19,7 +19,7 @@ public class Principale {
 
         CasePiege cp = new CasePiege(1, 1);
         Porte p = new Porte(5, 6);
-        CaseSecrete o = new CaseSecrete(8, 8, p, Case.TYPE_OUVERTURE);
+        CaseSecrete o = new CaseSecrete(8, 6, p, Case.TYPE_OUVERTURE);
         CaseSecrete f = new CaseSecrete(8, 7, p, Case.TYPE_FERMETURE);
 
         j.getLaby().setCase(cp);
