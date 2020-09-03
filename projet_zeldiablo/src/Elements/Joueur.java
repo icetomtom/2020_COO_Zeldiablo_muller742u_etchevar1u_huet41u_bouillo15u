@@ -12,7 +12,6 @@ import Partie.Jeu;
 public class Joueur extends Entite{
 	
 	private List<Objet> inventaire;
-	public static final int TAILLE_INVENTAIRE = 6;
 
 	
 	/**
