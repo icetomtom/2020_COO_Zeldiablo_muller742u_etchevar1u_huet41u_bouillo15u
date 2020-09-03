@@ -1,5 +1,8 @@
 package Elements;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import Partie.Jeu;
 
 /**
@@ -8,10 +11,14 @@ import Partie.Jeu;
  */
 public class Joueur extends Entite{
 	
+	private List<Objet> inventaire;
+
+	
 	/**
 	 *  attribut correspondant � la derniere direction du joueur
 	 */
 	private int direction;
+	
 	/**
 	 * contructeur vide de la classe joueur
 	 */
@@ -29,8 +36,41 @@ public class Joueur extends Entite{
 		this.vie = 10;
 		this.x=x;
 		this.y=y;
+		this.inventaire = new ArrayList<Objet>();
+        this.inventaire.add(new Epee());
 
 	}
+	/**
+	 * methode qui sert a utiliser un objet
+	 * @param ob
+	 */
+	
+	public void ajouterObjet(Objet ob) {
+		this.inventaire.add(ob);
+	}
+	
+	public void utiliserObjet(int ob) {
+		if(this.inventaire.size() > ob) {
+			Objet obj = this.inventaire.get(ob);
+			obj.etreUtilise(this);
+			this.inventaire.remove(ob);
+		}
+	}
+	
+	/**
+	 * methode qui affiche l inventaire
+	 */
+	public void afficherInventaire() {
+		for(int i=0;i<this.inventaire.size();i++) {
+			System.out.println(this.inventaire.get(i).getNomObjet());
+		}
+	}
+	
+	public void ramasser(Objet o) {
+		if(o != null)
+			this.inventaire.add(o);
+	}
+	
 	
 	/**
 	 * Methode qui sert � deplacer le jouer 
@@ -87,5 +127,10 @@ public class Joueur extends Entite{
 			break;
 		}
 	}
+	
+	public List<Objet> getInventaire() {
+		return this.inventaire;
+	}
+	
 
 }

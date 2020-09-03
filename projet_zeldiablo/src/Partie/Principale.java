@@ -31,6 +31,7 @@ public class Principale {
         for(Case c : j.getLaby().getCases()) {
             dessin.addSprite(c);
         }
+        
         dessin.addSprite(j.getJoueur());
 
         MoteurGraphique m = new MoteurGraphique(j, dessin);

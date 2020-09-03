@@ -5,8 +5,8 @@ public abstract class Arme implements Objet {
 	protected int degats;
 	protected int resistance;
 	
-	
-	public String getType() {
+	@Override
+	public String getNomObjet() {
 		return "Arme";
 	}
 

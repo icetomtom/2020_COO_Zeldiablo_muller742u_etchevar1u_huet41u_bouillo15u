@@ -1,12 +1,10 @@
 package Monstre;
 
-import Elements.Entite;
-
 /**
  * 
  * classe representant un monstre immobile
  */
-public class MonstreImmobile extends Entite{
+public class MonstreImmobile extends Monstre{
 	
 	/**
 	 * Constructeur avec un string en parametre

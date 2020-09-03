@@ -20,6 +20,11 @@ public class Labyrinthe implements Serializable {
      * Point d'appartion du joueur
      */
     private int entree_x, entree_y;
+    
+    /**
+     * amulette du labyrinthe
+     */
+    private Amulette amulette;
 
     /**
      * Cases du labyrinthe
@@ -41,6 +46,8 @@ public class Labyrinthe implements Serializable {
         this.cases = new ArrayList<Case>(this.longeur * this.largeur);
 
         chargerCasesRecursivement();
+        this.getCase(entree_x, entree_y).setType(Case.TYPE_ENTREE);
+        this.amulette = new Amulette("entities_6_8", this.getNoeuds().get(1).getPosX(), this.getNoeuds().get(1).getPosY());
     }
 
     /**
@@ -242,6 +249,10 @@ public class Labyrinthe implements Serializable {
             }
         }
     }
+
+	public Amulette getAmulette() {
+		return this.amulette;
+	}
 
 }
 
