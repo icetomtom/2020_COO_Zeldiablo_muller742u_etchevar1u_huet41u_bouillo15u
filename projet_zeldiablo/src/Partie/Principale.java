@@ -16,10 +16,6 @@ public class Principale {
 
         Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
         
-        CaseSecrete cs = new CaseSecrete(2, 3, new Porte(4, 6), Case.TYPE_OUVERTURE);
-        
-        j.getLaby().setCase(cs);
-        
         DessinPartie dessin = new DessinPartie();
         for(Case c : j.getLaby().getCases()) {
             dessin.addSprite(c);
