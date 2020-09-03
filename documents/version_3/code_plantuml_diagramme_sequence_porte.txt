@@ -1,0 +1,31 @@
+@startuml
+
+activate Jeu
+
+Jeu -> Labyrinthe : getCase()
+activate Labyrinthe
+Labyrinthe --> Jeu : c : Case
+deactivate Labyrinthe
+
+Jeu -> Case : getType()
+activate Case
+Case --> Jeu : type : int
+deactivate Case
+
+alt si c'est une porte
+    Jeu -> Porte : estOuverte()
+    activate Porte
+    Porte --> Jeu : ouverte : booleen
+    deactivate Porte
+end
+
+alt si la case est traversable
+    Jeu -> Joueur : deplacer(int x, int y)
+    activate Joueur
+    Joueur --> Jeu
+    deactivate Joueur
+end
+
+deactivate Jeu
+
+@enduml
