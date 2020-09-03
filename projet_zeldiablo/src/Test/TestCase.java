@@ -56,7 +56,7 @@ public class TestCase {
 	public void test_Porte_fermee() {
 		//initialisation
 		Porte p = new Porte(1, 1);
-		CaseSecrete cs = new CaseSecrete(8, 8, p);
+		CaseSecrete cs = new CaseSecrete(8, 8, p, Case.TYPE_OUVERTURE);
 		Jeu j = new Jeu();
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(p);
@@ -81,7 +81,7 @@ public class TestCase {
 	public void test_Porte_ouverte() {
 		//initialisation
 		Porte p = new Porte(1, 1);
-		CaseSecrete cs = new CaseSecrete(3, 4, p);
+		CaseSecrete cs = new CaseSecrete(3, 4, p, Case.TYPE_OUVERTURE);
 		Jeu j = new Jeu();
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(p);
@@ -97,5 +97,44 @@ public class TestCase {
 		
 		//le joueur doit pouvoir traverser la porte
 		assertEquals("L'ordonnee du joueur doit etre 1", 1, j.getJoueur().getPosY());
+	}
+	
+	/**
+	 * test de l'ouverture d'une porte
+	 */
+	@Test
+	public void test_ouvrir_porte() {
+		//initialisation
+		Porte p = new Porte(1, 1);
+		CaseSecrete cs = new CaseSecrete(3, 4, p, Case.TYPE_OUVERTURE);
+		Jeu j = new Jeu();
+		j.getLaby().setCase(cs);
+		j.getLaby().setCase(p);
+		
+		//verif
+		j.deplacerJoueur(Jeu.LEFT);
+		
+		assertEquals("La porte doit etre ouverte", true, p.estTraversable());
+	}
+	
+	/**
+	 * test de la fermeture d'une porte
+	 */
+	@Test
+	public void test_fermer_porte() {
+		//initialisation
+		Porte p = new Porte(1, 1);
+		CaseSecrete cs = new CaseSecrete(3, 4, p, Case.TYPE_OUVERTURE);
+		CaseSecrete cs1 = new CaseSecrete(2, 4, p, Case.TYPE_FERMETURE);
+		Jeu j = new Jeu();
+		j.getLaby().setCase(cs);
+		j.getLaby().setCase(cs1);
+		j.getLaby().setCase(p);
+		
+		//verif
+		j.deplacerJoueur(Jeu.LEFT); //la porte s'ouvre
+		j.deplacerJoueur(Jeu.LEFT); //puis se ferme
+		
+		assertEquals("La porte doit etre fermee", false, p.estTraversable());
 	}
 }
