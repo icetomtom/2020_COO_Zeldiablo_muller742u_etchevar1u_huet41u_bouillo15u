@@ -81,7 +81,7 @@ public class TestCase {
 	public void test_Porte_ouverte() {
 		//initialisation
 		Porte p = new Porte(1, 1);
-		CaseSecrete cs = new CaseSecrete(3, 5, p);
+		CaseSecrete cs = new CaseSecrete(3, 4, p);
 		Jeu j = new Jeu();
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(p);
