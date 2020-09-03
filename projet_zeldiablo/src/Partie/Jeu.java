@@ -96,10 +96,6 @@ public class Jeu implements JeuAbstract {
 				this.joueur.seDeplacer(xNewPos, yNewPos);
 				this.joueur.setDirection(direction);
 				
-				if(xNewPos == this.laby.getAmulette().getPosX() && yNewPos == this.laby.getAmulette().getPosY()) {
-					joueur.ramasser(this.laby.getAmulette());
-				}
-				
 				if(xNewPos == this.laby.getEntreeX() && yNewPos == this.laby.getEntreeY() 
 						&& this.laby.getAmulette().etreUtilise(this.joueur)) {
 					this.fini = true;
@@ -148,7 +144,13 @@ public class Jeu implements JeuAbstract {
 			this.deplacerEntite(joueur,RIGHT);
 		}if(clavier.isPressed(KeyEvent.VK_SPACE)) {
 			this.combat();
+		}if(clavier.getTyped(KeyEvent.VK_E)) {
+			if(this.joueur.getPosX() == this.laby.getAmulette().getPosX()
+					&& this.joueur.getPosY() == this.laby.getAmulette().getPosY()) {
+				this.joueur.ramasser(this.laby.getAmulette());
+			}
 		}
+		
 //		this.actionMonstre();
 
 		if(this.fini) {
