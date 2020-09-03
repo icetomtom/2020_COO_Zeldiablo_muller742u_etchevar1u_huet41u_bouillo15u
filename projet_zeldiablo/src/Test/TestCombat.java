@@ -14,28 +14,45 @@ import Partie.Jeu;
 
 public class TestCombat {
 	
+	/**
+	 * test qui permet de savoir si le joueur attaque bien le monstre en face de lui
+	 */
 	@Test
 	public void testCombatJoueur() {
 		Jeu j= new Jeu();
 		
 		Entite troll = new Troll("leo");
 		
-		System.out.println(j.getJoueur().getPosX());
-		System.out.println(j.getJoueur().getPosY());
+		
 		j.deplacerJoueur(Jeu.UP);
-		System.out.println(j.getJoueur().getPosX());
-		System.out.println(j.getJoueur().getPosY());
-		System.out.println(j.getJoueur().getDirection());
 		j.ajouter(troll);
 		j.getEntite(1).setPosX(5);
 		j.getEntite(1).setPosY(3);
 		
-		j.ajouter(new Troll("leo2"));
-		j.getEntite(2).setPosX(5);
-		j.getEntite(2).setPosY(7);
 		
 		j.combat();
 	
+		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(1).getVie());
+	}
+	
+	/**
+	 * test pour savoir si le joueur attaque bien d'une case et dans une bonne direction
+	 */
+	@Test
+	public void testCombatPlusieursMonstre() {
+		Jeu j= new Jeu();
+		
+		Entite troll = new Troll("leo");
+		
+		
+		j.deplacerJoueur(Jeu.UP);
+		j.ajouter(troll);
+		j.getEntite(1).setPosX(5);
+		j.getEntite(1).setPosY(3);
+		
+		
+		j.combat();
+		
 		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(1).getVie());
 		assertEquals("la direction n'est pas bonne",4,j.getEntite(2).getVie());
 		
@@ -45,6 +62,9 @@ public class TestCombat {
 		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(2).getVie());
 	}
 	
+	/**
+	 * test qui permet de savoir si les monstres attaquent tous s'il le peuvent et dans toutes les directions
+	 */
 	@Test
 	public void testCombatMonstre() {
 		Jeu j = new Jeu();
@@ -54,12 +74,22 @@ public class TestCombat {
 		j.getEntite(1).setPosY(6);
 		j.ajouter(new Troll("leo2"));
 		
-		j.getEntite(2).setPosX(5);
-		j.getEntite(2).setPosY(4);
+		j.getEntite(2).setPosX(4);
+		j.getEntite(2).setPosY(5);
+		
+		j.ajouter(new Troll("leo3"));
+		
+		j.getEntite(3).setPosX(5);
+		j.getEntite(3).setPosY(4);
+		
+		j.ajouter(new Troll("leo4"));
+		
+		j.getEntite(2).setPosX(6);
+		j.getEntite(2).setPosY(5);
 		
 		j.attaqueMonstre();
 		
-		assertEquals("Le joueur ne s'est pas fait attaque",8,j.getJoueur().getVie());
+		assertEquals("Le joueur ne s'est pas fait attaque",6,j.getJoueur().getVie());
 		
 	}
 	public static void main(String[] args) {
