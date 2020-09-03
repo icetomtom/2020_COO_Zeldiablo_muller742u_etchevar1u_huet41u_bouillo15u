@@ -186,4 +186,15 @@ public class Jeu implements JeuAbstract {
 		return this.entites.get(index);
 	}
 	
+	/**
+	 * methode qui permet de supprimer de la liste des entites les monstre ou joueur si ils sont morts
+	 */
+	public void morts() {
+		for(int i=0;i<entites.size();i++) {
+			if(entites.get(i).etreMort()) {
+				entites.remove(i);
+			}
+		}
+	}
+	
 }
