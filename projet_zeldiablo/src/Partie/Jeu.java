@@ -33,6 +33,9 @@ public class Jeu implements JeuAbstract {
 	 * attribut qui represente le labyrinthe
 	 */
 	private Labyrinthe laby;
+	private long start=0;
+
+
 
 	/**
 	 * constantes de direction
@@ -42,10 +45,12 @@ public class Jeu implements JeuAbstract {
 	public static final int LEFT = 2;
 	public static final int RIGHT = 3;
 
+
 	/**
 	 * constructeur par defaut
 	 */
 	public Jeu() {
+
 		this.laby = new Labyrinthe(10, 10);
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 		this.entites = new ArrayList<>();
@@ -186,8 +191,17 @@ public class Jeu implements JeuAbstract {
 				this.joueur.ramasser(this.laby.getAmulette());
 			}
 		}
-		
-		this.actionMonstre();
+		;
+		long tempsEntre = System.currentTimeMillis() - start  ;
+
+
+		if((tempsEntre/1000)>=1){
+			this.actionMonstre();
+			start = System.currentTimeMillis();
+		}
+
+
+
 		morts();
 
 		if(this.fini) {
