@@ -7,3 +7,24 @@ description :Lorsqu'un monstre n'a plus de points de vie, il meurt et disparait 
    - critere 1: les monstre ont par defaut 3 points de vie et ne peuvent pas avoir de points de vie negatifs
    - critere 2: lorsqu'un monstre par defaut est touche trois fois, il disparait
    - critere 3: le heros attaque avant le monstre, le monstre meurt, le monstre n'a pas le temps de repliquer et disparait avant
+
+Fonctionnalite 2 : Case qui ferme une porte
+responsable : muller742u
+description texte : case qui ferme une porte/passage secret déjà ouvert
+- criteres de validation :
+  - critère 1 : cette case a l'effet inverse que celle qui ouvre les portes
+  - critère 2 : une porte fermee reste fermee
+  - critere 3 : une meme porte peut etre manipulee par plusieurs case qui l'ouvre ou la ferme
+
+
+
+* realisation
+
+- Classe CaseSecrete
+- reponsable : muller742u
+
+- Classe TestCase
+- responsable : muller742u
+
+- Modification des sprites
+- responsable : muller742u
