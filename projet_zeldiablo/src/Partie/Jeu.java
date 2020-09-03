@@ -13,6 +13,7 @@ import Usine.UsineMonstre;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
+import moteurJeu.sprite.Sprite;
 
 /**
  *
@@ -206,6 +207,10 @@ public class Jeu implements JeuAbstract {
 	 */
 	public Entite getEntite(int index) {
 		return this.entites.get(index);
+	}
+	
+	public void enleverSprite(Sprite s) {
+		
 	}
 	
 	/**

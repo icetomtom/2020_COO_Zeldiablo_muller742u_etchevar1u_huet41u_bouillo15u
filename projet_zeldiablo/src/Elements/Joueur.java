@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Partie.Jeu;
+import moteurJeu.sprite.Sprite;
 
 /**
  * 
@@ -67,8 +68,12 @@ public class Joueur extends Entite{
 	}
 	
 	public void ramasser(Objet o) {
-		if(o != null)
+		if(o != null) {
 			this.inventaire.add(o);
+			if(o instanceof Sprite) {
+				((Sprite)o).setNomImage("entities_2_3");
+			}
+		}
 	}
 	
 	

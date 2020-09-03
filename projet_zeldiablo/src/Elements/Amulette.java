@@ -2,7 +2,7 @@ package Elements;
 
 import moteurJeu.sprite.Sprite;
 
-public class Amulette extends Sprite implements Objet {
+public class Amulette extends Sprite implements Objet{
 	
 	public Amulette(String nom) {
 		super(nom);
@@ -10,6 +10,8 @@ public class Amulette extends Sprite implements Objet {
 	
 	public Amulette(String nom, int x, int y) {
 		super(nom);
+		this.x = x;
+		this.y = y;
 	}
 
 	private int x, y;

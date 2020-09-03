@@ -1,8 +1,7 @@
 package Elements;
 
 public interface Objet {
+	public abstract String getNomObjet();
 
-	public String getNomObjet();
-
-	public boolean etreUtilise(Joueur j);
+	public abstract boolean etreUtilise(Joueur j);
 }
