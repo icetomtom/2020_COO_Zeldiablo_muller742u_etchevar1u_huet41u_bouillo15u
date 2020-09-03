@@ -6,6 +6,11 @@ package Elements;
  */
 public class CasePiege extends CaseAEffet {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2896770426808755699L;
+	
+	/**
 	 * attribut permettant de savoir si le piege a deja ete declenche une fois
 	 */
 	private boolean active;
