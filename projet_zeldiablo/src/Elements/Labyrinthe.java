@@ -226,8 +226,8 @@ public class Labyrinthe implements Serializable {
         // Transform le labyrinthe genere avec des cases pour les murs
         this.cases.clear();
         Case c = null;
-        for(int j=0; j<largeur-largeur%2; j++) {
-            for(int i=0; i<longeur-largeur%2; i++) {
+        for(int j=0; j<largeur; j++) {
+            for(int i=0; i<longeur; i++) {
                 // Cherche le type de la case
                 int type = Case.TYPE_MUR;
                 // L'entree est forcement vide
