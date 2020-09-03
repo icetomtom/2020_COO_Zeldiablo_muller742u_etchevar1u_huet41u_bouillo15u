@@ -61,9 +61,9 @@ public class Jeu implements JeuAbstract {
 	 *
 	 * @param direction la direction prise par le joueur (direction cardinale representee par un entier)
 	 */
-	public void deplacerJoueur(int direction) {
-		int xNewPos = this.joueur.getPosX();
-		int yNewPos = this.joueur.getPosY();
+	public void deplacerEntite(Entite e,int direction) {
+		int xNewPos = e.getPosX();
+		int yNewPos = e.getPosY();
 
 		switch(direction) {
 			case UP:
@@ -92,11 +92,16 @@ public class Jeu implements JeuAbstract {
 
 		//le joueur ne peut avancer que si la case est traversable
 		if(c.estTraversable()) {
-			this.joueur.seDeplacer(xNewPos, yNewPos);
-			this.joueur.setDirection(direction);
+			if(e.getClass().isInstance(joueur)) {
+				this.joueur.seDeplacer(xNewPos, yNewPos);
+				this.joueur.setDirection(direction);
+			}else {
+				e.seDeplacer(direction);
+			}
+			
 			
 			if(c instanceof CaseAEffet) {
-				((CaseAEffet)c).activerEffet(this.joueur);
+				((CaseAEffet)c).activerEffet(e);
 			}
 		}
 	}
@@ -119,19 +124,19 @@ public class Jeu implements JeuAbstract {
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
 		if(clavier.isPressed(KeyEvent.VK_UP)) {
-			this.deplacerJoueur(UP);
+			this.deplacerEntite(joueur,UP);
 		}
 		
 		if(clavier.isPressed(KeyEvent.VK_DOWN)) {
-			this.deplacerJoueur(DOWN);
+			this.deplacerEntite(joueur,DOWN);
 		}
 		
 		if(clavier.isPressed(KeyEvent.VK_LEFT)) {
-			this.deplacerJoueur(LEFT);
+			this.deplacerEntite(joueur,LEFT);
 		}
 		
 		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
-			this.deplacerJoueur(RIGHT);
+			this.deplacerEntite(joueur,RIGHT);
 		}if(clavier.isPressed(KeyEvent.VK_SPACE)) {
 			this.combat();
 		}
@@ -178,7 +183,7 @@ public class Jeu implements JeuAbstract {
 			}else if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
 				entites.get(i).attaquer(entites.get(0));
 			}else {
-				entites.get(i).deplacementAleatoire();
+				this.deplacerEntite(entites.get(i), entites.get(i).deplacementAleatoire());
 			}
 		}
 	}

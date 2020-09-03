@@ -159,7 +159,7 @@ public class Entite extends Sprite {
     /**
      * deplacement aleatoire d'un monstre
      */
-    public void deplacementAleatoire() {
-    	this.seDeplacer((int)(Math.random())*4);
+    public int deplacementAleatoire() {
+    	return (int)(Math.random())*4;
     }
 }
