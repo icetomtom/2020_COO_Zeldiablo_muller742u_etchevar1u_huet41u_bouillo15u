@@ -1,5 +1,6 @@
 package Elements;
 
+import Partie.Jeu;
 import moteurJeu.sprite.Sprite;
 
 /**
@@ -56,6 +57,32 @@ public class Joueur extends Entite{
 	 */
 	public int getDirection() {
 		return this.direction;
+	}
+	
+	@Override
+	public void attaquer(Entite e) {
+		switch(this.getDirection()) {
+		case Jeu.UP:
+			if(e.getPosX()==this.getPosX()&&e.getPosY()==this.getPosY()-1) {
+				e.subirDegats(this.degats);
+			}
+				break;
+		case Jeu.LEFT:
+			if(e.getPosX()==this.getPosX()-1 && e.getPosY()==this.getPosY()) {
+				e.subirDegats(this.degats);
+			}
+			break;
+		case Jeu.RIGHT:
+			if(e.getPosX()==this.getPosX()+1&& e.getPosY()==this.getPosY()) {
+				e.subirDegats(this.degats);		
+			}
+			break;
+		case Jeu.DOWN:
+			if(e.getPosX()==this.getPosX()&& e.getPosY()==this.getPosY()+1) {
+				e.subirDegats(this.degats);
+			}
+			break;
+		}
 	}
 
 }
