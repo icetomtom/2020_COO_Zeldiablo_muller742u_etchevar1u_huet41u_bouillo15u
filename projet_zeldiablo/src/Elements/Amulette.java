@@ -1,7 +1,21 @@
 package Elements;
 
-public class Amulette implements Objet {
+import moteurJeu.sprite.Sprite;
 
+public class Amulette extends Sprite implements Objet {
+	
+	public Amulette(String nom) {
+		super(nom);
+	}
+	
+	public Amulette(String nom, int x, int y) {
+		super(nom);
+	}
+
+	private int x, y;
+	
+	
+	
 	@Override
 	public String getNomObjet() {
 		return "Amulette";
@@ -9,8 +23,17 @@ public class Amulette implements Objet {
 
 	@Override
 	public boolean etreUtilise(Joueur j) {
-		// TODO Auto-generated method stub
-		return false;
+		return j.getInventaire().contains(this);
+	}
+
+	@Override
+	public int getPosX() {
+		return this.x;
+	}
+
+	@Override
+	public int getPosY() {
+		return this.y;
 	}
 
 }

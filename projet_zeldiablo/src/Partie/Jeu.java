@@ -93,6 +93,15 @@ public class Jeu implements JeuAbstract {
 			if(e.getClass().isInstance(joueur)) {
 				this.joueur.seDeplacer(xNewPos, yNewPos);
 				this.joueur.setDirection(direction);
+				
+				if(xNewPos == this.laby.getAmulette().getPosX() && yNewPos == this.laby.getAmulette().getPosY()) {
+					joueur.ramasser(this.laby.getAmulette());
+				}
+				
+				if(xNewPos == this.laby.getEntreeX() && yNewPos == this.laby.getEntreeY() 
+						&& this.laby.getAmulette().etreUtilise(this.joueur)) {
+					this.fini = true;
+				}
 			}else {
 				e.seDeplacer(direction);
 			}
@@ -140,6 +149,10 @@ public class Jeu implements JeuAbstract {
 		}
 //		this.actionMonstre();
 
+		if(this.fini) {
+			System.out.println("tu as fini gg");
+		}
+		
 		return null;
 	}
 
