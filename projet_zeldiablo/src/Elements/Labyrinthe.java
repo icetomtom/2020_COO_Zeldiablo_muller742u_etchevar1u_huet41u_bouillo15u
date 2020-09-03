@@ -2,13 +2,14 @@ package Elements;
 
 import moteurJeu.sprite.Sprite;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Classe représentant un labyrinthe
  */
-public class Labyrinthe {
+public class Labyrinthe implements Serializable {
 
     /**
      * Dimensions du labyrinthe
@@ -31,8 +32,8 @@ public class Labyrinthe {
     public Labyrinthe() {
         this.longeur = 10;
         this.largeur = 10;
-        this.entree_x = this.longeur / 2;
-        this.entree_y = this.largeur / 2;
+        this.entree_x = (this.longeur-1) / 2;
+        this.entree_y = (this.largeur-1) / 2;
         this.cases = new ArrayList<Case>(this.longeur * this.largeur);
 
         chargerNiveauParDefaut();
