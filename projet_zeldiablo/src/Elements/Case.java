@@ -59,34 +59,20 @@ public class Case extends Sprite implements Serializable {
     public static final int TYPE_FERMETURE = 6;
     
     /**
+     * Type representant l'entree
+     */
+    public static final int TYPE_ENTREE = 7;
+    
+    /**
      * Constructeur
      */
     public Case(int x, int y, int type) {
         super("entities_2_3");
-        switch (type){
-            case TYPE_VIDE:
-                break;
-            case TYPE_MUR:
-                setNomImage("entities_0_1");
-                break;
-            case TYPE_PIEGE:
-                break;
-            case TYPE_PORTE:
-            	setNomImage("entities_4_6");
-            	break;
-            case TYPE_OUVERTURE:
-            	setNomImage("entities_2_6");
-            	break;
-            case TYPE_FERMETURE:
-            	setNomImage("entities_1_6");
-            	break;
-            default:
-                throw new IllegalArgumentException("Type inconnu : " + type);
-        }
+        
+        this.setType(type);
 
         this.x = x;
         this.y = y;
-        this.type = type;
         
         if(type == TYPE_MUR || type == TYPE_PORTE) {
         	this.traversable = false;
@@ -129,5 +115,29 @@ public class Case extends Sprite implements Serializable {
     
     public void setType(int newType) {
 		this.type = newType;
+		
+		switch (type){
+        case TYPE_VIDE:
+            break;
+        case TYPE_MUR:
+            setNomImage("entities_0_1");
+            break;
+        case TYPE_PIEGE:
+            break;
+        case TYPE_PORTE:
+        	setNomImage("entities_4_6");
+        	break;
+        case TYPE_OUVERTURE:
+        	setNomImage("entities_2_6");
+        	break;
+        case TYPE_FERMETURE:
+        	setNomImage("entities_1_6");
+        	break;
+        case TYPE_ENTREE:
+        	setNomImage("entities_0_6");
+        	break;
+        default:
+            throw new IllegalArgumentException("Type inconnu : " + type);
+    }
 	}
 }

@@ -41,6 +41,7 @@ public class Labyrinthe implements Serializable {
         this.cases = new ArrayList<Case>(this.longeur * this.largeur);
 
         chargerCasesRecursivement();
+        this.getCase(entree_x, entree_y).setType(Case.TYPE_ENTREE);
     }
 
     /**
