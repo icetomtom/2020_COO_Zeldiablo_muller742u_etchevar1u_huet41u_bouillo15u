@@ -1,0 +1,155 @@
+@startuml
+title Zeldiablo 3eme Itération
+
+'''classes
+class Jeu{
+  + Jeu()
+  + déplacer(int direction)
+  + getJoueur(): Joueur
+  + getLaby() : Labyrinthe
+
+
+}
+
+abstract class Sprite {
+  - nomImage : String
+
+  + Sprite(nom : String)
+  + dessiner(Graphics g) : void
+
+  + abstract getPosX() : int
+  + abstract getPosY() : int
+}
+
+class Entite{
+   # x : int
+   # y : int
+   # vie : int
+
+   + Entite(String nom)
+   + getPosX():int
+   + getPosY():int
+   + setPosX(int x): void
+   + setPosY(int y): void
+   + getVie(): int
+}
+
+class Joueur{
+  - xPos : int
+  - yPos : int
+  + Joueur()
+  + Joueur(int x, int y)
+  + seDéplacer(int x,y)
+  + getPosX() : int
+  + getPosY() : int
+  + setPosX(int x): void
+  + setPosY(int y) : void
+}
+Joueur --^ Entite
+Entite --^ Sprite
+
+class Labyrinthe {
+    -entree_x : int
+    -entree_y : int
+    -longeur : int
+    -largeur : int
+    -cases : ArrayList<Case>
+
+    + Labyrinthe()
+    + getEntreeX() : int
+    + getEntreeY() : int
+    + getEntreeLongeur() : int
+    + getEntreeLargeur() : int
+    + getCase(int x, int y) : Case
+}
+
+class Case {
+    -x : int
+    -y : int
+    -type : int
+    -traversable : booleen
+
+    + Case()
+    + getType() : Type
+    + getX() : int
+    + getY() : int
+    + estTraversable() : booleen
+}
+
+class CaseAEffet{
+   + CaseAEffet(int x, int y, int type)
+   + activerEffet(Entite e): void
+}
+
+class CasePiege {
+   - active : boolean
+   + CasePiege(int x,int y,int type)
+   + activerEffet(Entite e) : void
+   + estActive(): boolean
+}
+
+
+class Fantome{
+   + Fantome(String nom)
+   + seDeplacer(int x, int y): void
+}
+
+class Troll{
+   + Troll(String nom)
+   + seDeplacer(int x, int y): void
+}
+
+class MonstreImmobile{
+   + MonstreImmobile(String nom)
+}
+
+class DessinPartie {
+  - sprites : List<Sprite>
+  + DessinPartie.TAILLE_CASE : int
+
+  + dessiner(img: BufferedImage) : void
+}
+
+class UsineMonstre {
++ getMonstre(type : int) : Monstre
+}
+
+class UsineNiveau {
++ getNiveau(fichier : string) : Niveau
++ getNiveau(monstres : HashMap) : Niveau
++ getNiveauNbMonstresAlea() : Niveau
+}
+
+class Niveau {
++ Niveau(laby : Labyrinthe, monstres : List<Entite> )
++ getLabyrinthe() : Labyrinthe
++ getMonstres() : List<Entite>
+}
+
+class CaseSecrete {
+  + activerEffet(Entite e)
+}
+
+class Porte {
+  + ouvrirPorte()
+}
+
+Niveau "*" --> "1" Labyrinthe : labyrinthe
+Niveau "*" --> "*" Entite : monstres
+
+Fantome --^ Entite
+MonstreImmobile --^ Entite
+Troll --^ Entite
+CasePiege --^ CaseAEffet
+CaseSecrete --^ CaseAEffet
+Porte --^ Case
+CaseAEffet --^ Case
+
+'''relations
+DessinPartie "*" --> "*" Sprite : -sprites
+Jeu "1" --> "1" Joueur : - joueur
+Jeu "1" --> "*" Entite: - entites
+Jeu "1" --> "1" Labyrinthe : - laby
+Case "*" <-"1" Labyrinthe : - cases
+CaseSecrete "1" --> "1" Porte : -porteLiee
+@enduml
