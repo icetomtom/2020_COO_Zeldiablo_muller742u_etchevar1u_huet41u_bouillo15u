@@ -153,35 +153,14 @@ public class Jeu implements JeuAbstract {
 	public void combat() {
 		Joueur j = (Joueur) entites.get(0);
 		for(int i =1;i<entites.size();i++) {
-			switch(j.getDirection()) {
-			case UP:
-				if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()-1) {
-					j.attaquer(entites.get(i));
-				}
-					break;
-			case LEFT:
-				if(entites.get(i).getPosX()==j.getPosX()-1 && entites.get(i).getPosY()==j.getPosY()) {
-					j.attaquer(entites.get(i));
-				}
-				break;
-			case RIGHT:
-				if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
-					j.attaquer(entites.get(i));		
-				}
-				break;
-			case DOWN:
-				if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
-					j.attaquer(entites.get(i));
-				}
-				break;
-			}
+			j.attaquer(entites.get(i));
 		}		
 	}
 	
 	/**
-	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur
+	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur ou alors de se deplacer
 	 */
-	public void attaqueMonstre() {
+	public void actionMonstre() {
 		Joueur j = (Joueur)entites.get(0);
 		for(int i =1;i<entites.size();i++) {
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
@@ -192,10 +171,17 @@ public class Jeu implements JeuAbstract {
 				entites.get(i).attaquer(entites.get(0));
 			}else if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
 				entites.get(i).attaquer(entites.get(0));
+			}else {
+				entites.get(i).deplacementAleatoire();
 			}
 		}
 	}
 	
+	/**
+	 * methode qui permet d'avoir une entite de la liste en fonction de son index
+	 * @param index entier correspondant a la place de lentite dans la liste
+	 * @return une entite 
+	 */
 	public Entite getEntite(int index) {
 		return this.entites.get(index);
 	}

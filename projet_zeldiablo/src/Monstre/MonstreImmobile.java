@@ -13,6 +13,7 @@ public class MonstreImmobile extends Entite{
 	 */
 	public MonstreImmobile() {
 		super("entities_5_13");
+		this.vie=3;
 	}
 	
 	@Override

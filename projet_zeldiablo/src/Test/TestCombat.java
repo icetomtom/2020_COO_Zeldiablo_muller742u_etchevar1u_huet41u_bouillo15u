@@ -20,6 +20,7 @@ public class TestCombat {
 	@Test
 	public void testCombatJoueur() {
 		Jeu j= new Jeu();
+		System.out.println(j.getEntite(1).getVie());
 		
 		Entite troll = new Troll("leo");
 		
@@ -31,7 +32,7 @@ public class TestCombat {
 		
 		j.combat();
 	
-		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(1).getVie());
+		assertEquals("Le joueur n'a pas attaque",2,j.getEntite(1).getVie());
 	}
 	
 	/**
@@ -54,7 +55,7 @@ public class TestCombat {
 		j.getEntite(2).setPosY(6);
 		j.combat();
 		
-		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(1).getVie());
+		assertEquals("Le joueur n'a pas attaque",2,j.getEntite(1).getVie());
 		assertEquals("la direction n'est pas bonne",4,j.getEntite(2).getVie());
 		
 		j.deplacerJoueur(Jeu.DOWN);
@@ -88,7 +89,7 @@ public class TestCombat {
 		j.getEntite(4).setPosX(5);
 		j.getEntite(4).setPosY(4);
 		
-		j.attaqueMonstre();
+		j.actionMonstre();
 		
 		assertEquals("Le joueur ne s'est pas fait attaque",6,j.getJoueur().getVie());
 		
