@@ -60,7 +60,7 @@ public class Case extends Sprite implements Serializable {
                 setNomImage("entities_0_1");
                 break;
             case TYPE_PIEGE:
-                //setNomImage("entities_3_3");
+                setNomImage("entities_5_1");
                 break;
             case TYPE_PORTE:
             	setNomImage("entities_4_6");

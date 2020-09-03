@@ -2,6 +2,7 @@ package Elements;
 
 import moteurJeu.sprite.Sprite;
 
+import java.io.Console;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +47,8 @@ public class Labyrinthe implements Serializable {
         cases.clear();
 
         Case c = null;
-        for(int i=0; i<longeur; i++) {
-            for(int j=0; j<largeur; j++) {
+        for(int j=0; j<largeur; j++) {
+            for(int i=0; i<longeur; i++) {
                 if(i == 0 || j == 0 || i == longeur-1 || j == largeur-1)
                     c = new Case(i, j, Case.TYPE_MUR);
                 else

@@ -147,7 +147,7 @@ public class Sprites {
 			for (int j = 0; j < ny; j++) {
 				BufferedImage extraite = res.getSubimage(i * tx, j * ty, tx, ty);
 				images.put(nomRacine + "_" + i + "_" + j, extraite);
-				System.out.println(nomRacine + "_" + i + "_" + j);
+				// System.out.println(nomRacine + "_" + i + "_" + j);
 			}
 	}
 

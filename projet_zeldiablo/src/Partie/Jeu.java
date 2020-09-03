@@ -82,7 +82,7 @@ public class Jeu implements JeuAbstract {
 		//on recupere la case sur laquelle on veut avancer
 		Case c = this.laby.getCase(xNewPos, yNewPos);
 
-		//le joueur ne peut avancer que si la case est vide
+		//le joueur ne peut avancer que si la case est traversable
 		if(c.estTraversable()) {
 			this.joueur.seDeplacer(xNewPos, yNewPos);
 			this.joueur.setDirection(direction);

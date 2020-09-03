@@ -43,7 +43,7 @@ public abstract class Sprite implements Serializable {
 	 *            graphics pour dessiner
 	 */
 	public void dessiner(Graphics g) {
-//		System.out.println("Dessine : "+this);
+//		System.out.println("Dessine : "+getPosX()+ " " +getPosY() + " " + this.nomImage);
 		Sprites.dessiner(g, this.nomImage, getPosX() * DessinPartie.TAILLE_CASE, getPosY() * DessinPartie.TAILLE_CASE);
 	}
 
