@@ -25,6 +25,8 @@ public class Jeu implements JeuAbstract {
 	 */
 	private Joueur joueur;
 	
+	private boolean fini;
+	
 	private ArrayList<Entite> entites;
 	
 	/**
@@ -51,6 +53,7 @@ public class Jeu implements JeuAbstract {
 		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.MONSTRE_IMMO));
 		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.TROLL));
 		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.FANTOME));
+		this.fini = false;
 	}
 
 	/**
@@ -139,7 +142,7 @@ public class Jeu implements JeuAbstract {
 
 	@Override
 	public boolean etreFini() {
-		return false;
+		return fini;
 	}
 	
 	/**
@@ -193,7 +196,10 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet de supprimer de la liste des entites les monstre ou joueur si ils sont morts
 	 */
 	public void morts() {
-		for(int i=0;i<entites.size();i++) {
+		if(entites.get(0).etreMort()) {
+			this.fini=true;
+		}
+		for(int i=1;i<entites.size();i++) {
 			if(entites.get(i).etreMort()) {
 				entites.remove(i);
 			}

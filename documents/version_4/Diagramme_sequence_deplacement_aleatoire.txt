@@ -1,0 +1,27 @@
+@startuml
+create main
+activate main
+
+create "jeu: Jeu" as Jeu 
+
+main -> Jeu : new 
+
+activate Jeu
+
+create "monstre : Entite" as Monstre
+
+Jeu -> Monstre : deplacementAleatoire
+
+activate Monstre
+
+Monstre -> Monstre : deplacement(int n)
+
+Monstre --> Jeu
+
+deactivate Monstre
+
+Jeu --> main 
+
+deactivate Jeu
+deactivate main
+@enduml
