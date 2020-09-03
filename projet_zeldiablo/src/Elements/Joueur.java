@@ -12,6 +12,7 @@ import Partie.Jeu;
 public class Joueur extends Entite{
 	
 	private List<Objet> inventaire;
+
 	
 	/**
 	 *  attribut correspondant � la derniere direction du joueur
@@ -44,6 +45,10 @@ public class Joueur extends Entite{
 	 * @param ob
 	 */
 	
+	public void ajouterObjet(Objet ob) {
+		this.inventaire.add(ob);
+	}
+	
 	public void utiliserObjet(int ob) {
 		if(this.inventaire.size() > ob) {
 			Objet obj = this.inventaire.get(ob);
@@ -60,6 +65,12 @@ public class Joueur extends Entite{
 			System.out.println(this.inventaire.get(i).getNomObjet());
 		}
 	}
+	
+	public void ramasser(Objet o) {
+		if(o != null)
+			this.inventaire.add(o);
+	}
+	
 	
 	/**
 	 * Methode qui sert � deplacer le jouer 
@@ -120,4 +131,6 @@ public class Joueur extends Entite{
 	public List<Objet> getInventaire() {
 		return this.inventaire;
 	}
+	
+
 }
