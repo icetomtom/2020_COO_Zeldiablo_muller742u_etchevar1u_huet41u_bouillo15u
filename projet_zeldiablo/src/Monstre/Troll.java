@@ -1,12 +1,10 @@
 package Monstre;
 
-import Elements.Entite;
-
 /**
  * 
  * classe representant un monstre de type troll
  */
-public class Troll extends Entite {
+public class Troll extends Monstre {
 	
 	/**
 	 * attribut booleen prive qui annonce si le troll se fait attaquer 

@@ -1,6 +1,8 @@
 package Partie;
 
+import java.awt.List;
 import java.awt.event.KeyEvent;
+
 import java.util.ArrayList;
 
 import Elements.Case;
@@ -8,11 +10,13 @@ import Elements.CaseAEffet;
 import Elements.Entite;
 import Elements.Joueur;
 import Elements.Labyrinthe;
+import Elements.Niveau;
 import Usine.TYPE_MONSTRE;
 import Usine.UsineMonstre;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
+import Monstre.Monstre;
 
 /**
  *
@@ -50,9 +54,27 @@ public class Jeu implements JeuAbstract {
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 		this.entites = new ArrayList<Entite>();
 		this.entites.add(joueur);
-		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.MONSTRE_IMMO));
-		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.TROLL));
-		this.entites.add(UsineMonstre.getMonstre(TYPE_MONSTRE.FANTOME));
+		ArrayList<Monstre> m = new ArrayList<Monstre>();
+		for(int i=0;i<5;i++) {
+			int nb = (int)Math.random()*(4-1)+1;
+			switch (nb){
+				case 1:
+					m.add((Monstre) UsineMonstre.getMonstre(TYPE_MONSTRE.MONSTRE_IMMO));
+					break;
+				case 2:
+					m.add((Monstre)UsineMonstre.getMonstre(TYPE_MONSTRE.FANTOME));
+					break;
+				case 3:
+					m.add((Monstre)UsineMonstre.getMonstre(TYPE_MONSTRE.TROLL));
+					break;					
+			}
+		}
+		
+		Niveau n = new Niveau(laby,m);
+		for(int j=0;j<n.getMonstres().size();j++) {
+			entites.add(n.getMonstres().get(j));
+		}
+		
 		this.fini = false;
 	}
 
