@@ -21,13 +21,8 @@
 		sont représentées par des carrés qui occupent toute la case. Le carré est plein ou
 		vide en fonction de l'état de la porte (ouverte/fermée).
 
-<<<<<<< HEAD
-- Fonctionnalit� 3 : attaque directionnelle
-- reponsable : huet41u
-=======
 - Fonctionnalit� 3 : attaque directionnelle
 - reponsable : huet41u / etchevar1u
->>>>>>> f4de6ed43b685058c273f6514249c98e3635c1d2
 - descriptif texte : quand le joueur demande a attaque, le heros attaque devant lui
 			et ne blesse que le monstre dans cette direction
 - critere de validation :
@@ -36,21 +31,18 @@
 	- critere 3 : les monstres situ�s a cote du personnage dans une autre direction ne subissent pas de degats
 	- critere 4 : si aucun monstre n'est present devant le heros, aucune monstre ne subit de degats
 
-
-<<<<<<< HEAD
 - Fonctionnalité 4 : Génération de niveau
 - Responsable : bouillo15u
 - descriptif texte : Amélioration de la derniere version de generation avec le paterne factory + possibilite de sauvegarder les niveau dans des fichiers
 - critere de validation
     - critere 1 : Un niveau décrit le laburinthe et les monstres qui y sont contenus
     - critere 2 : Il est possible de choisir le niveau au demarrage ( via args dans main )
-=======
-- Fonctionnalite 4: attaque monstre 
-- reponsable : huet41u
+
+- Fonctionnalite 5: attaque monstre 
+- reponsable : huet41u / etchevar1u
 - descriptif texte : lorsqu'un monstre doit agir, si le monstre � c�t� du heros, alors il ne se deplace pas mais il attaque celui-ci
 	- critere 1 : lorsque le monstre est a cote du joueur, il attaque et ne se deplace pas. Par defaut, le heros perd 1 point de vie
 	- critere 2 : lorsque le monstre est loin du joueur il n'attaque pas mais se deplace
->>>>>>> f4de6ed43b685058c273f6514249c98e3635c1d2
 
 * réalisation
 
@@ -83,16 +75,19 @@
   - responsable : muller742u
 
 - Classe Porte
-  - reponsable : muller42u
+  - reponsable : muller742u
 
-- Tests Porte et CaseSecrete
+- Classe TestCase
   - responsable : muller742u
 
-<<<<<<< HEAD
--Ecriture m�thode attaque 
-=======
+- Modification classe Jeu
+  - reponsable : muller742u
+
+- Ecriture de la boucle principale du jeu (methode evoluer)
+  - responsable : muller742u
+
+
 -Ecriture m�thode d'attaque 
->>>>>>> f4de6ed43b685058c273f6514249c98e3635c1d2
   - responsable : etchevar1u
   
   Methodes d'attaques et tests des combats:
