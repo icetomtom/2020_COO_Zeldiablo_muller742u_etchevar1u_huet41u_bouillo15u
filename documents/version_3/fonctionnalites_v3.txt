@@ -32,6 +32,12 @@
 	- critere 4 : si aucun monstre n'est present devant le heros, aucune monstre ne subit de degats
 
 
+- Fonctionnalite 4: attaque monstre 
+- reponsable : huet41u
+- descriptif texte : lorsqu'un monstre doit agir, si le monstre à côté du heros, alors il ne se deplace pas mais il attaque celui-ci
+	- critere 1 : lorsque le monstre est a cote du joueur, il attaque et ne se deplace pas. Par defaut, le heros perd 1 point de vie
+	- critere 2 : lorsque le monstre est loin du joueur il n'attaque pas mais se deplace
+
 * rÃ©alisation
 
 - Classe Dessin
