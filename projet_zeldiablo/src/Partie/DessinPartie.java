@@ -1,5 +1,6 @@
 package Partie;
 
+import Elements.Joueur;
 import moteurJeu.moteur.DessinAbstract;
 import moteurJeu.sprite.Sprite;
 
@@ -28,6 +29,13 @@ public class DessinPartie implements DessinAbstract {
 
     public void removeSprite(Sprite s) {
         sprites.remove(s);
+    }
+
+    public DessinPartie(ArrayList<Sprite> sprites_jeu) {
+        if(sprites_jeu == null)
+            this.sprites = new ArrayList<>();
+        else
+            this.sprites = sprites_jeu;
     }
 
     @Override

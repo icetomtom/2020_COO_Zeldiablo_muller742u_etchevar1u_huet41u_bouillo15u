@@ -37,7 +37,7 @@ public class Entite extends Sprite {
 	/**
 	 * creation du sprite
 	 *
-	 * @param nom nom de l'imaeg
+	 * @param nom nom de l'image
 	 */
 	public Entite(String nom) {
 		super(nom);

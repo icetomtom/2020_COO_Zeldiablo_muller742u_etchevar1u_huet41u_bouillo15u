@@ -21,7 +21,7 @@ public class TestCombat {
 	public void testCombatJoueur() {
 		Jeu j= new Jeu();
 		
-		Entite troll = new Troll("leo");
+		Entite troll = new Troll();
 		
 		j.deplacerEntite(j.getEntite(0),Jeu.UP);
 		j.ajouter(troll);
@@ -41,7 +41,7 @@ public class TestCombat {
 	public void testCombatPlusieursMonstre() {
 		Jeu j= new Jeu();
 		
-		Entite troll = new Troll("leo");
+		Entite troll = new Troll();
 		
 		
 		j.deplacerEntite(j.getJoueur(),Jeu.UP);
@@ -49,7 +49,7 @@ public class TestCombat {
 		j.getEntite(1).setPosX(4);
 		j.getEntite(1).setPosY(2);
 		
-		j.ajouter(new Troll("leo2"));
+		j.ajouter(new Troll());
 		j.getEntite(2).setPosX(4);
 		j.getEntite(2).setPosY(6);
 		j.combat();
@@ -83,11 +83,11 @@ public class TestCombat {
 		j.getEntite(3).setPosY(3);
 		
 		
-		j.ajouter(new Troll(""));
+		j.ajouter(new Troll());
 		j.getEntite(4).setPosX(5);
 		j.getEntite(4).setPosY(4);
 		
-		j.ajouter(new Troll(""));
+		j.ajouter(new Troll());
 		j.getEntite(5).setPosX(6);
 		j.getEntite(5).setPosY(6);
 		

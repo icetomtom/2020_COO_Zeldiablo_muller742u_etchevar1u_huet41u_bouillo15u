@@ -4,7 +4,7 @@ package Monstre;
  * 
  * classe representant un monstre immobile
  */
-public class MonstreImmobile extends Monstre{
+public class MonstreImmobile extends Monstre {
 	
 	/**
 	 * Constructeur avec un string en parametre
