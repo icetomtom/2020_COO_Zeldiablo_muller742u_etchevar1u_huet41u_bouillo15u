@@ -21,18 +21,41 @@
 		sont représentées par des carrés qui occupent toute la case. Le carré est plein ou
 		vide en fonction de l'état de la porte (ouverte/fermée).
 
-- Fonctionnalit� 3 : attaque directionnelle
+- Fonctionnalit� 3 : attaque directionnelle
 - reponsable : huet41u
 - descriptif texte : quand le joueur demande a attaque, le heros attaque devant lui
 			et ne blesse que le monstre dans cette direction
 - critere de validation :
- 	- critere 1 : l'attaque a lieu dans la derni�re direction suivie par le heros
+ 	- critere 1 : l'attaque a lieu dans la derni�re direction suivie par le heros
  	- critere 2 : l'attaque ne peut toucherau maximum un monstre et seulement si ce monstre se trouve juste devant le personnage
-	- critere 3 : les monstres situ�s a cote du personnage dans une autre direction ne subissent pas de degats
+	- critere 3 : les monstres situ�s a cote du personnage dans une autre direction ne subissent pas de degats
 	- critere 4 : si aucun monstre n'est present devant le heros, aucune monstre ne subit de degats
 
 
+- Fonctionnalité 4 : Génération de niveau
+- Responsable : bouillo15u
+- descriptif texte : Amélioration de la derniere version de generation avec le paterne factory + possibilite de sauvegarder les niveau dans des fichiers
+- critere de validation
+    - critere 1 : Un niveau décrit le laburinthe et les monstres qui y sont contenus
+    - critere 2 : Il est possible de choisir le niveau au demarrage ( via args dans main )
+
 * réalisation
+
+- Classe TestDessin
+    - resonsabes
+        - bouillo15u
+
+- Classe Usine Niveau
+    - resonsabes
+        - bouillo15u
+
+- Classe TestMonstre
+    - resonsabes
+        - bouillo15u
+
+- Classe Niveau
+    - responsables
+        - bouillo15u
 
 - Classe Dessin
     - responsables
@@ -52,7 +75,7 @@
 - Tests Porte et CaseSecrete
   - responsable : muller742u
 
--Ecriture m�thode attaque 
+-Ecriture m�thode attaque 
   - responsable : etchevar1u
   
   Methodes d'attaques et tests des combats:
