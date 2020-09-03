@@ -13,7 +13,12 @@ public class Entite extends Sprite {
 	 * point de vie de l entite
 	 */
 	protected int vie;
-
+	
+	/**
+	 * si l'entite est vivante ou non
+	 */
+	protected boolean vivant;
+	
 	/**
 	 * Degats de l'entit�
 	 */
@@ -27,7 +32,7 @@ public class Entite extends Sprite {
 	/**
 	 * Nombre maximum de points de vie d'une entit�
 	 */
-	private int maxPV;
+	protected int maxPV;
 
 	/**
 	 * creation du sprite
@@ -37,6 +42,9 @@ public class Entite extends Sprite {
 	public Entite(String nom) {
 		super(nom);
 		this.degats=1;
+		this.vivant=true;
+		this.vie= 3;
+		this.maxPV=3;
 	}
 
 
@@ -91,7 +99,12 @@ public class Entite extends Sprite {
 	 * @param d degats subis
 	 */
 	public void subirDegats(int d) {
-		vie = vie - d <= 0 ? 0 : vie - d;
+		vie = vie -d;
+		if (vie<=0) {
+			vie =0;
+			this.vivant=false;
+		}
+		
 
 	}
 	
@@ -102,7 +115,7 @@ public class Entite extends Sprite {
      * @return bool�en si le personnage est mort
      */
     public boolean etreMort() {
-        return this.vie == 0;
+        return this.vivant;
     }
     
     /**

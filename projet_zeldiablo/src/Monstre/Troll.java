@@ -19,7 +19,27 @@ public class Troll extends Entite {
 	 */
 	public Troll(String nom) {
 		super(nom);
-		this.vie = 4;
+		this.vie = 5;
+		this.est_attaque=false;
+		this.maxPV=5;
+	}
+	
+	/**
+	 * methode subirdegats speciale au troll
+	 */
+	@Override
+	public void subirDegats(int n) {
+		super.subirDegats(n);
+		this.est_attaque=true;
+	}
+	
+	public void regeneration() {
+		if(!est_attaque) {
+			if(vie<this.maxPV) {
+				this.vie++;
+			}
+		}
+		this.est_attaque=false;
 	}
 
 }

@@ -1,0 +1,9 @@
+* Fonctionnalités version 4
+
+Fonctionnalite 1: Mort des monstre
+responsable : huet41u
+description :Lorsqu'un monstre n'a plus de points de vie, il meurt et disparait du jeu.
+- criteres de validation
+   - critere 1: les monstre ont par defaut 3 points de vie et ne peuvent pas avoir de points de vie negatifs
+   - critere 2: lorsqu'un monstre par defaut est touche trois fois, il disparait
+   - critere 3: le heros attaque avant le monstre, le monstre meurt, le monstre n'a pas le temps de repliquer et disparait avant

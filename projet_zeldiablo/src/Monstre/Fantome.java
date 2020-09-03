@@ -16,14 +16,5 @@ public class Fantome extends Entite {
 		this.vie = 2;	
 	}
 	
-	/**
-	 * methode qui permet au monstre de se deplacer
-	 * @param x correspondant a l'abscisse
-	 * @param y correspondant a l'ordonnee
-	 */
-	public void seDeplacer(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
 
 }
