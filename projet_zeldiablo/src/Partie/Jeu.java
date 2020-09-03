@@ -177,11 +177,11 @@ public class Jeu implements JeuAbstract {
 		for(int i =1;i<entites.size();i++) {
 			if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
 				entites.get(i).attaquer(entites.get(0));
-			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
+			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()-1) {
 				entites.get(i).attaquer(entites.get(0));
-			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
+			}else if(entites.get(i).getPosX()==j.getPosX()-1&& entites.get(i).getPosY()==j.getPosY()) {
 				entites.get(i).attaquer(entites.get(0));
-			}else if(entites.get(i).getPosX()==j.getPosX()&& entites.get(i).getPosY()==j.getPosY()+1) {
+			}else if(entites.get(i).getPosX()==j.getPosX()+1&& entites.get(i).getPosY()==j.getPosY()) {
 				entites.get(i).attaquer(entites.get(0));
 			}
 		}
