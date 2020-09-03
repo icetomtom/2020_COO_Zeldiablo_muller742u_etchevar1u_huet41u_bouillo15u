@@ -22,7 +22,7 @@
 		vide en fonction de l'Ã©tat de la porte (ouverte/fermÃ©e).
 
 - Fonctionnalité 3 : attaque directionnelle
-- reponsable : huet41u
+- reponsable : huet41u / etchevar1u
 - descriptif texte : quand le joueur demande a attaque, le heros attaque devant lui
 			et ne blesse que le monstre dans cette direction
 - critere de validation :
@@ -52,7 +52,7 @@
 - Tests Porte et CaseSecrete
   - responsable : muller742u
 
--Ecriture méthode attaque 
+-Ecriture méthode d'attaque 
   - responsable : etchevar1u
   
   Methodes d'attaques et tests des combats:
