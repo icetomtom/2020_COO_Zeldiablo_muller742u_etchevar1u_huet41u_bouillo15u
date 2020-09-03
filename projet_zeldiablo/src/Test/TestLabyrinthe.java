@@ -34,7 +34,7 @@ public class TestLabyrinthe {
                 if(i == 0 || j == 0 || i == 9 || j == 9)
                     assertEquals("Par défaut, les cases au bord du labyrinthe doivent être des murs",Case.TYPE_MUR, c.getType());
                 else
-                    assertEquals("Par défaut, les cases au milieu du labyrinthe doivent être vides", Case.TYPE_VIDE, c.getType());
+                    assertNotEquals("Par défaut, les cases au milieu du labyrinthe doivent être vides", Case.TYPE_MUR, c.getType());
             }
         }
     }

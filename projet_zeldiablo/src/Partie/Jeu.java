@@ -1,17 +1,15 @@
 package Partie;
 
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
-
 import Elements.*;
 import Monstre.Monstre;
-import Usine.TYPE_MONSTRE;
-import Usine.UsineMonstre;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
 import moteurJeu.sprite.Sprite;
+
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -50,32 +48,31 @@ public class Jeu implements JeuAbstract {
 	 * constructeur par defaut
 	 */
 	public Jeu() {
-
-		this.laby = new Labyrinthe(10, 10);
-		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
+		this.sprites = new ArrayList<>();
 		this.entites = new ArrayList<>();
+		this.fini = true;
+	}
 
-		ArrayList<Monstre> m = new ArrayList<Monstre>();
-		for(int i =0;i<5;i++) {
-			int nb = (int)(Math.random()*(4-1)+1);
-			switch(nb) {
-				case 1:
-					m.add(UsineMonstre.getMonstre(TYPE_MONSTRE.MONSTRE_IMMO));
-					break;
-				case 2:
-					m.add(UsineMonstre.getMonstre(TYPE_MONSTRE.FANTOME));
-					break;
-				case 3:
-					m.add(UsineMonstre.getMonstre(TYPE_MONSTRE.TROLL));
-					break;
-			}
-		}
+	public Jeu(Niveau n) {
+		this();
+		initialiserAvecNiveau(n);
+	}
 
-		Niveau n =new Niveau(laby,m);
-		for(int j=0;j<m.size();j++) {
-			entites.add(n.getMonstres().get(j));
+	/**
+	 * Cree toutes les entities et sprites, remet les variable du jeu à 0
+	 * @param n
+	 */
+	public void initialiserAvecNiveau(Niveau n) {
+		if(n == null)
+			throw new IllegalArgumentException("Impossible d'initialiser un jeu avec un niveau null");
 
-		}
+		this.entites.clear();
+		this.sprites.clear();
+
+		this.laby = n.getLabyrinthe();
+		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
+
+		entites.addAll(n.getMonstres());
 
 		CasePiege cp = new CasePiege(1, 1);
 		Porte p = new Porte(5, 6);
@@ -89,7 +86,6 @@ public class Jeu implements JeuAbstract {
 
 		this.entites.add(joueur);
 
-		this.sprites = new ArrayList<>();
 		sprites.addAll(this.laby.getCases());
 		sprites.add(laby.getAmulette());
 		sprites.addAll(this.entites);
@@ -102,6 +98,8 @@ public class Jeu implements JeuAbstract {
 	 * @param direction la direction prise par le joueur (direction cardinale representee par un entier)
 	 */
 	public void deplacerEntite(Entite e,int direction) {
+		if (fini)
+			return;
 		if(e == null)
 			return;
 
@@ -169,6 +167,9 @@ public class Jeu implements JeuAbstract {
 
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
+		if (fini)
+			return JeuPrincipale.MODE_FIN;
+
 		if(clavier.isPressed(KeyEvent.VK_UP)) {
 			this.deplacerEntite(joueur,UP);
 		}
@@ -204,10 +205,9 @@ public class Jeu implements JeuAbstract {
 
 		morts();
 
-		if(this.fini) {
-			System.out.println("tu as fini gg");
-		}
-		
+		if(this.fini)
+			return JeuPrincipale.MODE_MENU;
+
 		return JeuPrincipale.MODE_PARTIE;
 	}
 
@@ -228,6 +228,9 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet de faire combattre le joueur si un monstre est en face de lui et dans sa direction
 	 */
 	public void combat() {
+		if (fini)
+			return;
+
 		for(int i =1;i<entites.size();i++) {
 			joueur.attaquer(entites.get(i));
 		}		
@@ -237,6 +240,9 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur ou alors de se deplacer
 	 */
 	public void actionMonstre() {
+		if (fini)
+			return;
+
 		Joueur j = joueur;
 		for(int i =0;i<entites.size();i++) {
 			if(!(entites.get(i) instanceof Monstre))
@@ -272,6 +278,9 @@ public class Jeu implements JeuAbstract {
 	 * methode qui permet de supprimer de la liste des entites les monstre ou joueur si ils sont morts
 	 */
 	public void morts() {
+		if (fini)
+			return;
+
 		if(joueur.etreMort()) {
 			this.fini=true;
 		}

@@ -18,13 +18,14 @@ public class MenuPrincipale {
      */
     String prochaine_etape = JeuPrincipale.MODE_MENU;
 
+    String nom_niveau = null;
+
     /**
      * Constructeur du menu et ses boutons
      */
     public MenuPrincipale() {
         buttons = new ArrayList<>();
-        buttons.add(new Button("Jouer", JeuPrincipale.MODE_PARTIE, 10, 10, 580, 200));
-//        buttons.add(new Button("Niveau 1"));
+        buttons.add(new Button("Quitter", JeuPrincipale.MODE_FIN, 100, 450, 400, 100));
     }
 
     /**
@@ -41,6 +42,14 @@ public class MenuPrincipale {
      */
     public void setProchaineEtape(String etape) {
         prochaine_etape = etape;
+    }
+
+    public void setNomNiveau(String niveau) {
+        this.nom_niveau = niveau;
+    }
+
+    public String getNomNiveau() {
+        return this.nom_niveau;
     }
 
     public ArrayList<Button> getButtons() {

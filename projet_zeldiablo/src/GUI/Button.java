@@ -2,7 +2,8 @@ package GUI;
 
 public class Button {
 
-    private final String etape, label;
+    private final String etape;
+    private String label;
     private final int x, y, longeur, largeur;
 
     public Button(String label, String etape, int x, int y, int longeur, int largeur) {
@@ -15,7 +16,13 @@ public class Button {
     }
 
     public boolean collision(int x, int y) {
-        return !(x < this.x || x > this.x + longeur || y < this.y || y > this.largeur + y);
+        boolean r = !(x < this.x || x > this.x + longeur || y < this.y || y > this.largeur + this.y);
+        System.out.println(x + " " + y + " " + this.x+ " " +this.y+ " " +longeur+ " " +largeur + " " +r);
+        return r;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     public String getLabel() {

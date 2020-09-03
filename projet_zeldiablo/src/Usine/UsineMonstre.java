@@ -13,12 +13,12 @@ public class UsineMonstre {
         switch (type) {
             case MONSTRE_IMMO:
                 return new MonstreImmobile();
-            case TROLL:
+            case MONSTRE_TROLL:
                 return new Troll();
-		case FANTOME:
-		    return new Fantome();
-        default:
-            throw new IllegalArgumentException("Type de Monstre '" + type + "' inconnu");
+            case MONSTRE_FANTOME:
+                return new Fantome();
+            default:
+                throw new IllegalArgumentException("Type de Monstre '" + type + "' inconnu");
         }
     }
 }

@@ -2,6 +2,8 @@ package Test;
 
 import static org.junit.Assert.assertEquals;
 
+import Elements.Labyrinthe;
+import Elements.Niveau;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -12,6 +14,8 @@ import Elements.Joueur;
 import Monstre.Troll;
 import Partie.Jeu;
 
+import java.util.ArrayList;
+
 public class TestCombat {
 	
 	/**
@@ -19,7 +23,8 @@ public class TestCombat {
 	 */
 	@Test
 	public void testCombatJoueur() {
-		Jeu j= new Jeu();
+		Labyrinthe l = new Labyrinthe();
+		Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
 		
 		Entite troll = new Troll();
 		

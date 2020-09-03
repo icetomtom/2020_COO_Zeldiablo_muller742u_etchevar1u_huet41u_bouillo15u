@@ -2,13 +2,12 @@ package Test;
 
 import static org.junit.Assert.assertEquals;
 
+import Elements.*;
 import org.junit.Test;
 
-import Elements.Case;
-import Elements.CasePiege;
-import Elements.CaseSecrete;
-import Elements.Porte;
 import Partie.Jeu;
+
+import java.util.ArrayList;
 
 /** 
  * test la classe Case
@@ -34,7 +33,9 @@ public class TestCase {
 	public void test_CasePiege() {
 		//initialisation
 		CasePiege c = new CasePiege(1, 1);
+		Labyrinthe l = new Labyrinthe();
 		Jeu j = new Jeu();
+		j.initialiserAvecNiveau(new Niveau(l,new ArrayList<>()));
 		j.getLaby().setCase(c);
 		
 		//verification
@@ -57,7 +58,11 @@ public class TestCase {
 		//initialisation
 		Porte p = new Porte(1, 1);
 		CaseSecrete cs = new CaseSecrete(8, 8, p, Case.TYPE_OUVERTURE);
+
+		Labyrinthe l = new Labyrinthe();
 		Jeu j = new Jeu();
+		j.initialiserAvecNiveau(new Niveau(l,new ArrayList<>()));
+
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(p);
 		
@@ -82,7 +87,10 @@ public class TestCase {
 		//initialisation
 		Porte p = new Porte(1, 1);
 		CaseSecrete cs = new CaseSecrete(3, 4, p, Case.TYPE_OUVERTURE);
+
+		Labyrinthe l = new Labyrinthe();
 		Jeu j = new Jeu();
+		j.initialiserAvecNiveau(new Niveau(l,new ArrayList<>()));
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(p);
 		
@@ -107,7 +115,9 @@ public class TestCase {
 		//initialisation
 		Porte p = new Porte(1, 1);
 		CaseSecrete cs = new CaseSecrete(3, 4, p, Case.TYPE_OUVERTURE);
+		Labyrinthe l = new Labyrinthe();
 		Jeu j = new Jeu();
+		j.initialiserAvecNiveau(new Niveau(l,new ArrayList<>()));
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(p);
 		
@@ -126,7 +136,9 @@ public class TestCase {
 		Porte p = new Porte(1, 1);
 		CaseSecrete cs = new CaseSecrete(3, 4, p, Case.TYPE_OUVERTURE);
 		CaseSecrete cs1 = new CaseSecrete(2, 4, p, Case.TYPE_FERMETURE);
+		Labyrinthe l = new Labyrinthe();
 		Jeu j = new Jeu();
+		j.initialiserAvecNiveau(new Niveau(l,new ArrayList<>()));
 		j.getLaby().setCase(cs);
 		j.getLaby().setCase(cs1);
 		j.getLaby().setCase(p);

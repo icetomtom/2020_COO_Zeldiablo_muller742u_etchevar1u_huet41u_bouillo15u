@@ -3,10 +3,13 @@ package Test;
 import Elements.Case;
 import Elements.Joueur;
 import Elements.Labyrinthe;
+import Elements.Niveau;
 import Partie.DessinPartie;
 import Partie.Jeu;
 import moteurJeu.moteur.MoteurGraphique;
 import moteurJeu.sprite.Sprites;
+
+import java.util.ArrayList;
 
 public class TestDessin {
 
@@ -21,7 +24,7 @@ public class TestDessin {
         for(Case c : l.getCases())
             dessin.addSprite(c);
         dessin.addSprite(joueur);
-        Jeu j = new Jeu();
+        Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
         MoteurGraphique m = new MoteurGraphique(j, dessin);
 
         m.lancerJeu(600, 600, 60);

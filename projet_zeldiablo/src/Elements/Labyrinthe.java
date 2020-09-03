@@ -1,5 +1,7 @@
 package Elements;
 
+import sun.nio.cs.ext.MacArabic;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,19 +37,41 @@ public class Labyrinthe implements Serializable {
      * Constructeur par défaut
      */
     public Labyrinthe() {
-        this(0, 0);
+        this(10, 10, true);
     }
 
+    /**
+     * Constructeur ou on peu préciser la taille
+     * @param longeur
+     * @param largeur
+     */
     public Labyrinthe(int longeur, int largeur) {
+        this(longeur, largeur, true);
+    }
+
+    /**
+     * Constructeur ou on précise la taille et la méthode de génération
+     * @param longeur
+     * @param largeur
+     * @param defaut méthode de génération par défaut ou non
+     */
+    public Labyrinthe(int longeur, int largeur, boolean defaut) {
         this.longeur = longeur;
         this.largeur = largeur;
         this.entree_x = (this.longeur-1) / 2;
         this.entree_y = (this.largeur-1) / 2;
         this.cases = new ArrayList<Case>(this.longeur * this.largeur);
 
-        chargerCasesRecursivement();
+        if(defaut)
+            chargerCasesParDefaut();
+        else {
+            chargerCasesRecursivement();
+        }
+
         this.getCase(entree_x, entree_y).setType(Case.TYPE_ENTREE);
-        this.amulette = new Amulette("entities_6_10", this.getNoeuds().get(1).getPosX(), this.getNoeuds().get(1).getPosY());
+        List<Case> noeuds = getNoeuds();
+        Case c = noeuds.get((int)(Math.random() * noeuds.size()));
+        this.amulette = new Amulette("entities_6_10", c.getPosX(), c.getPosY());
     }
 
     /**
@@ -150,7 +174,7 @@ public class Labyrinthe implements Serializable {
     /**
      * Genere les cases d'un Labyrinthe
      */
-    public void chargerCasesRecursivement() {
+    private void chargerCasesRecursivement() {
         int w = (longeur+1) / 2 - 1;
         int h = (largeur+1) / 2 - 1;;
 

@@ -13,6 +13,7 @@ import org.junit.runner.notification.Failure;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 import static org.junit.Assert.*;
 
@@ -23,13 +24,12 @@ public class TestAffichageAvecSprite {
         Joueur j = new Joueur();
         assertTrue("Joueur n'est pas un sprite !", j instanceof Sprite);
 
-//        assertTrue("Monstre n'est pas un sprite !");
-//        assertTrue("Mur n'est pas un sprite !");
     }
 
     @Test
     public void test_ChargementImages() {
-        Sprites.chargerFeuille("personnages", "./images/test_sprites.png", 6, 3);
+        File f = new File(".");
+        Sprites.chargerFeuille("personnages", "images/test_sprites.png", 6, 3);
 
         int i=0,j=0;
         try {
@@ -48,7 +48,7 @@ public class TestAffichageAvecSprite {
 
     @Test
     public void test_AffichageImg() {
-        Sprites.chargerFeuille("personnages_2", "projet_zeldiablo/images/test_sprites.png", 6, 3);
+        Sprites.chargerFeuille("personnages_2", "images/test_sprites.png", 6, 3);
         JPanel panel = new JPanel() {
             @Override
             public void paintComponent(Graphics g) {

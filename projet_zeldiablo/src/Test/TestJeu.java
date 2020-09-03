@@ -2,9 +2,13 @@ package Test;
 
 import static org.junit.Assert.assertEquals;
 
+import Elements.Labyrinthe;
+import Elements.Niveau;
 import org.junit.Test;
 
 import Partie.Jeu;
+
+import java.util.ArrayList;
 
 public class TestJeu {
 	
@@ -14,7 +18,8 @@ public class TestJeu {
 	@Test
 	public void methode_seDeplacer_vide() {
 		//initialisation des valeurs
-		Jeu j = new Jeu();
+		Labyrinthe l = new Labyrinthe();
+		Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
 		
 		//test de la methode
 		int yOld = j.getJoueur().getPosY();
@@ -29,7 +34,8 @@ public class TestJeu {
 	@Test
 	public void methode_seDeplacer_mur() {
 		//initialisation des valeurs
-		Jeu j = new Jeu();
+		Labyrinthe l = new Labyrinthe();
+		Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
 		
 		//test de la methode, on avance le personnage assez pour etre sur d'avoir rencontre un mur
 		for(int i = 0; i < 20; i++) {
