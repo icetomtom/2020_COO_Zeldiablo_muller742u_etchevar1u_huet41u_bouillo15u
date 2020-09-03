@@ -23,11 +23,10 @@ public class TestCombat {
 		
 		Entite troll = new Troll("leo");
 		
-		
 		j.deplacerJoueur(Jeu.UP);
 		j.ajouter(troll);
-		j.getEntite(1).setPosX(5);
-		j.getEntite(1).setPosY(3);
+		j.getEntite(1).setPosX(4);
+		j.getEntite(1).setPosY(2);
 		
 		
 		j.combat();
@@ -47,10 +46,12 @@ public class TestCombat {
 		
 		j.deplacerJoueur(Jeu.UP);
 		j.ajouter(troll);
-		j.getEntite(1).setPosX(5);
-		j.getEntite(1).setPosY(3);
+		j.getEntite(1).setPosX(4);
+		j.getEntite(1).setPosY(2);
 		
-		
+		j.ajouter(new Troll("leo2"));
+		j.getEntite(2).setPosX(4);
+		j.getEntite(2).setPosY(6);
 		j.combat();
 		
 		assertEquals("Le joueur n'a pas attaque",3,j.getEntite(1).getVie());
@@ -70,22 +71,22 @@ public class TestCombat {
 		Jeu j = new Jeu();
 		Entite troll= new Troll("leo");
 		j.ajouter(troll);
-		j.getEntite(1).setPosX(5);
-		j.getEntite(1).setPosY(6);
+		j.getEntite(1).setPosX(4);
+		j.getEntite(1).setPosY(5);
 		j.ajouter(new Troll("leo2"));
 		
-		j.getEntite(2).setPosX(4);
-		j.getEntite(2).setPosY(5);
+		j.getEntite(2).setPosX(3);
+		j.getEntite(2).setPosY(4);
 		
 		j.ajouter(new Troll("leo3"));
 		
-		j.getEntite(3).setPosX(5);
-		j.getEntite(3).setPosY(4);
+		j.getEntite(3).setPosX(4);
+		j.getEntite(3).setPosY(3);
 		
 		j.ajouter(new Troll("leo4"));
 		
-		j.getEntite(2).setPosX(6);
-		j.getEntite(2).setPosY(5);
+		j.getEntite(4).setPosX(5);
+		j.getEntite(4).setPosY(4);
 		
 		j.attaqueMonstre();
 		
