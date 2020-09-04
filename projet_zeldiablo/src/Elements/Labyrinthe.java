@@ -76,7 +76,7 @@ public class Labyrinthe implements Serializable {
     /**
      * Per d'obtenir une case a† une position
      * @param x abscisse de la case
-     * @param y ordonn√©e de la case
+     * @param y ordonnee de la case
      * @return case
      */
     public Case getCase(int x, int y) {
