@@ -12,7 +12,7 @@ public class MenuPrincipal {
     ArrayList<Bouton> boutons;
 
     /**
-     * String du nom de la prochaine etape, null signifie qu'on reste sur le menu
+     * String du nom de la prochaine etape, null signifie qu on reste sur le menu
      */
     String prochaine_etape = JeuPrincipal.MODE_MENU;
 
@@ -27,7 +27,7 @@ public class MenuPrincipal {
     }
 
     /**
-     * Obtenir la prochaine étape
+     * Obtenir la prochaine etape
      * @return la prochaine etape
      */
     public String getProchaineEtape() {
@@ -35,17 +35,25 @@ public class MenuPrincipal {
     }
 
     /**
-     * Obtenir la prochaine étape
+     * Obtenir la prochaine etape
      * @param etape la prochaine etape
      */
     public void setProchaineEtape(String etape) {
         prochaine_etape = etape;
     }
 
+    /**
+     * setter du nom niveau
+     * @param niveau
+     */
     public void setNomNiveau(String niveau) {
         this.nom_niveau = niveau;
     }
 
+    /**
+     * getter du nom niveau
+     * @return
+     */
     public String getNomNiveau() {
         return this.nom_niveau;
     }

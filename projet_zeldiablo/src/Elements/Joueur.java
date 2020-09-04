@@ -16,7 +16,7 @@ public class Joueur extends Entite{
 
 	
 	/**
-	 *  attribut correspondant � la derniere direction du joueur
+	 *  attribut correspondant a la derniere direction du joueur
 	 */
 	private int direction;
 	
@@ -29,8 +29,8 @@ public class Joueur extends Entite{
 	
 	/**
 	 * Constructeur avec paramtre de la classe joueur
-	 * @param x entier correspondant � l'abscisse du joueur
-	 * @param y entier correspondant a l'ordonnee du joueur
+	 * @param x entier correspondant a l abscisse du joueur
+	 * @param y entier correspondant a l ordonnee du joueur
 	 */
 	public Joueur(int x,int y) {
 		super("entities_4_8");
@@ -86,8 +86,8 @@ public class Joueur extends Entite{
 	
 	
 	/**
-	 * Methode qui sert � deplacer le jouer 
-	 * @param x entier correspondant � la nouvelle abscisse du joueur
+	 * Methode qui sert a deplacer le jouer 
+	 * @param x entier correspondant a la nouvelle abscisse du joueur
 	 * @param y entier correspondant a la nouvelle ordonnee du joueur
 	 */
 	public void seDeplacer(int x,int y) {
@@ -96,7 +96,7 @@ public class Joueur extends Entite{
 	}
 	
 	/**
-	 * methode permettant de se souvenir de la derni�re direction du joueur
+	 * methode permettant de se souvenir de la derniere direction du joueur
 	 * @param n
 	 */
 	public void setDirection(int n) {
@@ -105,7 +105,7 @@ public class Joueur extends Entite{
 	
 	/**
 	 * methode permettant de recuperer la direction
-	 * @return un entier correspondant � la direction
+	 * @return un entier correspondant a la direction
 	 */
 	public int getDirection() {
 		return this.direction;
@@ -113,7 +113,7 @@ public class Joueur extends Entite{
 	
 	/**
 	 * attaque du joueur en focntion de sa direction
-	 * @param e correspond a l'entite qu'il attaque
+	 * @param e correspond a l'entite qu il attaque
 	 */
 	@Override
 	public void attaquer(Entite e) {

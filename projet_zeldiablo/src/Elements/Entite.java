@@ -5,7 +5,7 @@ import moteurJeu.sprite.Sprite;
 public class Entite extends Sprite {
 
 	/**
-	 * Position de l'entite dans un labyrinthe
+	 * Position de l entite dans un labyrinthe
 	 */
 	protected int x, y;
 
@@ -15,22 +15,22 @@ public class Entite extends Sprite {
 	protected int vie;
 	
 	/**
-	 * si l'entite est vivante ou non
+	 * si l entite est vivante ou non
 	 */
 	protected boolean vivant;
 	
 	/**
-	 * Degats de l'entit�
+	 * Degats de l entite
 	 */
 	protected int degats;
 
 	/**
-	 * Labyrinthe o� se situe l'entit�
+	 * Labyrinthe ou se situe l entite
 	 */
 	protected Labyrinthe labyrinthe;
 
 	/**
-	 * Nombre maximum de points de vie d'une entit�
+	 * Nombre maximum de points de vie d'une entite 
 	 */
 	protected int maxPV;
 	
@@ -55,7 +55,7 @@ public class Entite extends Sprite {
 
 
 	/**
-	 * methode qui permet de retourner l'abscisse du joueur
+	 * methode qui permet de retourner l abscisse du joueur
 	 * @return un entier
 	 */
 	public int getPosX() {
@@ -63,7 +63,7 @@ public class Entite extends Sprite {
 	}
 
 	/**
-	 * methode qui permet de retourner l'ordonnee du joueur
+	 * methode qui permet de retourner l ordonnee du joueur
 	 * @return un entier
 	 */
 	public int getPosY() {
@@ -71,16 +71,16 @@ public class Entite extends Sprite {
 	}
 
 	/**
-	 * Methode qui permet de modifier l'abscisse du joueur
-	 * @param x entier correspondant � la nouvelle abscisse du joueur
+	 * Methode qui permet de modifier l abscisse du joueur
+	 * @param x entier correspondant a la nouvelle abscisse du joueur
 	 */
 	public void setPosX(int x) {
 		this.x = x;
 	}
 
 	/**
-	 * Methode qui permet de modifier l'ordonnee du joueur
-	 * @param y entier correspondant � la nouvelle ordonnee du joueur
+	 * Methode qui permet de modifier l ordonnee du joueur
+	 * @param y entier correspondant a la nouvelle ordonnee du joueur
 	 */
 	public void setPosY(int y) {
 		this.y = y;
@@ -100,7 +100,7 @@ public class Entite extends Sprite {
 	}
 
 	/**
-	 * M�thode permettant de subir des d�gats
+	 * Methode permettant de subir des degats
 	 *
 	 * @param d degats subis
 	 */
@@ -115,10 +115,10 @@ public class Entite extends Sprite {
 	}
 	
 	  /**
-     * M�thode permettant de savoir si le personnage
-     * est d�c�d�
+     * Methode permettant de savoir si le personnage
+     * est en vie
      *
-     * @return bool�en si le personnage est mort
+     * @return booleen si le personnage est mort
      */
     public boolean etreMort() {
         return !this.vivant;
@@ -165,7 +165,7 @@ public class Entite extends Sprite {
     }
     
     /**
-     * deplacement aleatoire d'un monstre
+     * deplacement aleatoire d un monstre
      */
     public int deplacementAleatoire() {
     	return (int)(Math.random()*4);
