@@ -142,6 +142,10 @@ public class Jeu implements JeuAbstract {
 			if(c instanceof CaseAEffet) {
 				((CaseAEffet)c).activerEffet(e);
 			}
+	    	
+	    	e.getBarreDeVie().updatePos(e.getPosX(), e.getPosY());
+	    	
+	    	System.out.println(e.getBarreDeVie().getPosX() + " " + e.getBarreDeVie().getPosY());
 		}else if(e instanceof Fantome){
 			if(e.getPosX()<laby.getLongeur() && e.getPosX()>0) {
 				if (e.getPosY()<laby.getLargeur() && e.getPosY()>0) {

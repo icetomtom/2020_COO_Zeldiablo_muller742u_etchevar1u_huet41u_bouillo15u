@@ -17,7 +17,7 @@ public class BarreDeVie extends Sprite {
 	 * 
 	 * @param nom nom du sprite a charger
 	 */
-	public BarreDeVie(String nom) { super(nom); }
+	public BarreDeVie(String nom, int x, int y) { super(nom); this.x = x; this.y = y; }
 
 	@Override
 	public int getPosX() { return this.x; }

@@ -50,7 +50,7 @@ public class Entite extends Sprite {
 		this.vivant=true;
 		this.vie= 3;
 		this.maxPV=3;
-		this.barreDeVie = new BarreDeVie("entities_0_15");
+		this.barreDeVie = new BarreDeVie("entities_0_15", this.x, this.y);
 	}
 
 
@@ -160,8 +160,6 @@ public class Entite extends Sprite {
     		this.x++;
     		break;
     	}
-    	
-    	this.barreDeVie.updatePos(this.x, this.y);
     }
     
     /**
@@ -170,4 +168,10 @@ public class Entite extends Sprite {
     public int deplacementAleatoire() {
     	return (int)(Math.random()*4);
     }
+    
+    /**
+     * getter de l'attribut barreDeVie
+     * @return l'attribut barreDevie
+     */
+    public BarreDeVie getBarreDeVie() { return this.barreDeVie; }
 }
