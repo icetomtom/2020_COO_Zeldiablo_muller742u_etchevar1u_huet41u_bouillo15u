@@ -68,3 +68,6 @@ critere de validation :
 
 - Modification classe Jeu
 - responsable : muller742u
+
+- Classe de test inventaire
+- responsable : muller742u
