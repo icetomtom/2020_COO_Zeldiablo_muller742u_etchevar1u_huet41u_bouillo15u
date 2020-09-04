@@ -1,6 +1,5 @@
 package Partie;
 
-import Elements.Joueur;
 import moteurJeu.moteur.DessinAbstract;
 import moteurJeu.sprite.Sprite;
 
@@ -15,7 +14,7 @@ import java.util.List;
 public class DessinPartie implements DessinAbstract {
 
     /**
-     * Liste de tous les elements à afficher
+     * Liste de tous les elements a afficher
      */
     private final List<Sprite> sprites;
 
@@ -43,7 +42,7 @@ public class DessinPartie implements DessinAbstract {
     }
 
     /**
-     * Ajoute un sprite à afficher
+     * Ajoute un sprite a afficher
      * @param s le sprite
      */
     public void addSprite(Sprite s) {

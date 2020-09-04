@@ -8,18 +8,18 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 /**
- * Adpte un menu pour etre afficher
+ * Adapte un menu pour etre afficher
  */
 public class DessinMenu implements DessinAbstract {
 
     /**
-     * Menu qu'il faut afficher
+     * Menu qu il faut afficher
      */
     private MenuPrincipal menu;
 
     /**
      * Constructeur
-     * @param menu à afficher
+     * @param menu a afficher
      */
     public DessinMenu(MenuPrincipal menu) {
         this.menu = menu;

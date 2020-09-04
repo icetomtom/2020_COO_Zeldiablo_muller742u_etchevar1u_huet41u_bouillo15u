@@ -62,7 +62,7 @@ public class Jeu implements JeuAbstract {
 	}
 
 	/**
-	 * Cree toutes les entities et sprites, remet les variable du jeu à 0
+	 * Cree toutes les entities et sprites, remet les variable du jeu a 0
 	 * @param n
 	 */
 	public void initialiserAvecNiveau(Niveau n) {
@@ -152,16 +152,16 @@ public class Jeu implements JeuAbstract {
 	}
 
 	/**
-	 * getter de l'attribut joueur
+	 * getter de l attribut joueur
 	 *
-	 * @return l'attribut joueur
+	 * @return l attribut joueur
 	 */
 	public Joueur getJoueur() { return this.joueur; }
 
 	/**
-	 * getter de l'attribut laby
+	 * getter de l attribut laby
 	 *
-	 * @return l'attribut laby
+	 * @return l attribut laby
 	 */
 	public Labyrinthe getLaby() { return this.laby; }
 
@@ -217,7 +217,7 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	/**
-	 * methode qui permet d'ajouter des entites au jeu
+	 * methode qui permet d ajouter des entites au jeu
 	 * @param e
 	 */
 	public void ajouter(Entite e) {
@@ -237,7 +237,7 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	/**
-	 * methode qui permet a toute la liste de monstre d'attaquer si possible le joueur ou alors de se deplacer
+	 * methode qui permet a toute la liste de monstre d attaquer si possible le joueur ou alors de se deplacer
 	 */
 	public void actionMonstre() {
 		if (fini)
@@ -265,7 +265,7 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	/**
-	 * methode qui permet d'avoir une entite de la liste en fonction de son index
+	 * methode qui permet d avoir une entite de la liste en fonction de son index
 	 * @param index entier correspondant a la place de lentite dans la liste
 	 * @return une entite 
 	 */
