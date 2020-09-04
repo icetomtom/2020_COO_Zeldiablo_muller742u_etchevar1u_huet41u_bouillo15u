@@ -115,8 +115,8 @@ public class Labyrinthe implements Serializable {
     }
 
     /**
-     * Getter de l'attibut entree_x
-     * @return position x de l'entrée pour le joueur
+     * Getter de l attibut entree_x
+     * @return position x de l'entree pour le joueur
      */
     public int getEntreeX() {
         return entree_x;
@@ -173,7 +173,7 @@ public class Labyrinthe implements Serializable {
     }
 
     /**
-     * Genere les cases d'un Labyrinthe
+     * Genere les cases d un Labyrinthe
      */
     private void chargerCasesRecursivement() {
         int w = (longeur+1) / 2 - 1;
@@ -205,7 +205,7 @@ public class Labyrinthe implements Serializable {
         int dir;
         boolean[] possibles = new boolean[4];
 
-        // Tant qu'on a pas fini
+        // Tant qu  on a pas fini
         while (!openlist.isEmpty()) {
             // On part de la derniere case dans le chemin
             curr = openlist.lastElement();
@@ -255,7 +255,7 @@ public class Labyrinthe implements Serializable {
             for(int i=0; i<longeur; i++) {
                 // Cherche le type de la case
                 int type = Case.TYPE_MUR;
-                // L'entree est forcement vide
+                // L entree est forcement vide
                 if(entree_x == i && entree_y == j)
                     type = Case.TYPE_VIDE;
                 // Bords du labyrinthe
