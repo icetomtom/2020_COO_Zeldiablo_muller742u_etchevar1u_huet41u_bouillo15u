@@ -22,38 +22,17 @@ public class PrincipaleGenerationNiveaux {
      */
     public static void main(String[] args) throws IOException {
 
+        // Décommenter pour generer de nouveaux niveaux ! Ecrases les anciens !
 
-//        Niveau n = UsineNiveau.getNiveau("niveaux/niveau3_2.obj");
-//        Case c_porte = n.getLabyrinthe().getCase(5, 3);
-//        Case c_vide = n.getLabyrinthe().getCase(6, 7);
-//        for (Monstre m : n.getMonstres())
-//            if (m.getPosY() == 5 && m.getPosX() == 13)
-//                m.setPosX(1);
-
-//        c_porte.setX(6);
-//        c_porte.setY(7);
-//        ((Porte) c_porte).changerEtat(true);
-//
-//        c_vide.setX(5);
-//        c_vide.setY(3);
-//
-//        n.getLabyrinthe().setCase(c_porte);
-//        n.getLabyrinthe().setCase(c_vide);
-
+//        for(int i = 0; i < 4; i++) {
 ////
-//
-//
-//        UsineNiveau.saveNiveau("niveaux/niveau3_2.obj", n);
-
-        for(int i = 0; i < 4; i++) {
-//
-            HashMap<TYPE_MONSTRE, Integer> montres_lvl_1 = new HashMap<>();
-            montres_lvl_1.put(TYPE_MONSTRE.MONSTRE_FANTOME, 4);
-            montres_lvl_1.put(TYPE_MONSTRE.MONSTRE_TROLL, 4);
-            montres_lvl_1.put(TYPE_MONSTRE.MONSTRE_IMMO, 1);
-            Niveau n1 = UsineNiveau.getNiveau(montres_lvl_1, 15, 15);
-            UsineNiveau.saveNiveau("niveaux/niveau1_"+i+".obj", n1);
-        }
+//            HashMap<TYPE_MONSTRE, Integer> montres_lvl_1 = new HashMap<>();
+//            montres_lvl_1.put(TYPE_MONSTRE.MONSTRE_FANTOME, 5);
+//            montres_lvl_1.put(TYPE_MONSTRE.MONSTRE_TROLL, 7);
+//            montres_lvl_1.put(TYPE_MONSTRE.MONSTRE_IMMO, 4);
+//            Niveau n1 = UsineNiveau.getNiveau(montres_lvl_1, 15, 15);
+//            UsineNiveau.saveNiveau("niveaux/niveau3_"+i+".obj", n1);
+//        }
 
 //        UsineNiveau.saveNiveau("niveaux/niveau_vide", new Niveau(new Labyrinthe(), new ArrayList<Monstre>()));
 
