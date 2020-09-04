@@ -232,7 +232,7 @@ public class Jeu implements JeuAbstract {
 		if (fini)
 			return;
 
-		for(int i =1;i<entites.size();i++) {
+		for(int i =0;i<entites.size();i++) {
 			joueur.attaquer(entites.get(i));
 		}		
 	}
@@ -288,7 +288,7 @@ public class Jeu implements JeuAbstract {
 		if(joueur.etreMort()) {
 			this.fini=true;
 		}else {
-			for(int i=entites.size()-1;i>0;i--) {
+			for(int i=entites.size()-1;i>=0;i--) {
 				if(entites.get(i).etreMort()) {
 					enleverSprite(entites.get(i));
 					entites.remove(entites.get(i));
