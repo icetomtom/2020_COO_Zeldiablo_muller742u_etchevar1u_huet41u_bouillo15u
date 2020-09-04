@@ -1,5 +1,6 @@
 package Partie;
 
+import Elements.Entite;
 import moteurJeu.moteur.DessinAbstract;
 import moteurJeu.sprite.Sprite;
 
@@ -14,27 +15,38 @@ import java.util.List;
 public class DessinPartie implements DessinAbstract {
 
     /**
-     * Liste de tous les elements a afficher
+     * Liste de tous les sprites qui ne sont pas des entities
      */
     private final List<Sprite> sprites;
 
     /**
+     * Liste de toutes les entites de la partie
+     */
+    private final List<Entite> entities;
+
+    /**
      * Taille en px de chaque case du labyrinthe
      */
-    public static final int TAILLE_CASE = 60;
+    public static final int TAILLE_CASE = 40;
 
     /**
      * Constructeur
      */
     public DessinPartie() {
         this.sprites = new ArrayList<>();
+        this.entities = new ArrayList<>();
     }
 
     /**
      * Constructeur
      * @param sprites a afficher
+     * @param entities a afficher
      */
-    public DessinPartie(List<Sprite> sprites) {
+    public DessinPartie(List<Sprite> sprites, List<Entite> entities) {
+        if(entities == null)
+            this.entities = new ArrayList<>();
+        else
+            this.entities = entities;
         if(sprites == null)
             this.sprites = new ArrayList<>();
         else
@@ -63,6 +75,12 @@ public class DessinPartie implements DessinAbstract {
 
         for(Sprite s: sprites) {
             s.dessiner(g);
+        }
+        for(Entite e: entities) {
+            e.dessiner(g);
+            System.out.println(e.getBarreDeVie());
+            e.getBarreDeVie().dessiner(g);
+
         }
 
         g.dispose();

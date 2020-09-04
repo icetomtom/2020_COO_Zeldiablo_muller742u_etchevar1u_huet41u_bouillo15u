@@ -10,7 +10,8 @@ public class Fantome extends Monstre {
 	 */
 	public Fantome() {
 		super("entities_3_13");
-		this.vie = 2;	
+		this.vie = 2;
+		barreDeVie.setVieMax(2);
 	}
 	
 

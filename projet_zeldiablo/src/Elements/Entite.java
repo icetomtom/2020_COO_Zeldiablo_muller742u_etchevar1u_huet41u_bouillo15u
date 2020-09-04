@@ -50,7 +50,7 @@ public class Entite extends Sprite {
 		this.vivant=true;
 		this.vie= 3;
 		this.maxPV=3;
-		this.barreDeVie = new BarreDeVie("entities_0_15", this.x, this.y);
+		this.barreDeVie = new BarreDeVie("entities_0_15", this.x, this.y, vie);
 	}
 
 
@@ -110,6 +110,7 @@ public class Entite extends Sprite {
 			vie =0;
 			this.vivant=false;
 		}
+		barreDeVie.setVie(vie);
 		
 
 	}

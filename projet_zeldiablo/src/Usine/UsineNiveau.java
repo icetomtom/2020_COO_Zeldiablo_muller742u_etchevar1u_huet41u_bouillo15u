@@ -11,16 +11,25 @@ import java.util.List;
 public class UsineNiveau {
 
     public static Niveau getNiveauNbMonstresAlea() {
+        return getNiveauNbMonstresAlea(10, 10);
+    }
+
+    public static Niveau getNiveau(HashMap<TYPE_MONSTRE, Integer> nb_monstres) {
+        return getNiveau(nb_monstres, 10, 10);
+    }
+
+    public static Niveau getNiveauNbMonstresAlea(int longeur_laby, int largeur_laby) {
         HashMap<TYPE_MONSTRE, Integer> nb = new HashMap<>();
         for(TYPE_MONSTRE t : TYPE_MONSTRE.values()) {
             nb.put(t, (int)(Math.random() * 3) + 1);
         }
-        return getNiveau(nb);
+        return getNiveau(nb, longeur_laby, largeur_laby);
     }
 
-    public static Niveau getNiveau(HashMap<TYPE_MONSTRE, Integer> nb_monstres) {
+    public static Niveau getNiveau(HashMap<TYPE_MONSTRE, Integer> nb_monstres, int longeur_laby, int largeur_laby) {
+
         List<Monstre> entites = new ArrayList<>();
-        Labyrinthe l = new Labyrinthe(10, 10, false);
+        Labyrinthe l = new Labyrinthe(longeur_laby, largeur_laby, false);
 
         List<Case> noeuds = l.getNoeuds();
         Case c = noeuds.get((int)(Math.random()*noeuds.size()));

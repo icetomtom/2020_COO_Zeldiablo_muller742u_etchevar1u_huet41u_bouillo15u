@@ -30,7 +30,7 @@ public class DessinPrincipal implements DessinAbstract {
      */
     public DessinPrincipal(JeuPrincipal j) {
         dessinMenu = new DessinMenu(j.menu.menu);
-        dessinJeu = new DessinPartie(j.partie.getSprites());
+        dessinJeu = new DessinPartie(j.partie.getSprites(), j.partie.getEntites());
         this.j = j;
     }
 

@@ -76,12 +76,11 @@ public class Jeu implements JeuAbstract {
 		this.joueur = new Joueur(this.laby.getEntreeX(), this.laby.getEntreeY());
 
 		entites.addAll(n.getMonstres());
-
 		this.entites.add(joueur);
 
 		sprites.addAll(this.laby.getCases());
 		sprites.add(laby.getAmulette());
-		sprites.addAll(this.entites);
+
 		this.fini = false;
 	}
 
@@ -142,10 +141,7 @@ public class Jeu implements JeuAbstract {
 			if(c instanceof CaseAEffet) {
 				((CaseAEffet)c).activerEffet(e);
 			}
-	    	
-	    	e.getBarreDeVie().updatePos(e.getPosX(), e.getPosY());
-	    	
-	    	System.out.println(e.getBarreDeVie().getPosX() + " " + e.getBarreDeVie().getPosY());
+
 		}else if(e instanceof Fantome){
 			if(e.getPosX()<laby.getLongeur() && e.getPosX()>0) {
 				if (e.getPosY()<laby.getLargeur() && e.getPosY()>0) {
@@ -153,6 +149,8 @@ public class Jeu implements JeuAbstract {
 				}
 			}
 		}
+
+		e.getBarreDeVie().updatePos(e.getPosX(), e.getPosY());
 	}
 
 	/**
@@ -307,4 +305,8 @@ public class Jeu implements JeuAbstract {
 	public List<Sprite> getSprites() {
 		return sprites;
 	}
+
+    public List<Entite> getEntites() {
+		return entites;
+    }
 }
