@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1318px" preserveAspectRatio="none" style="width:2718px;height:1318px;" version="1.1" viewBox="0 0 2718 1318" width="2718px" zoomAndPan="magnify"><defs><filter height="300%" id="f1wu2q24oku013" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="228" x="1236.25" y="16.708">Zeldiablo 4eme Itération</text><!--MD5=[2d4eb6d04d47a3654a2f28a4e4967f43]
+class Jeu--><rect codeLine="4" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="99.2188" id="Jeu" style="stroke: #A80036; stroke-width: 1.5;" width="151" x="1229.5" y="324.9531"/><ellipse cx="1291.25" cy="340.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1293.5938,336.625 C1292.6563,336.1875 1292.0625,336.0469 1291.1875,336.0469 C1288.5625,336.0469 1286.5625,338.125 1286.5625,340.8438 L1286.5625,341.9688 C1286.5625,344.5469 1288.6719,346.4375 1291.5625,346.4375 C1292.7813,346.4375 1293.9375,346.1406 1294.6875,345.5938 C1295.2656,345.1875 1295.5938,344.7344 1295.5938,344.3438 C1295.5938,343.8906 1295.2031,343.5 1294.7344,343.5 C1294.5156,343.5 1294.3125,343.5781 1294.125,343.7656 C1293.6719,344.25 1293.6719,344.25 1293.4844,344.3438 C1293.0625,344.6094 1292.375,344.7344 1291.6094,344.7344 C1289.5625,344.7344 1288.2656,343.6406 1288.2656,341.9375 L1288.2656,340.8438 C1288.2656,339.0625 1289.5156,337.75 1291.25,337.75 C1291.8281,337.75 1292.4375,337.9063 1292.9063,338.1563 C1293.3906,338.4375 1293.5625,338.6563 1293.6563,339.0625 C1293.7188,339.4688 1293.75,339.5938 1293.8906,339.7188 C1294.0313,339.8594 1294.2656,339.9688 1294.4844,339.9688 C1294.75,339.9688 1295.0156,339.8281 1295.1875,339.6094 C1295.2969,339.4531 1295.3281,339.2656 1295.3281,338.8438 L1295.3281,337.4219 C1295.3281,336.9844 1295.3125,336.8594 1295.2188,336.7031 C1295.0625,336.4375 1294.7813,336.2969 1294.4844,336.2969 C1294.1875,336.2969 1293.9844,336.3906 1293.7656,336.7031 L1293.5938,336.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="1311.75" y="345.1074">Jeu</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1230.5" x2="1379.5" y1="356.9531" y2="356.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="1230.5" x2="1379.5" y1="364.9531" y2="364.9531"/><ellipse cx="1240.5" cy="375.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="26" x="1249.5" y="379.1636">Jeu()</text><ellipse cx="1240.5" cy="388.7578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="1249.5" y="391.9683">déplacer(int direction)</text><ellipse cx="1240.5" cy="401.5625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="1249.5" y="404.7729">getJoueur(): Joueur</text><ellipse cx="1240.5" cy="414.3672" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="1249.5" y="417.5776">getLaby() : Labyrinthe</text><!--MD5=[85c2ed8dbf494cb60783de624603a7dd]
+class Sprite--><rect codeLine="13" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="124.8281" id="Sprite" style="stroke: #A80036; stroke-width: 1.5;" width="178" x="275" y="1174.9531"/><ellipse cx="341.75" cy="1190.9531" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M343.8281,1192.7656 L344.2188,1193.75 L343.8281,1193.75 C343.375,1193.75 343.2656,1193.7656 343.1094,1193.875 C342.8594,1194.0313 342.7031,1194.3125 342.7031,1194.6094 C342.7031,1194.875 342.8438,1195.125 343.0625,1195.2813 C343.2031,1195.4063 343.4063,1195.4531 343.8281,1195.4531 L346.1875,1195.4531 C346.5469,1195.4531 346.7656,1195.4219 346.9063,1195.3281 C347.1563,1195.1875 347.3125,1194.8906 347.3125,1194.6094 C347.3125,1194.3281 347.1719,1194.0781 346.9531,1193.9219 C346.7813,1193.7813 346.625,1193.75 346.1563,1193.75 L342.7656,1185.5469 L339.0938,1185.5469 C338.6406,1185.5469 338.5156,1185.5625 338.3594,1185.6563 C338.1094,1185.8281 337.9531,1186.1094 337.9531,1186.3906 C337.9531,1186.6719 338.0938,1186.9219 338.3125,1187.0938 C338.4844,1187.2031 338.6563,1187.2344 339.0938,1187.2344 L340.1719,1187.2344 L337.5313,1193.75 C337.1094,1193.75 336.9531,1193.7656 336.7969,1193.875 C336.5469,1194.0313 336.3906,1194.3125 336.3906,1194.6094 C336.3906,1195.1719 336.7656,1195.4531 337.5156,1195.4531 L339.7813,1195.4531 C340.1406,1195.4531 340.3594,1195.4219 340.4844,1195.3281 C340.75,1195.1875 340.8906,1194.8906 340.8906,1194.6094 C340.8906,1194.3281 340.7656,1194.0781 340.5469,1193.9063 C340.375,1193.7813 340.2344,1193.75 339.7813,1193.75 L339.3906,1193.75 L339.7813,1192.7656 L343.8281,1192.7656 Z M343.125,1191.0625 L340.4531,1191.0625 L341.7969,1187.7969 L343.125,1191.0625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="36" x="362.25" y="1195.1074">Sprite</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="276" x2="452" y1="1206.9531" y2="1206.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="283" y="1214.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="295" y="1221.1636">nomImage : String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="276" x2="452" y1="1227.7578" y2="1227.7578"/><ellipse cx="286" cy="1238.7578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="295" y="1241.9683">Sprite(nom : String)</text><ellipse cx="286" cy="1251.5625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="295" y="1254.7729">dessiner(Graphics g) : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="299" y="1267.5776"/><ellipse cx="286" cy="1277.1719" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="295" y="1280.3823">abstract getPosX() : int</text><ellipse cx="286" cy="1289.9766" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="127" x="295" y="1293.187">abstract getPosY() : int</text><!--MD5=[2bbec844ebd31f726303561be2fafbd2]
+class Entite--><rect codeLine="23" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="163.2422" id="Entite" style="stroke: #A80036; stroke-width: 1.5;" width="135" x="979.5" y="912.4531"/><ellipse cx="1026.25" cy="928.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1028.5938,924.125 C1027.6563,923.6875 1027.0625,923.5469 1026.1875,923.5469 C1023.5625,923.5469 1021.5625,925.625 1021.5625,928.3438 L1021.5625,929.4688 C1021.5625,932.0469 1023.6719,933.9375 1026.5625,933.9375 C1027.7813,933.9375 1028.9375,933.6406 1029.6875,933.0938 C1030.2656,932.6875 1030.5938,932.2344 1030.5938,931.8438 C1030.5938,931.3906 1030.2031,931 1029.7344,931 C1029.5156,931 1029.3125,931.0781 1029.125,931.2656 C1028.6719,931.75 1028.6719,931.75 1028.4844,931.8438 C1028.0625,932.1094 1027.375,932.2344 1026.6094,932.2344 C1024.5625,932.2344 1023.2656,931.1406 1023.2656,929.4375 L1023.2656,928.3438 C1023.2656,926.5625 1024.5156,925.25 1026.25,925.25 C1026.8281,925.25 1027.4375,925.4063 1027.9063,925.6563 C1028.3906,925.9375 1028.5625,926.1563 1028.6563,926.5625 C1028.7188,926.9688 1028.75,927.0938 1028.8906,927.2188 C1029.0313,927.3594 1029.2656,927.4688 1029.4844,927.4688 C1029.75,927.4688 1030.0156,927.3281 1030.1875,927.1094 C1030.2969,926.9531 1030.3281,926.7656 1030.3281,926.3438 L1030.3281,924.9219 C1030.3281,924.4844 1030.3125,924.3594 1030.2188,924.2031 C1030.0625,923.9375 1029.7813,923.7969 1029.4844,923.7969 C1029.1875,923.7969 1028.9844,923.8906 1028.7656,924.2031 L1028.5938,924.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="1046.75" y="932.6074">Entite</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="980.5" x2="1113.5" y1="944.4531" y2="944.4531"/><polygon fill="none" points="990.5,950.4531,994.5,954.4531,990.5,958.4531,986.5,954.4531" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="999.5" y="958.6636">x : int</text><polygon fill="none" points="990.5,963.2578,994.5,967.2578,990.5,971.2578,986.5,967.2578" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="999.5" y="971.4683">y : int</text><polygon fill="none" points="990.5,976.0625,994.5,980.0625,990.5,984.0625,986.5,980.0625" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="43" x="999.5" y="984.2729">vie : int</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="980.5" x2="1113.5" y1="990.8672" y2="990.8672"/><ellipse cx="990.5" cy="1001.8672" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="999.5" y="1005.0776">Entite(String nom)</text><ellipse cx="990.5" cy="1014.6719" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="999.5" y="1017.8823">getPosX():int</text><ellipse cx="990.5" cy="1027.4766" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="70" x="999.5" y="1030.687">getPosY():int</text><ellipse cx="990.5" cy="1040.2813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="999.5" y="1043.4917">setPosX(int x): void</text><ellipse cx="990.5" cy="1053.0859" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="999.5" y="1056.2964">setPosY(int y): void</text><ellipse cx="990.5" cy="1065.8906" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="999.5" y="1069.1011">getVie(): int</text><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
+class Joueur--><rect codeLine="36" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="163.2422" id="Joueur" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="1179" y="601.9531"/><ellipse cx="1224.25" cy="617.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1226.5938,613.625 C1225.6563,613.1875 1225.0625,613.0469 1224.1875,613.0469 C1221.5625,613.0469 1219.5625,615.125 1219.5625,617.8438 L1219.5625,618.9688 C1219.5625,621.5469 1221.6719,623.4375 1224.5625,623.4375 C1225.7813,623.4375 1226.9375,623.1406 1227.6875,622.5938 C1228.2656,622.1875 1228.5938,621.7344 1228.5938,621.3438 C1228.5938,620.8906 1228.2031,620.5 1227.7344,620.5 C1227.5156,620.5 1227.3125,620.5781 1227.125,620.7656 C1226.6719,621.25 1226.6719,621.25 1226.4844,621.3438 C1226.0625,621.6094 1225.375,621.7344 1224.6094,621.7344 C1222.5625,621.7344 1221.2656,620.6406 1221.2656,618.9375 L1221.2656,617.8438 C1221.2656,616.0625 1222.5156,614.75 1224.25,614.75 C1224.8281,614.75 1225.4375,614.9063 1225.9063,615.1563 C1226.3906,615.4375 1226.5625,615.6563 1226.6563,616.0625 C1226.7188,616.4688 1226.75,616.5938 1226.8906,616.7188 C1227.0313,616.8594 1227.2656,616.9688 1227.4844,616.9688 C1227.75,616.9688 1228.0156,616.8281 1228.1875,616.6094 C1228.2969,616.4531 1228.3281,616.2656 1228.3281,615.8438 L1228.3281,614.4219 C1228.3281,613.9844 1228.3125,613.8594 1228.2188,613.7031 C1228.0625,613.4375 1227.7813,613.2969 1227.4844,613.2969 C1227.1875,613.2969 1226.9844,613.3906 1226.7656,613.7031 L1226.5938,613.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="39" x="1244.75" y="622.1074">Joueur</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1180" x2="1316" y1="633.9531" y2="633.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1187" y="641.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="1199" y="648.1636">xPos : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1187" y="654.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="1199" y="660.9683">yPos : int</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1180" x2="1316" y1="667.5625" y2="667.5625"/><ellipse cx="1190" cy="678.5625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="44" x="1199" y="681.7729">Joueur()</text><ellipse cx="1190" cy="691.3672" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="1199" y="694.5776">Joueur(int x, int y)</text><ellipse cx="1190" cy="704.1719" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="1199" y="707.3823">seDéplacer(int x,y)</text><ellipse cx="1190" cy="716.9766" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="1199" y="720.187">getPosX() : int</text><ellipse cx="1190" cy="729.7813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="78" x="1199" y="732.9917">getPosY() : int</text><ellipse cx="1190" cy="742.5859" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="1199" y="745.7964">setPosX(int x): void</text><ellipse cx="1190" cy="755.3906" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="1199" y="758.6011">setPosY(int y) : void</text><!--MD5=[7320b4e76d9809b3f9f7cbd1c9d91a4b]
+class CaseGeneration--><rect codeLine="50" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="137.6328" id="CaseGeneration" style="stroke: #A80036; stroke-width: 1.5;" width="217" x="2242.5" y="40.4531"/><ellipse cx="2298.75" cy="56.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M2301.0938,52.125 C2300.1563,51.6875 2299.5625,51.5469 2298.6875,51.5469 C2296.0625,51.5469 2294.0625,53.625 2294.0625,56.3438 L2294.0625,57.4688 C2294.0625,60.0469 2296.1719,61.9375 2299.0625,61.9375 C2300.2813,61.9375 2301.4375,61.6406 2302.1875,61.0938 C2302.7656,60.6875 2303.0938,60.2344 2303.0938,59.8438 C2303.0938,59.3906 2302.7031,59 2302.2344,59 C2302.0156,59 2301.8125,59.0781 2301.625,59.2656 C2301.1719,59.75 2301.1719,59.75 2300.9844,59.8438 C2300.5625,60.1094 2299.875,60.2344 2299.1094,60.2344 C2297.0625,60.2344 2295.7656,59.1406 2295.7656,57.4375 L2295.7656,56.3438 C2295.7656,54.5625 2297.0156,53.25 2298.75,53.25 C2299.3281,53.25 2299.9375,53.4063 2300.4063,53.6563 C2300.8906,53.9375 2301.0625,54.1563 2301.1563,54.5625 C2301.2188,54.9688 2301.25,55.0938 2301.3906,55.2188 C2301.5313,55.3594 2301.7656,55.4688 2301.9844,55.4688 C2302.25,55.4688 2302.5156,55.3281 2302.6875,55.1094 C2302.7969,54.9531 2302.8281,54.7656 2302.8281,54.3438 L2302.8281,52.9219 C2302.8281,52.4844 2302.8125,52.3594 2302.7188,52.2031 C2302.5625,51.9375 2302.2813,51.7969 2301.9844,51.7969 C2301.6875,51.7969 2301.4844,51.8906 2301.2656,52.2031 L2301.0938,52.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="96" x="2319.25" y="60.6074">CaseGeneration</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="2243.5" x2="2458.5" y1="72.4531" y2="72.4531"/><ellipse cx="2253.5" cy="83.4531" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="2262.5" y="86.6636">x : int</text><ellipse cx="2253.5" cy="96.2578" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="2262.5" y="99.4683">y : int</text><ellipse cx="2253.5" cy="109.0625" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="2262.5" y="112.2729">murs : boolean[4]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="2266.5" y="125.0776"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="2266.5" y="137.8823"/><ellipse cx="2253.5" cy="147.4766" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="191" x="2262.5" y="150.687">CaseGeneration.AUCUN_MUR : int</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="2243.5" x2="2458.5" y1="157.2813" y2="157.2813"/><ellipse cx="2253.5" cy="168.2813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="2262.5" y="171.4917">murAlea() : int</text><!--MD5=[c45abaa87488010b8b38d7cb3b3cc46f]
+class Labyrinthe--><rect codeLine="60" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="227.2656" id="Labyrinthe" style="stroke: #A80036; stroke-width: 1.5;" width="234" x="1744" y="569.9531"/><ellipse cx="1825.75" cy="585.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1828.0938,581.625 C1827.1563,581.1875 1826.5625,581.0469 1825.6875,581.0469 C1823.0625,581.0469 1821.0625,583.125 1821.0625,585.8438 L1821.0625,586.9688 C1821.0625,589.5469 1823.1719,591.4375 1826.0625,591.4375 C1827.2813,591.4375 1828.4375,591.1406 1829.1875,590.5938 C1829.7656,590.1875 1830.0938,589.7344 1830.0938,589.3438 C1830.0938,588.8906 1829.7031,588.5 1829.2344,588.5 C1829.0156,588.5 1828.8125,588.5781 1828.625,588.7656 C1828.1719,589.25 1828.1719,589.25 1827.9844,589.3438 C1827.5625,589.6094 1826.875,589.7344 1826.1094,589.7344 C1824.0625,589.7344 1822.7656,588.6406 1822.7656,586.9375 L1822.7656,585.8438 C1822.7656,584.0625 1824.0156,582.75 1825.75,582.75 C1826.3281,582.75 1826.9375,582.9063 1827.4063,583.1563 C1827.8906,583.4375 1828.0625,583.6563 1828.1563,584.0625 C1828.2188,584.4688 1828.25,584.5938 1828.3906,584.7188 C1828.5313,584.8594 1828.7656,584.9688 1828.9844,584.9688 C1829.25,584.9688 1829.5156,584.8281 1829.6875,584.6094 C1829.7969,584.4531 1829.8281,584.2656 1829.8281,583.8438 L1829.8281,582.4219 C1829.8281,581.9844 1829.8125,581.8594 1829.7188,581.7031 C1829.5625,581.4375 1829.2813,581.2969 1828.9844,581.2969 C1828.6875,581.2969 1828.4844,581.3906 1828.2656,581.7031 L1828.0938,581.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="62" x="1846.25" y="590.1074">Labyrinthe</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1745" x2="1977" y1="601.9531" y2="601.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1752" y="609.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="77" x="1764" y="616.1636">entree_x : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1752" y="622.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="77" x="1764" y="628.9683">entree_y : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1752" y="635.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="1764" y="641.7729">longeur : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1752" y="648.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="1764" y="654.5776">largeur : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1752" y="661.1719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="140" x="1764" y="667.3823">cases : ArrayList&lt;Case&gt;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1745" x2="1977" y1="673.9766" y2="673.9766"/><ellipse cx="1755" cy="684.9766" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="1764" y="688.187">Labyrinthe()</text><ellipse cx="1755" cy="697.7813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="208" x="1764" y="700.9917">Labyrinthe(longeur : int, largeur : int)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="1768" y="713.7964"/><ellipse cx="1755" cy="723.3906" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="175" x="1764" y="726.6011">genererRecursivement() : void</text><ellipse cx="1755" cy="736.1953" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="1764" y="739.4058">getEntreeX() : int</text><ellipse cx="1755" cy="749" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="1764" y="752.2104">getEntreeY() : int</text><ellipse cx="1755" cy="761.8047" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="136" x="1764" y="765.0151">getEntreeLongeur() : int</text><ellipse cx="1755" cy="774.6094" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="133" x="1764" y="777.8198">getEntreeLargeur() : int</text><ellipse cx="1755" cy="787.4141" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="1764" y="790.6245">getCase(int x, int y) : Case</text><!--MD5=[e8dcfdde5c6ce5239f59acd294696d72]
+class Case--><rect codeLine="78" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="163.2422" id="Case" style="stroke: #A80036; stroke-width: 1.5;" width="178" x="1480" y="601.9531"/><ellipse cx="1549.75" cy="617.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1552.0938,613.625 C1551.1563,613.1875 1550.5625,613.0469 1549.6875,613.0469 C1547.0625,613.0469 1545.0625,615.125 1545.0625,617.8438 L1545.0625,618.9688 C1545.0625,621.5469 1547.1719,623.4375 1550.0625,623.4375 C1551.2813,623.4375 1552.4375,623.1406 1553.1875,622.5938 C1553.7656,622.1875 1554.0938,621.7344 1554.0938,621.3438 C1554.0938,620.8906 1553.7031,620.5 1553.2344,620.5 C1553.0156,620.5 1552.8125,620.5781 1552.625,620.7656 C1552.1719,621.25 1552.1719,621.25 1551.9844,621.3438 C1551.5625,621.6094 1550.875,621.7344 1550.1094,621.7344 C1548.0625,621.7344 1546.7656,620.6406 1546.7656,618.9375 L1546.7656,617.8438 C1546.7656,616.0625 1548.0156,614.75 1549.75,614.75 C1550.3281,614.75 1550.9375,614.9063 1551.4063,615.1563 C1551.8906,615.4375 1552.0625,615.6563 1552.1563,616.0625 C1552.2188,616.4688 1552.25,616.5938 1552.3906,616.7188 C1552.5313,616.8594 1552.7656,616.9688 1552.9844,616.9688 C1553.25,616.9688 1553.5156,616.8281 1553.6875,616.6094 C1553.7969,616.4531 1553.8281,616.2656 1553.8281,615.8438 L1553.8281,614.4219 C1553.8281,613.9844 1553.8125,613.8594 1553.7188,613.7031 C1553.5625,613.4375 1553.2813,613.2969 1552.9844,613.2969 C1552.6875,613.2969 1552.4844,613.3906 1552.2656,613.7031 L1552.0938,613.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="1570.25" y="622.1074">Case</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1481" x2="1657" y1="633.9531" y2="633.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1488" y="641.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="1500" y="648.1636">x : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1488" y="654.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="1500" y="660.9683">y : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1488" y="667.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="1500" y="673.7729">type : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1488" y="680.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="123" x="1500" y="686.5776">traversable : booleen</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1481" x2="1657" y1="693.1719" y2="693.1719"/><ellipse cx="1491" cy="704.1719" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="1500" y="707.3823">Case()</text><ellipse cx="1491" cy="716.9766" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="96" x="1500" y="720.187">getType() : Type</text><ellipse cx="1491" cy="729.7813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="1500" y="732.9917">getX() : int</text><ellipse cx="1491" cy="742.5859" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="1500" y="745.7964">getY() : int</text><ellipse cx="1491" cy="755.3906" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="1500" y="758.6011">estTraversable() : booleen</text><!--MD5=[eeae929945aaacbe621dd08a735fca93]
+class CaseAEffet--><rect codeLine="91" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="73.6094" id="CaseAEffet" style="stroke: #A80036; stroke-width: 1.5;" width="206" x="1555" y="337.4531"/><ellipse cx="1621.25" cy="353.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1623.5938,349.125 C1622.6563,348.6875 1622.0625,348.5469 1621.1875,348.5469 C1618.5625,348.5469 1616.5625,350.625 1616.5625,353.3438 L1616.5625,354.4688 C1616.5625,357.0469 1618.6719,358.9375 1621.5625,358.9375 C1622.7813,358.9375 1623.9375,358.6406 1624.6875,358.0938 C1625.2656,357.6875 1625.5938,357.2344 1625.5938,356.8438 C1625.5938,356.3906 1625.2031,356 1624.7344,356 C1624.5156,356 1624.3125,356.0781 1624.125,356.2656 C1623.6719,356.75 1623.6719,356.75 1623.4844,356.8438 C1623.0625,357.1094 1622.375,357.2344 1621.6094,357.2344 C1619.5625,357.2344 1618.2656,356.1406 1618.2656,354.4375 L1618.2656,353.3438 C1618.2656,351.5625 1619.5156,350.25 1621.25,350.25 C1621.8281,350.25 1622.4375,350.4063 1622.9063,350.6563 C1623.3906,350.9375 1623.5625,351.1563 1623.6563,351.5625 C1623.7188,351.9688 1623.75,352.0938 1623.8906,352.2188 C1624.0313,352.3594 1624.2656,352.4688 1624.4844,352.4688 C1624.75,352.4688 1625.0156,352.3281 1625.1875,352.1094 C1625.2969,351.9531 1625.3281,351.7656 1625.3281,351.3438 L1625.3281,349.9219 C1625.3281,349.4844 1625.3125,349.3594 1625.2188,349.2031 C1625.0625,348.9375 1624.7813,348.7969 1624.4844,348.7969 C1624.1875,348.7969 1623.9844,348.8906 1623.7656,349.2031 L1623.5938,349.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="65" x="1641.75" y="357.6074">CaseAEffet</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1556" x2="1760" y1="369.4531" y2="369.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="1556" x2="1760" y1="377.4531" y2="377.4531"/><ellipse cx="1566" cy="388.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="180" x="1575" y="391.6636">CaseAEffet(int x, int y, int type)</text><ellipse cx="1566" cy="401.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="150" x="1575" y="404.4683">activerEffet(Entite e): void</text><!--MD5=[637d7e1f87b088885927afd6449ecd5a]
+class CasePiege--><rect codeLine="96" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="99.2188" id="CasePiege" style="stroke: #A80036; stroke-width: 1.5;" width="195" x="1579.5" y="59.9531"/><ellipse cx="1641.25" cy="75.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1643.5938,71.625 C1642.6563,71.1875 1642.0625,71.0469 1641.1875,71.0469 C1638.5625,71.0469 1636.5625,73.125 1636.5625,75.8438 L1636.5625,76.9688 C1636.5625,79.5469 1638.6719,81.4375 1641.5625,81.4375 C1642.7813,81.4375 1643.9375,81.1406 1644.6875,80.5938 C1645.2656,80.1875 1645.5938,79.7344 1645.5938,79.3438 C1645.5938,78.8906 1645.2031,78.5 1644.7344,78.5 C1644.5156,78.5 1644.3125,78.5781 1644.125,78.7656 C1643.6719,79.25 1643.6719,79.25 1643.4844,79.3438 C1643.0625,79.6094 1642.375,79.7344 1641.6094,79.7344 C1639.5625,79.7344 1638.2656,78.6406 1638.2656,76.9375 L1638.2656,75.8438 C1638.2656,74.0625 1639.5156,72.75 1641.25,72.75 C1641.8281,72.75 1642.4375,72.9063 1642.9063,73.1563 C1643.3906,73.4375 1643.5625,73.6563 1643.6563,74.0625 C1643.7188,74.4688 1643.75,74.5938 1643.8906,74.7188 C1644.0313,74.8594 1644.2656,74.9688 1644.4844,74.9688 C1644.75,74.9688 1645.0156,74.8281 1645.1875,74.6094 C1645.2969,74.4531 1645.3281,74.2656 1645.3281,73.8438 L1645.3281,72.4219 C1645.3281,71.9844 1645.3125,71.8594 1645.2188,71.7031 C1645.0625,71.4375 1644.7813,71.2969 1644.4844,71.2969 C1644.1875,71.2969 1643.9844,71.3906 1643.7656,71.7031 L1643.5938,71.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="63" x="1661.75" y="80.1074">CasePiege</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1580.5" x2="1773.5" y1="91.9531" y2="91.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1587.5" y="99.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="92" x="1599.5" y="106.1636">active : boolean</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1580.5" x2="1773.5" y1="112.7578" y2="112.7578"/><ellipse cx="1590.5" cy="123.7578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="169" x="1599.5" y="126.9683">CasePiege(int x,int y,int type)</text><ellipse cx="1590.5" cy="136.5625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="1599.5" y="139.7729">activerEffet(Entite e) : void</text><ellipse cx="1590.5" cy="149.3672" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="115" x="1599.5" y="152.5776">estActive(): boolean</text><!--MD5=[0faf4e8a4a3beb0fd3e861bd4feff639]
+class Fantome--><rect codeLine="104" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="73.6094" id="Fantome" style="stroke: #A80036; stroke-width: 1.5;" width="188" x="504" y="646.4531"/><ellipse cx="567.75" cy="662.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M570.0938,658.125 C569.1563,657.6875 568.5625,657.5469 567.6875,657.5469 C565.0625,657.5469 563.0625,659.625 563.0625,662.3438 L563.0625,663.4688 C563.0625,666.0469 565.1719,667.9375 568.0625,667.9375 C569.2813,667.9375 570.4375,667.6406 571.1875,667.0938 C571.7656,666.6875 572.0938,666.2344 572.0938,665.8438 C572.0938,665.3906 571.7031,665 571.2344,665 C571.0156,665 570.8125,665.0781 570.625,665.2656 C570.1719,665.75 570.1719,665.75 569.9844,665.8438 C569.5625,666.1094 568.875,666.2344 568.1094,666.2344 C566.0625,666.2344 564.7656,665.1406 564.7656,663.4375 L564.7656,662.3438 C564.7656,660.5625 566.0156,659.25 567.75,659.25 C568.3281,659.25 568.9375,659.4063 569.4063,659.6563 C569.8906,659.9375 570.0625,660.1563 570.1563,660.5625 C570.2188,660.9688 570.25,661.0938 570.3906,661.2188 C570.5313,661.3594 570.7656,661.4688 570.9844,661.4688 C571.25,661.4688 571.5156,661.3281 571.6875,661.1094 C571.7969,660.9531 571.8281,660.7656 571.8281,660.3438 L571.8281,658.9219 C571.8281,658.4844 571.8125,658.3594 571.7188,658.2031 C571.5625,657.9375 571.2813,657.7969 570.9844,657.7969 C570.6875,657.7969 570.4844,657.8906 570.2656,658.2031 L570.0938,658.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="52" x="588.25" y="666.6074">Fantome</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="505" x2="691" y1="678.4531" y2="678.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="505" x2="691" y1="686.4531" y2="686.4531"/><ellipse cx="515" cy="697.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="120" x="524" y="700.6636">Fantome(String nom)</text><ellipse cx="515" cy="710.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="162" x="524" y="713.4683">seDeplacer(int x, int y): void</text><!--MD5=[0d912f6bb98965e5a45e9bb1a9ed0249]
+class Troll--><rect codeLine="109" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="73.6094" id="Troll" style="stroke: #A80036; stroke-width: 1.5;" width="188" x="727" y="646.4531"/><ellipse cx="803.75" cy="662.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M806.0938,658.125 C805.1563,657.6875 804.5625,657.5469 803.6875,657.5469 C801.0625,657.5469 799.0625,659.625 799.0625,662.3438 L799.0625,663.4688 C799.0625,666.0469 801.1719,667.9375 804.0625,667.9375 C805.2813,667.9375 806.4375,667.6406 807.1875,667.0938 C807.7656,666.6875 808.0938,666.2344 808.0938,665.8438 C808.0938,665.3906 807.7031,665 807.2344,665 C807.0156,665 806.8125,665.0781 806.625,665.2656 C806.1719,665.75 806.1719,665.75 805.9844,665.8438 C805.5625,666.1094 804.875,666.2344 804.1094,666.2344 C802.0625,666.2344 800.7656,665.1406 800.7656,663.4375 L800.7656,662.3438 C800.7656,660.5625 802.0156,659.25 803.75,659.25 C804.3281,659.25 804.9375,659.4063 805.4063,659.6563 C805.8906,659.9375 806.0625,660.1563 806.1563,660.5625 C806.2188,660.9688 806.25,661.0938 806.3906,661.2188 C806.5313,661.3594 806.7656,661.4688 806.9844,661.4688 C807.25,661.4688 807.5156,661.3281 807.6875,661.1094 C807.7969,660.9531 807.8281,660.7656 807.8281,660.3438 L807.8281,658.9219 C807.8281,658.4844 807.8125,658.3594 807.7188,658.2031 C807.5625,657.9375 807.2813,657.7969 806.9844,657.7969 C806.6875,657.7969 806.4844,657.8906 806.2656,658.2031 L806.0938,658.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="26" x="824.25" y="666.6074">Troll</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="728" x2="914" y1="678.4531" y2="678.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="728" x2="914" y1="686.4531" y2="686.4531"/><ellipse cx="738" cy="697.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="747" y="700.6636">Troll(String nom)</text><ellipse cx="738" cy="710.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="162" x="747" y="713.4683">seDeplacer(int x, int y): void</text><!--MD5=[8fdb557447df04eeb3adec19c313909b]
+class MonstreImmobile--><rect codeLine="114" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="60.8047" id="MonstreImmobile" style="stroke: #A80036; stroke-width: 1.5;" width="194" x="950" y="652.9531"/><ellipse cx="991.1" cy="668.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M993.4438,664.625 C992.5063,664.1875 991.9125,664.0469 991.0375,664.0469 C988.4125,664.0469 986.4125,666.125 986.4125,668.8438 L986.4125,669.9688 C986.4125,672.5469 988.5219,674.4375 991.4125,674.4375 C992.6313,674.4375 993.7875,674.1406 994.5375,673.5938 C995.1156,673.1875 995.4438,672.7344 995.4438,672.3438 C995.4438,671.8906 995.0531,671.5 994.5844,671.5 C994.3656,671.5 994.1625,671.5781 993.975,671.7656 C993.5219,672.25 993.5219,672.25 993.3344,672.3438 C992.9125,672.6094 992.225,672.7344 991.4594,672.7344 C989.4125,672.7344 988.1156,671.6406 988.1156,669.9375 L988.1156,668.8438 C988.1156,667.0625 989.3656,665.75 991.1,665.75 C991.6781,665.75 992.2875,665.9063 992.7563,666.1563 C993.2406,666.4375 993.4125,666.6563 993.5063,667.0625 C993.5688,667.4688 993.6,667.5938 993.7406,667.7188 C993.8813,667.8594 994.1156,667.9688 994.3344,667.9688 C994.6,667.9688 994.8656,667.8281 995.0375,667.6094 C995.1469,667.4531 995.1781,667.2656 995.1781,666.8438 L995.1781,665.4219 C995.1781,664.9844 995.1625,664.8594 995.0688,664.7031 C994.9125,664.4375 994.6313,664.2969 994.3344,664.2969 C994.0375,664.2969 993.8344,664.3906 993.6156,664.7031 L993.4438,664.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="104" x="1010.9" y="673.1074">MonstreImmobile</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="951" x2="1143" y1="684.9531" y2="684.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="951" x2="1143" y1="692.9531" y2="692.9531"/><ellipse cx="961" cy="703.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="970" y="707.1636">MonstreImmobile(String nom)</text><!--MD5=[af7211c51a8092534662497ca2ed7b31]
+class DessinPartie--><rect codeLine="118" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="86.4141" id="DessinPartie" style="stroke: #A80036; stroke-width: 1.5;" width="232" x="7" y="453.9531"/><ellipse cx="81.75" cy="469.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M84.0938,465.625 C83.1563,465.1875 82.5625,465.0469 81.6875,465.0469 C79.0625,465.0469 77.0625,467.125 77.0625,469.8438 L77.0625,470.9688 C77.0625,473.5469 79.1719,475.4375 82.0625,475.4375 C83.2813,475.4375 84.4375,475.1406 85.1875,474.5938 C85.7656,474.1875 86.0938,473.7344 86.0938,473.3438 C86.0938,472.8906 85.7031,472.5 85.2344,472.5 C85.0156,472.5 84.8125,472.5781 84.625,472.7656 C84.1719,473.25 84.1719,473.25 83.9844,473.3438 C83.5625,473.6094 82.875,473.7344 82.1094,473.7344 C80.0625,473.7344 78.7656,472.6406 78.7656,470.9375 L78.7656,469.8438 C78.7656,468.0625 80.0156,466.75 81.75,466.75 C82.3281,466.75 82.9375,466.9063 83.4063,467.1563 C83.8906,467.4375 84.0625,467.6563 84.1563,468.0625 C84.2188,468.4688 84.25,468.5938 84.3906,468.7188 C84.5313,468.8594 84.7656,468.9688 84.9844,468.9688 C85.25,468.9688 85.5156,468.8281 85.6875,468.6094 C85.7969,468.4531 85.8281,468.2656 85.8281,467.8438 L85.8281,466.4219 C85.8281,465.9844 85.8125,465.8594 85.7188,465.7031 C85.5625,465.4375 85.2813,465.2969 84.9844,465.2969 C84.6875,465.2969 84.4844,465.3906 84.2656,465.7031 L84.0938,465.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="102.25" y="474.1074">DessinPartie</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="238" y1="485.9531" y2="485.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="493.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="120" x="27" y="500.1636">sprites : List&lt;Sprite&gt;</text><ellipse cx="18" cy="509.7578" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="173" x="27" y="512.9683">DessinPartie.TAILLE_CASE : int</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="238" y1="519.5625" y2="519.5625"/><ellipse cx="18" cy="530.5625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="206" x="27" y="533.7729">dessiner(img: BufferedImage) : void</text><!--MD5=[4a7b78873eb2734d83f0d715f0c0d32c]
+class UsineMonstre--><rect codeLine="125" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="60.8047" id="UsineMonstre" style="stroke: #A80036; stroke-width: 1.5;" width="205" x="2494.5" y="78.9531"/><ellipse cx="2551.25" cy="94.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M2553.5938,90.625 C2552.6563,90.1875 2552.0625,90.0469 2551.1875,90.0469 C2548.5625,90.0469 2546.5625,92.125 2546.5625,94.8438 L2546.5625,95.9688 C2546.5625,98.5469 2548.6719,100.4375 2551.5625,100.4375 C2552.7813,100.4375 2553.9375,100.1406 2554.6875,99.5938 C2555.2656,99.1875 2555.5938,98.7344 2555.5938,98.3438 C2555.5938,97.8906 2555.2031,97.5 2554.7344,97.5 C2554.5156,97.5 2554.3125,97.5781 2554.125,97.7656 C2553.6719,98.25 2553.6719,98.25 2553.4844,98.3438 C2553.0625,98.6094 2552.375,98.7344 2551.6094,98.7344 C2549.5625,98.7344 2548.2656,97.6406 2548.2656,95.9375 L2548.2656,94.8438 C2548.2656,93.0625 2549.5156,91.75 2551.25,91.75 C2551.8281,91.75 2552.4375,91.9063 2552.9063,92.1563 C2553.3906,92.4375 2553.5625,92.6563 2553.6563,93.0625 C2553.7188,93.4688 2553.75,93.5938 2553.8906,93.7188 C2554.0313,93.8594 2554.2656,93.9688 2554.4844,93.9688 C2554.75,93.9688 2555.0156,93.8281 2555.1875,93.6094 C2555.2969,93.4531 2555.3281,93.2656 2555.3281,92.8438 L2555.3281,91.4219 C2555.3281,90.9844 2555.3125,90.8594 2555.2188,90.7031 C2555.0625,90.4375 2554.7813,90.2969 2554.4844,90.2969 C2554.1875,90.2969 2553.9844,90.3906 2553.7656,90.7031 L2553.5938,90.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="83" x="2571.75" y="99.1074">UsineMonstre</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="2495.5" x2="2698.5" y1="110.9531" y2="110.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="2495.5" x2="2698.5" y1="118.9531" y2="118.9531"/><ellipse cx="2505.5" cy="129.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="2514.5" y="133.1636">getMonstre(type : int) : Monstre</text><!--MD5=[075eb53c4050d81bac222ddea475c328]
+class UsineNiveau--><rect codeLine="129" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="86.4141" id="UsineNiveau" style="stroke: #A80036; stroke-width: 1.5;" width="259" x="2221.5" y="331.4531"/><ellipse cx="2309.75" cy="347.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M2312.0938,343.125 C2311.1563,342.6875 2310.5625,342.5469 2309.6875,342.5469 C2307.0625,342.5469 2305.0625,344.625 2305.0625,347.3438 L2305.0625,348.4688 C2305.0625,351.0469 2307.1719,352.9375 2310.0625,352.9375 C2311.2813,352.9375 2312.4375,352.6406 2313.1875,352.0938 C2313.7656,351.6875 2314.0938,351.2344 2314.0938,350.8438 C2314.0938,350.3906 2313.7031,350 2313.2344,350 C2313.0156,350 2312.8125,350.0781 2312.625,350.2656 C2312.1719,350.75 2312.1719,350.75 2311.9844,350.8438 C2311.5625,351.1094 2310.875,351.2344 2310.1094,351.2344 C2308.0625,351.2344 2306.7656,350.1406 2306.7656,348.4375 L2306.7656,347.3438 C2306.7656,345.5625 2308.0156,344.25 2309.75,344.25 C2310.3281,344.25 2310.9375,344.4063 2311.4063,344.6563 C2311.8906,344.9375 2312.0625,345.1563 2312.1563,345.5625 C2312.2188,345.9688 2312.25,346.0938 2312.3906,346.2188 C2312.5313,346.3594 2312.7656,346.4688 2312.9844,346.4688 C2313.25,346.4688 2313.5156,346.3281 2313.6875,346.1094 C2313.7969,345.9531 2313.8281,345.7656 2313.8281,345.3438 L2313.8281,343.9219 C2313.8281,343.4844 2313.8125,343.3594 2313.7188,343.2031 C2313.5625,342.9375 2313.2813,342.7969 2312.9844,342.7969 C2312.6875,342.7969 2312.4844,342.8906 2312.2656,343.2031 L2312.0938,343.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="2330.25" y="351.6074">UsineNiveau</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="2222.5" x2="2479.5" y1="363.4531" y2="363.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="2222.5" x2="2479.5" y1="371.4531" y2="371.4531"/><ellipse cx="2232.5" cy="382.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="195" x="2241.5" y="385.6636">getNiveau(fichier : string) : Niveau</text><ellipse cx="2232.5" cy="395.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="233" x="2241.5" y="398.4683">getNiveau(monstres : HashMap) : Niveau</text><ellipse cx="2232.5" cy="408.0625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="210" x="2241.5" y="411.2729">getNiveauNbMonstresAlea() : Niveau</text><!--MD5=[7d2ff6f7de69d63bf7a59e5d3cfdf96d]
+class Niveau--><rect codeLine="135" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="86.4141" id="Niveau" style="stroke: #A80036; stroke-width: 1.5;" width="314" x="1872" y="331.4531"/><ellipse cx="2004.75" cy="347.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M2007.0938,343.125 C2006.1563,342.6875 2005.5625,342.5469 2004.6875,342.5469 C2002.0625,342.5469 2000.0625,344.625 2000.0625,347.3438 L2000.0625,348.4688 C2000.0625,351.0469 2002.1719,352.9375 2005.0625,352.9375 C2006.2813,352.9375 2007.4375,352.6406 2008.1875,352.0938 C2008.7656,351.6875 2009.0938,351.2344 2009.0938,350.8438 C2009.0938,350.3906 2008.7031,350 2008.2344,350 C2008.0156,350 2007.8125,350.0781 2007.625,350.2656 C2007.1719,350.75 2007.1719,350.75 2006.9844,350.8438 C2006.5625,351.1094 2005.875,351.2344 2005.1094,351.2344 C2003.0625,351.2344 2001.7656,350.1406 2001.7656,348.4375 L2001.7656,347.3438 C2001.7656,345.5625 2003.0156,344.25 2004.75,344.25 C2005.3281,344.25 2005.9375,344.4063 2006.4063,344.6563 C2006.8906,344.9375 2007.0625,345.1563 2007.1563,345.5625 C2007.2188,345.9688 2007.25,346.0938 2007.3906,346.2188 C2007.5313,346.3594 2007.7656,346.4688 2007.9844,346.4688 C2008.25,346.4688 2008.5156,346.3281 2008.6875,346.1094 C2008.7969,345.9531 2008.8281,345.7656 2008.8281,345.3438 L2008.8281,343.9219 C2008.8281,343.4844 2008.8125,343.3594 2008.7188,343.2031 C2008.5625,342.9375 2008.2813,342.7969 2007.9844,342.7969 C2007.6875,342.7969 2007.4844,342.8906 2007.2656,343.2031 L2007.0938,343.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="40" x="2025.25" y="351.6074">Niveau</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1873" x2="2185" y1="363.4531" y2="363.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="1873" x2="2185" y1="371.4531" y2="371.4531"/><ellipse cx="1883" cy="382.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="288" x="1892" y="385.6636">Niveau(laby : Labyrinthe, monstres : List&lt;Entite&gt; )</text><ellipse cx="1883" cy="395.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="158" x="1892" y="398.4683">getLabyrinthe() : Labyrinthe</text><ellipse cx="1883" cy="408.0625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="1892" y="411.2729">getMonstres() : List&lt;Entite&gt;</text><!--MD5=[688dd102a86e389633d9b66d70c3dc51]
+class CaseSecrete--><rect codeLine="141" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="60.8047" id="CaseSecrete" style="stroke: #A80036; stroke-width: 1.5;" width="145" x="1399.5" y="78.9531"/><ellipse cx="1430.25" cy="94.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1432.5938,90.625 C1431.6563,90.1875 1431.0625,90.0469 1430.1875,90.0469 C1427.5625,90.0469 1425.5625,92.125 1425.5625,94.8438 L1425.5625,95.9688 C1425.5625,98.5469 1427.6719,100.4375 1430.5625,100.4375 C1431.7813,100.4375 1432.9375,100.1406 1433.6875,99.5938 C1434.2656,99.1875 1434.5938,98.7344 1434.5938,98.3438 C1434.5938,97.8906 1434.2031,97.5 1433.7344,97.5 C1433.5156,97.5 1433.3125,97.5781 1433.125,97.7656 C1432.6719,98.25 1432.6719,98.25 1432.4844,98.3438 C1432.0625,98.6094 1431.375,98.7344 1430.6094,98.7344 C1428.5625,98.7344 1427.2656,97.6406 1427.2656,95.9375 L1427.2656,94.8438 C1427.2656,93.0625 1428.5156,91.75 1430.25,91.75 C1430.8281,91.75 1431.4375,91.9063 1431.9063,92.1563 C1432.3906,92.4375 1432.5625,92.6563 1432.6563,93.0625 C1432.7188,93.4688 1432.75,93.5938 1432.8906,93.7188 C1433.0313,93.8594 1433.2656,93.9688 1433.4844,93.9688 C1433.75,93.9688 1434.0156,93.8281 1434.1875,93.6094 C1434.2969,93.4531 1434.3281,93.2656 1434.3281,92.8438 L1434.3281,91.4219 C1434.3281,90.9844 1434.3125,90.8594 1434.2188,90.7031 C1434.0625,90.4375 1433.7813,90.2969 1433.4844,90.2969 C1433.1875,90.2969 1432.9844,90.3906 1432.7656,90.7031 L1432.5938,90.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="78" x="1447.75" y="99.1074">CaseSecrete</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1400.5" x2="1543.5" y1="110.9531" y2="110.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="1400.5" x2="1543.5" y1="118.9531" y2="118.9531"/><ellipse cx="1410.5" cy="129.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="1419.5" y="133.1636">activerEffet(Entite e)</text><!--MD5=[5ad8ffd3b2f96b4fc2667cab3f5c8792]
+class Porte--><rect codeLine="145" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="60.8047" id="Porte" style="stroke: #A80036; stroke-width: 1.5;" width="95" x="1424.5" y="343.9531"/><ellipse cx="1453.9" cy="359.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1456.2438,355.625 C1455.3063,355.1875 1454.7125,355.0469 1453.8375,355.0469 C1451.2125,355.0469 1449.2125,357.125 1449.2125,359.8438 L1449.2125,360.9688 C1449.2125,363.5469 1451.3219,365.4375 1454.2125,365.4375 C1455.4313,365.4375 1456.5875,365.1406 1457.3375,364.5938 C1457.9156,364.1875 1458.2438,363.7344 1458.2438,363.3438 C1458.2438,362.8906 1457.8531,362.5 1457.3844,362.5 C1457.1656,362.5 1456.9625,362.5781 1456.775,362.7656 C1456.3219,363.25 1456.3219,363.25 1456.1344,363.3438 C1455.7125,363.6094 1455.025,363.7344 1454.2594,363.7344 C1452.2125,363.7344 1450.9156,362.6406 1450.9156,360.9375 L1450.9156,359.8438 C1450.9156,358.0625 1452.1656,356.75 1453.9,356.75 C1454.4781,356.75 1455.0875,356.9063 1455.5563,357.1563 C1456.0406,357.4375 1456.2125,357.6563 1456.3063,358.0625 C1456.3688,358.4688 1456.4,358.5938 1456.5406,358.7188 C1456.6813,358.8594 1456.9156,358.9688 1457.1344,358.9688 C1457.4,358.9688 1457.6656,358.8281 1457.8375,358.6094 C1457.9469,358.4531 1457.9781,358.2656 1457.9781,357.8438 L1457.9781,356.4219 C1457.9781,355.9844 1457.9625,355.8594 1457.8688,355.7031 C1457.7125,355.4375 1457.4313,355.2969 1457.1344,355.2969 C1456.8375,355.2969 1456.6344,355.3906 1456.4156,355.7031 L1456.2438,355.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="1471.1" y="364.1074">Porte</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1425.5" x2="1518.5" y1="375.9531" y2="375.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="1425.5" x2="1518.5" y1="383.9531" y2="383.9531"/><ellipse cx="1435.5" cy="394.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="69" x="1444.5" y="398.1636">ouvrirPorte()</text><!--MD5=[3e9018715522919461e589505e9f3789]
+class JeuPrincipal--><rect codeLine="149" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="163.2422" id="JeuPrincipal" style="stroke: #A80036; stroke-width: 1.5;" width="313" x="488.5" y="27.9531"/><ellipse cx="606.75" cy="43.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M609.0938,39.625 C608.1563,39.1875 607.5625,39.0469 606.6875,39.0469 C604.0625,39.0469 602.0625,41.125 602.0625,43.8438 L602.0625,44.9688 C602.0625,47.5469 604.1719,49.4375 607.0625,49.4375 C608.2813,49.4375 609.4375,49.1406 610.1875,48.5938 C610.7656,48.1875 611.0938,47.7344 611.0938,47.3438 C611.0938,46.8906 610.7031,46.5 610.2344,46.5 C610.0156,46.5 609.8125,46.5781 609.625,46.7656 C609.1719,47.25 609.1719,47.25 608.9844,47.3438 C608.5625,47.6094 607.875,47.7344 607.1094,47.7344 C605.0625,47.7344 603.7656,46.6406 603.7656,44.9375 L603.7656,43.8438 C603.7656,42.0625 605.0156,40.75 606.75,40.75 C607.3281,40.75 607.9375,40.9063 608.4063,41.1563 C608.8906,41.4375 609.0625,41.6563 609.1563,42.0625 C609.2188,42.4688 609.25,42.5938 609.3906,42.7188 C609.5313,42.8594 609.7656,42.9688 609.9844,42.9688 C610.25,42.9688 610.5156,42.8281 610.6875,42.6094 C610.7969,42.4531 610.8281,42.2656 610.8281,41.8438 L610.8281,40.4219 C610.8281,39.9844 610.8125,39.8594 610.7188,39.7031 C610.5625,39.4375 610.2813,39.2969 609.9844,39.2969 C609.6875,39.2969 609.4844,39.3906 609.2656,39.7031 L609.0938,39.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="627.25" y="48.1074">JeuPrincipal</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="489.5" x2="800.5" y1="59.9531" y2="59.9531"/><ellipse cx="499.5" cy="70.9531" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="74" x="508.5" y="74.1636">fini : boolean</text><ellipse cx="499.5" cy="83.7578" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="181" x="508.5" y="86.9683">JeuPrincipal.MODE_MENU : string</text><ellipse cx="499.5" cy="96.5625" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="508.5" y="99.7729">JeuPrincipal.MODE_PARTIE : string</text><ellipse cx="499.5" cy="109.3672" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="166" x="508.5" y="112.5776">JeuPrincipal.MODE_FIN : string</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="489.5" x2="800.5" y1="119.1719" y2="119.1719"/><ellipse cx="499.5" cy="130.1719" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="508.5" y="133.3823">JeuPrincipal()</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="496.5" y="139.9766"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="160" x="508.5" y="146.187">getNomNiveaux() : ArrayList</text><ellipse cx="499.5" cy="155.7813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="287" x="508.5" y="158.9917">evoluer(clavier : CClavier, souris : CSouris) : String</text><ellipse cx="499.5" cy="168.5859" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="508.5" y="171.7964">etreFini() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="181" x="508.5" y="184.6011">static main(args : String[]) : void</text><!--MD5=[8c38a7dab4d8d5c22b15ae91c4bbe878]
+class DessinMenuAdaptateur--><rect codeLine="162" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="73.6094" id="DessinMenuAdaptateur" style="stroke: #A80036; stroke-width: 1.5;" width="296" x="208" y="220.9531"/><ellipse cx="282.25" cy="236.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M284.5938,232.625 C283.6563,232.1875 283.0625,232.0469 282.1875,232.0469 C279.5625,232.0469 277.5625,234.125 277.5625,236.8438 L277.5625,237.9688 C277.5625,240.5469 279.6719,242.4375 282.5625,242.4375 C283.7813,242.4375 284.9375,242.1406 285.6875,241.5938 C286.2656,241.1875 286.5938,240.7344 286.5938,240.3438 C286.5938,239.8906 286.2031,239.5 285.7344,239.5 C285.5156,239.5 285.3125,239.5781 285.125,239.7656 C284.6719,240.25 284.6719,240.25 284.4844,240.3438 C284.0625,240.6094 283.375,240.7344 282.6094,240.7344 C280.5625,240.7344 279.2656,239.6406 279.2656,237.9375 L279.2656,236.8438 C279.2656,235.0625 280.5156,233.75 282.25,233.75 C282.8281,233.75 283.4375,233.9063 283.9063,234.1563 C284.3906,234.4375 284.5625,234.6563 284.6563,235.0625 C284.7188,235.4688 284.75,235.5938 284.8906,235.7188 C285.0313,235.8594 285.2656,235.9688 285.4844,235.9688 C285.75,235.9688 286.0156,235.8281 286.1875,235.6094 C286.2969,235.4531 286.3281,235.2656 286.3281,234.8438 L286.3281,233.4219 C286.3281,232.9844 286.3125,232.8594 286.2188,232.7031 C286.0625,232.4375 285.7813,232.2969 285.4844,232.2969 C285.1875,232.2969 284.9844,232.3906 284.7656,232.7031 L284.5938,232.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="139" x="302.75" y="241.1074">DessinMenuAdaptateur</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="209" x2="503" y1="252.9531" y2="252.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="209" x2="503" y1="260.9531" y2="260.9531"/><ellipse cx="219" cy="271.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="270" x="228" y="275.1636">DessinMenuAdaptateur(menu : MenuPrincipale)</text><ellipse cx="219" cy="284.7578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="225" x="228" y="287.9683">dessiner(image : BufferedImage) : void</text><!--MD5=[833456349329cc83aa64c3e89559cfbc]
+class MenuPrincipale--><rect codeLine="180" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="150.4375" id="MenuPrincipale" style="stroke: #A80036; stroke-width: 1.5;" width="225" x="243.5" y="608.4531"/><ellipse cx="307.25" cy="624.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M309.5938,620.125 C308.6563,619.6875 308.0625,619.5469 307.1875,619.5469 C304.5625,619.5469 302.5625,621.625 302.5625,624.3438 L302.5625,625.4688 C302.5625,628.0469 304.6719,629.9375 307.5625,629.9375 C308.7813,629.9375 309.9375,629.6406 310.6875,629.0938 C311.2656,628.6875 311.5938,628.2344 311.5938,627.8438 C311.5938,627.3906 311.2031,627 310.7344,627 C310.5156,627 310.3125,627.0781 310.125,627.2656 C309.6719,627.75 309.6719,627.75 309.4844,627.8438 C309.0625,628.1094 308.375,628.2344 307.6094,628.2344 C305.5625,628.2344 304.2656,627.1406 304.2656,625.4375 L304.2656,624.3438 C304.2656,622.5625 305.5156,621.25 307.25,621.25 C307.8281,621.25 308.4375,621.4063 308.9063,621.6563 C309.3906,621.9375 309.5625,622.1563 309.6563,622.5625 C309.7188,622.9688 309.75,623.0938 309.8906,623.2188 C310.0313,623.3594 310.2656,623.4688 310.4844,623.4688 C310.75,623.4688 311.0156,623.3281 311.1875,623.1094 C311.2969,622.9531 311.3281,622.7656 311.3281,622.3438 L311.3281,620.9219 C311.3281,620.4844 311.3125,620.3594 311.2188,620.2031 C311.0625,619.9375 310.7813,619.7969 310.4844,619.7969 C310.1875,619.7969 309.9844,619.8906 309.7656,620.2031 L309.5938,620.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="89" x="327.75" y="628.6074">MenuPrincipale</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="244.5" x2="467.5" y1="640.4531" y2="640.4531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="251.5" y="648.4531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="263.5" y="654.6636">prochaine_etape : string</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="251.5" y="661.2578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="263.5" y="667.4683">nom_niveau : string</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="244.5" x2="467.5" y1="674.0625" y2="674.0625"/><ellipse cx="254.5" cy="685.0625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="263.5" y="688.2729">MenuPrincipale()</text><ellipse cx="254.5" cy="697.8672" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="157" x="263.5" y="701.0776">getProchaineEtape() : string</text><ellipse cx="254.5" cy="710.6719" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="199" x="263.5" y="713.8823">setProchaineEtape(e : string) : void</text><ellipse cx="254.5" cy="723.4766" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="135" x="263.5" y="726.687">getNomNiveau() : string</text><ellipse cx="254.5" cy="736.2813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="141" x="263.5" y="739.4917">setNomNiveau(n : string)</text><ellipse cx="254.5" cy="749.0859" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="133" x="263.5" y="752.2964">getBoutons() : ArrayList</text><!--MD5=[5845d491798b4eb69ecf7750fc2de94e]
+class AdaptateurJeuMenu--><rect codeLine="169" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="99.2188" id="AdaptateurJeuMenu" style="stroke: #A80036; stroke-width: 1.5;" width="311" x="440.5" y="324.9531"/><ellipse cx="533.25" cy="340.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M535.5938,336.625 C534.6563,336.1875 534.0625,336.0469 533.1875,336.0469 C530.5625,336.0469 528.5625,338.125 528.5625,340.8438 L528.5625,341.9688 C528.5625,344.5469 530.6719,346.4375 533.5625,346.4375 C534.7813,346.4375 535.9375,346.1406 536.6875,345.5938 C537.2656,345.1875 537.5938,344.7344 537.5938,344.3438 C537.5938,343.8906 537.2031,343.5 536.7344,343.5 C536.5156,343.5 536.3125,343.5781 536.125,343.7656 C535.6719,344.25 535.6719,344.25 535.4844,344.3438 C535.0625,344.6094 534.375,344.7344 533.6094,344.7344 C531.5625,344.7344 530.2656,343.6406 530.2656,341.9375 L530.2656,340.8438 C530.2656,339.0625 531.5156,337.75 533.25,337.75 C533.8281,337.75 534.4375,337.9063 534.9063,338.1563 C535.3906,338.4375 535.5625,338.6563 535.6563,339.0625 C535.7188,339.4688 535.75,339.5938 535.8906,339.7188 C536.0313,339.8594 536.2656,339.9688 536.4844,339.9688 C536.75,339.9688 537.0156,339.8281 537.1875,339.6094 C537.2969,339.4531 537.3281,339.2656 537.3281,338.8438 L537.3281,337.4219 C537.3281,336.9844 537.3125,336.8594 537.2188,336.7031 C537.0625,336.4375 536.7813,336.2969 536.4844,336.2969 C536.1875,336.2969 535.9844,336.3906 535.7656,336.7031 L535.5938,336.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="117" x="553.75" y="345.1074">AdaptateurJeuMenu</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="441.5" x2="750.5" y1="356.9531" y2="356.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="441.5" x2="750.5" y1="364.9531" y2="364.9531"/><ellipse cx="451.5" cy="375.9531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="120" x="460.5" y="379.1636">AdaptateurJeuMenu()</text><ellipse cx="451.5" cy="388.7578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="285" x="460.5" y="391.9683">evoluer(clavier : CClavier, souris : CSouris) : string</text><ellipse cx="451.5" cy="401.5625" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="460.5" y="404.7729">etreFini() : boolean</text><ellipse cx="451.5" cy="414.3672" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="460.5" y="417.5776">getMenu() : MenuPrincipale</text><!--MD5=[46c823437baeff8ca5fa30f9b31d499b]
+class DessinPrincipal--><rect codeLine="193" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="73.6094" id="DessinPrincipal" style="stroke: #A80036; stroke-width: 1.5;" width="232" x="221" y="72.4531"/><ellipse cx="287.75" cy="88.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M290.0938,84.125 C289.1563,83.6875 288.5625,83.5469 287.6875,83.5469 C285.0625,83.5469 283.0625,85.625 283.0625,88.3438 L283.0625,89.4688 C283.0625,92.0469 285.1719,93.9375 288.0625,93.9375 C289.2813,93.9375 290.4375,93.6406 291.1875,93.0938 C291.7656,92.6875 292.0938,92.2344 292.0938,91.8438 C292.0938,91.3906 291.7031,91 291.2344,91 C291.0156,91 290.8125,91.0781 290.625,91.2656 C290.1719,91.75 290.1719,91.75 289.9844,91.8438 C289.5625,92.1094 288.875,92.2344 288.1094,92.2344 C286.0625,92.2344 284.7656,91.1406 284.7656,89.4375 L284.7656,88.3438 C284.7656,86.5625 286.0156,85.25 287.75,85.25 C288.3281,85.25 288.9375,85.4063 289.4063,85.6563 C289.8906,85.9375 290.0625,86.1563 290.1563,86.5625 C290.2188,86.9688 290.25,87.0938 290.3906,87.2188 C290.5313,87.3594 290.7656,87.4688 290.9844,87.4688 C291.25,87.4688 291.5156,87.3281 291.6875,87.1094 C291.7969,86.9531 291.8281,86.7656 291.8281,86.3438 L291.8281,84.9219 C291.8281,84.4844 291.8125,84.3594 291.7188,84.2031 C291.5625,83.9375 291.2813,83.7969 290.9844,83.7969 C290.6875,83.7969 290.4844,83.8906 290.2656,84.2031 L290.0938,84.125 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="90" x="308.25" y="92.6074">DessinPrincipal</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="222" x2="452" y1="104.4531" y2="104.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="222" x2="452" y1="112.4531" y2="112.4531"/><ellipse cx="232" cy="123.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="171" x="241" y="126.6636">DessinPrincipal(j : JeuPrincipal)</text><ellipse cx="232" cy="136.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="206" x="241" y="139.4683">dessiner(img : BufferedImage): void</text><!--MD5=[b45e2b44bcaac741a5cd2486a65a0a85]
+class Bouton--><rect codeLine="206" fill="#FEFECE" filter="url(#f1wu2q24oku013)" height="240.0703" id="Bouton" style="stroke: #A80036; stroke-width: 1.5;" width="432" x="176" y="873.9531"/><ellipse cx="366.75" cy="889.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M369.0938,885.625 C368.1563,885.1875 367.5625,885.0469 366.6875,885.0469 C364.0625,885.0469 362.0625,887.125 362.0625,889.8438 L362.0625,890.9688 C362.0625,893.5469 364.1719,895.4375 367.0625,895.4375 C368.2813,895.4375 369.4375,895.1406 370.1875,894.5938 C370.7656,894.1875 371.0938,893.7344 371.0938,893.3438 C371.0938,892.8906 370.7031,892.5 370.2344,892.5 C370.0156,892.5 369.8125,892.5781 369.625,892.7656 C369.1719,893.25 369.1719,893.25 368.9844,893.3438 C368.5625,893.6094 367.875,893.7344 367.1094,893.7344 C365.0625,893.7344 363.7656,892.6406 363.7656,890.9375 L363.7656,889.8438 C363.7656,888.0625 365.0156,886.75 366.75,886.75 C367.3281,886.75 367.9375,886.9063 368.4063,887.1563 C368.8906,887.4375 369.0625,887.6563 369.1563,888.0625 C369.2188,888.4688 369.25,888.5938 369.3906,888.7188 C369.5313,888.8594 369.7656,888.9688 369.9844,888.9688 C370.25,888.9688 370.5156,888.8281 370.6875,888.6094 C370.7969,888.4531 370.8281,888.2656 370.8281,887.8438 L370.8281,886.4219 C370.8281,885.9844 370.8125,885.8594 370.7188,885.7031 C370.5625,885.4375 370.2813,885.2969 369.9844,885.2969 C369.6875,885.2969 369.4844,885.3906 369.2656,885.7031 L369.0938,885.625 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="387.25" y="894.1074">Bouton</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="177" x2="607" y1="905.9531" y2="905.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="184" y="913.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="196" y="920.1636">etape : string</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="184" y="926.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="70" x="196" y="932.9683">label : string</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="184" y="939.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="196" y="945.7729">x : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="184" y="952.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="196" y="958.5776">y : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="184" y="965.1719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="196" y="971.3823">longeur : int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="184" y="977.9766"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="196" y="984.187">largeur : int</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="177" x2="607" y1="990.7813" y2="990.7813"/><ellipse cx="187" cy="1001.7813" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="406" x="196" y="1004.9917">Bouton(label : string, etape: string, x: int, y: int, longeur: int, largeur: int)</text><ellipse cx="187" cy="1014.5859" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="177" x="196" y="1017.7964">collision(x: int, y : int) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="200" y="1030.6011"/><ellipse cx="187" cy="1040.1953" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="196" y="1043.4058">setLabel(l : string)</text><ellipse cx="187" cy="1053" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="196" y="1056.2104">getLabel() : string</text><ellipse cx="187" cy="1065.8047" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="196" y="1069.0151">getX() : int</text><ellipse cx="187" cy="1078.6094" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="196" y="1081.8198">getY() : int</text><ellipse cx="187" cy="1091.4141" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="196" y="1094.6245">getLongeur() : int</text><ellipse cx="187" cy="1104.2188" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="95" x="196" y="1107.4292">getLargeur() : int</text><!--MD5=[3b266301c5c88b602f4e97d99d14fbbd]
+link Joueur to Entite--><path codeLine="47" d="M1195.45,765.1051 C1169.49,804.9601 1137.94,853.3761 1110.62,895.3121 " fill="none" id="Joueur-to-Entite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1116.37,899.3011,1099.59,912.2371,1104.64,891.6581,1116.37,899.3011" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f8c1f8c2d17328763a110b7ab6760b83]
+link Entite to Sprite--><path codeLine="48" d="M979.329,1018.8811 C860.769,1060.8021 614.594,1147.8461 472.173,1198.2041 " fill="none" id="Entite-to-Sprite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="474.403,1204.8406,453.214,1204.9083,469.736,1191.6411,474.403,1204.8406" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[870bc6d7e8320836fd6f4d74d6b4093c]
+link DessinMenuAdaptateur to MenuPrincipale--><path codeLine="167" d="M356,295.0631 C356,362.8881 356,510.7911 356,602.9541 " fill="none" id="DessinMenuAdaptateur-to-MenuPrincipale" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="356,608.1211,360,599.1211,356,603.1211,352,599.1211,356,608.1211" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="37" x="357" y="379.02">menu</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="348.4203" y="314.5619">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="347.6188" y="597.2786">1</text><!--MD5=[ad78f6fb4c2714fca68734bfdfec4c2c]
+link JeuPrincipal to AdaptateurJeuMenu--><path codeLine="176" d="M629.965,191.1531 C622.216,232.7431 612.974,282.3431 606.089,319.3041 " fill="none" id="JeuPrincipal-to-AdaptateurJeuMenu" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="605.09,324.6631,610.671,316.5482,606.0059,319.7477,602.8063,315.0827,605.09,324.6631" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="37" x="625" y="262.52">menu</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="621.3142" y="211.1595">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="597.774" y="314.0259">1</text><!--MD5=[3101f8e352a42d1496d507c14efac9b1]
+link JeuPrincipal to Jeu--><path codeLine="177" d="M801.829,172.9431 C934.678,225.8831 1119.77,299.6431 1224.46,341.3571 " fill="none" id="JeuPrincipal-to-Jeu" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1229.38,343.3191,1222.4891,336.2824,1224.7323,341.4755,1219.5393,343.7187,1229.38,343.3191" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="37" x="1093" y="262.52">partie</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="809.5949" y="172.7194">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1213.5424" y="336.5788">1</text><!--MD5=[86fba038402a9fef959441ed1ca1dd6f]
+link DessinPrincipal to DessinMenuAdaptateur--><path codeLine="198" d="M341.697,146.6631 C344.413,167.6131 347.84,194.0331 350.659,215.7731 " fill="none" id="DessinPrincipal-to-DessinMenuAdaptateur" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="351.325,220.9031,354.1347,211.4635,350.6822,215.9446,346.2011,212.4921,351.325,220.9031" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="75" x="270.503" y="179.79">dessinMenu</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="334.8953" y="166.1785">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="341.7255" y="209.8044">1</text><!--MD5=[ecb015faa7aa068995c4eb7feb1d9700]
+link DessinPrincipal to DessinPartie--><path codeLine="199" d="M220.794,138.8831 C178.4,155.4831 134.81,181.2831 110,220.9531 C66.4914,290.5231 87.1828,390.4541 105.5351,448.7401 " fill="none" id="DessinPrincipal-to-DessinPartie" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="107.076,453.5561,108.1421,443.7651,105.5518,448.7941,100.5229,446.2038,107.076,453.5561" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="78" x="111" y="262.52">dessinPartie</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="206.1253" y="137.3717">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="96.0249" y="442.8079">1</text><!--MD5=[6e0661c292f25b699ac29f4420207ce7]
+link DessinPrincipal to JeuPrincipal--><path codeLine="200" d="M453.102,109.4531 C463.102,109.4531 473.103,109.4531 483.103,109.4531 " fill="none" id="DessinPrincipal-to-JeuPrincipal" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="488.333,109.4531,479.333,105.4531,483.333,109.4531,479.333,113.4531,488.333,109.4531" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="461.1378" y="106.0337">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="472.5507" y="106.1541">1</text><!--MD5=[383de36d69103f27c1a8c57c6a19fdd5]
+link AdaptateurJeuMenu to MenuPrincipale--><path codeLine="204" d="M557.971,424.0981 C520.152,472.4761 461.524,547.4701 417.158,604.2221 " fill="none" id="AdaptateurJeuMenu-to-MenuPrincipale" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="413.989,608.2761,422.6833,603.6491,417.0684,604.3369,416.3805,598.722,413.989,608.2761" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="37" x="533" y="501.52">menu</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="545.131" y="444.195">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="411.1348" y="597.4483">1</text><!--MD5=[4787943fd799a7f6dfe97fd5228268db]
+link MenuPrincipale to Bouton--><path codeLine="226" d="M364.669,758.7391 C368.522,791.7561 373.163,831.5291 377.518,868.8511 " fill="none" id="MenuPrincipale-to-Bouton" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="378.103,873.8631,381.0349,864.4608,377.5245,868.8967,373.0886,865.3864,378.103,873.8631" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="122" x="375" y="840.02">boutons : ArrayList</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="358.1778" y="778.9403">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="369.9885" y="862.7583">*</text><!--MD5=[53597040849a67cadc2ce5dcd06b5985]
+link Niveau to Labyrinthe--><path codeLine="228" d="M1984.73,417.5751 C1974.46,428.7601 1964.15,441.2741 1956,453.9531 C1934.09,488.0151 1915.44,527.9751 1900.61,564.8711 " fill="none" id="Niveau-to-Labyrinthe" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1898.64,569.8211,1905.6891,562.9429,1900.492,565.1768,1898.2582,559.9797,1898.64,569.8211" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="64" x="1957" y="501.52">labyrinthe</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1969.8181" y="438.003">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1892.9002" y="558.745">1</text><!--MD5=[36688021de96eda6b29609f363d23d1d]
+link Niveau to Entite--><path codeLine="229" d="M2040.56,417.5701 C2060.83,501.6851 2092.02,691.4361 1995,796.9531 C1876.33,926.0191 1321.35,974.8981 1120.12,988.5641 " fill="none" id="Niveau-to-Entite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1114.85,988.9191,1124.1031,992.2926,1119.8382,988.5763,1123.5546,984.3114,1114.85,988.9191" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="2063" y="688.02">monstres</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="2034.8949" y="437.9972">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1122.6539" y="984.6091">*</text><!--MD5=[a5dd3c5bacc1a6ef7a839c9909c81afa]
+link Fantome to Entite--><path codeLine="231" d="M629.087,720.6371 C650.227,744.0101 679.602,774.1941 709,796.9531 C788.887,858.8011 890.228,915.0271 961.017,951.2371 " fill="none" id="Fantome-to-Entite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="964.543,945.1771,979.226,960.4551,958.22,957.6671,964.543,945.1771" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[acae9448828054c546639852a51b1a1e]
+link MonstreImmobile to Entite--><path codeLine="232" d="M1047,714.0331 C1047,754.7701 1047,830.1561 1047,892.2931 " fill="none" id="MonstreImmobile-to-Entite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1054,892.3641,1047,912.3641,1040,892.3641,1054,892.3641" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[c939165b9e4189c3d47d251bf27086b4]
+link Troll to Entite--><path codeLine="233" d="M847.59,720.7491 C878.946,763.5521 932.322,836.4121 975.964,895.9861 " fill="none" id="Troll-to-Entite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="981.816,892.1301,987.989,912.4001,970.523,900.4031,981.816,892.1301" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[17067d08a3e64d4ee16e91a8e417d1f5]
+link CasePiege to CaseAEffet--><path codeLine="234" d="M1673.49,158.9931 C1670.26,203.7931 1665.45,270.2831 1662.05,317.3351 " fill="none" id="CasePiege-to-CaseAEffet" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1669.02,317.9941,1660.6,337.4381,1655.06,316.9851,1669.02,317.9941" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[0c7a5a86e40c625df96ed5d4fc5a6a44]
+link CaseSecrete to CaseAEffet--><path codeLine="235" d="M1494.6,140.2331 C1511.25,162.3431 1534.33,193.3131 1554,220.9531 C1577.34,253.7531 1602.82,291.0931 1622.72,320.6121 " fill="none" id="CaseSecrete-to-CaseAEffet" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1628.68,316.9271,1634.02,337.4321,1617.06,324.7371,1628.68,316.9271" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[7fb5e65f5f01b69f7a24edd17e3833d7]
+link Porte to Case--><path codeLine="236" d="M1481.39,405.1681 C1494.24,445.8561 1517.96,520.9001 1537.47,582.6661 " fill="none" id="Porte-to-Case" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1544.16,580.5951,1543.51,601.7741,1530.81,584.8131,1544.16,580.5951" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[3e52a5a0d886c9c32d136ad29162a141]
+link CaseAEffet to Case--><path codeLine="237" d="M1647.53,411.5731 C1635.43,453.2971 1615.02,523.7221 1598.03,582.3061 " fill="none" id="CaseAEffet-to-Case" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1604.71,584.4011,1592.42,601.6611,1591.27,580.5031,1604.71,584.4011" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[31b57c053dbb0b797e587109ace3fc53]
+link DessinPartie to Sprite--><path codeLine="240" d="M112.88,539.9761 C89.9345,645.5251 44.3382,926.6951 158,1113.9531 C183.259,1155.5671 228.453,1184.7291 270.087,1204.1305 " fill="none" id="DessinPartie-to-Sprite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="274.884,1206.3302,268.3707,1198.9426,270.3391,1204.2459,265.0358,1206.2144,274.884,1206.3302" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="89" y="833.0195"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="99" y="840.02">sprites</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="103.6238" y="560.3876">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="259.9248" y="1200.0909">*</text><!--MD5=[5ae7032911800bdc339689900634dbe6]
+link Jeu to Joueur--><path codeLine="241" d="M1295.97,424.0981 C1287.38,470.3801 1274.26,541.0231 1263.91,596.7481 " fill="none" id="Jeu-to-Joueur" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1262.98,601.7521,1268.5564,593.634,1263.8932,596.8362,1260.691,592.173,1262.98,601.7521" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1293" y="494.5195"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="40" x="1303" y="501.52">joueur</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1286.1377" y="444.195">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1255.9579" y="590.8697">1</text><!--MD5=[d3b87e3f8e93c09b735b4820c8f9e3a1]
+link Jeu to Entite--><path codeLine="242" d="M1339.62,424.2921 C1344.73,433.7361 1349.21,443.8481 1352,453.9531 C1373.93,533.2881 1373.04,728.8931 1334,796.9531 C1286.43,879.8821 1187.8,935.2391 1119.54,965.3871 " fill="none" id="Jeu-to-Entite" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1114.68,967.5141,1124.5286,967.5793,1119.2624,965.5137,1121.328,960.2475,1114.68,967.5141" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1370" y="681.0195"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="44" x="1380" y="688.02">entites</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1335.9259" y="444.4163">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1122.4653" y="960.863">*</text><!--MD5=[b1dd1b6bd62eaab92423616f8d0d1cdd]
+link Jeu to Labyrinthe--><path codeLine="243" d="M1380.83,413.6311 C1456.13,451.9331 1574.52,513.2241 1675,569.9531 C1695.86,581.7321 1717.82,594.5871 1739.04,607.2611 " fill="none" id="Jeu-to-Labyrinthe" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1743.55,609.9621,1737.8858,601.905,1739.261,607.3922,1733.7739,608.7674,1743.55,609.9621" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1619" y="494.5195"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="27" x="1629" y="501.52">laby</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1388.4388" y="413.7132">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1728.1491" y="602.0896">1</text><!--MD5=[4283d3af5de43031094eedaeda888801]
+reverse link Case to Labyrinthe--><path codeLine="244" d="M1663.29,683.4531 C1688.95,683.4531 1717.06,683.4531 1743.82,683.4531 " fill="none" id="Case-backto-Labyrinthe" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1658.2,683.4531,1667.2,687.4531,1663.2,683.4531,1667.2,679.4531,1658.2,683.4531" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1678.5" y="669.5195"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="37" x="1688.5" y="676.52">cases</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1665.8767" y="679.8944">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1728.0569" y="680.0353">1</text><!--MD5=[301bf619f9045fd5e24eb51b3ac8a570]
+link CaseSecrete to Porte--><path codeLine="245" d="M1472,140.1131 C1472,189.0731 1472,286.5731 1472,338.6981 " fill="none" id="CaseSecrete-to-Porte" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1472,343.9031,1476,334.9031,1472,338.9031,1468,334.9031,1472,343.9031" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="1475" y="255.5195"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="60" x="1485" y="262.52">porteLiee</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1463.2125" y="159.7251">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1463.125" y="332.6825">1</text><!--MD5=[0be58eb5b3a0fcc6d0678e5f171a5e92]
+link CaseGeneration to UsineMonstre--><!--MD5=[cf46741dbbac87f9264820db0b9fe3e3]
+link CaseGeneration to UsineNiveau--><!--MD5=[0b01d8e8826869bff80aee5ac7b83e55]
+@startuml
+title Zeldiablo 4eme Itération
+
+'''classes
+class Jeu{
+  + Jeu()
+  + déplacer(int direction)
+  + getJoueur(): Joueur
+  + getLaby() : Labyrinthe
+
+
+}
+
+abstract class Sprite {
+  - nomImage : String
+
+  + Sprite(nom : String)
+  + dessiner(Graphics g) : void
+
+  + abstract getPosX() : int
+  + abstract getPosY() : int
+}
+
+class Entite{
+   # x : int
+   # y : int
+   # vie : int
+
+   + Entite(String nom)
+   + getPosX():int
+   + getPosY():int
+   + setPosX(int x): void
+   + setPosY(int y): void
+   + getVie(): int
+}
+
+class Joueur{
+  - xPos : int
+  - yPos : int
+  + Joueur()
+  + Joueur(int x, int y)
+  + seDéplacer(int x,y)
+  + getPosX() : int
+  + getPosY() : int
+  + setPosX(int x): void
+  + setPosY(int y) : void
+}
+Joueur - -^ Entite
+Entite - -^ Sprite
+
+class CaseGeneration {
+ + x : int
+ + y : int
+ + murs : boolean[4]
+
+ + murAlea() : int
+
+ + CaseGeneration.AUCUN_MUR : int
+}
+
+class Labyrinthe {
+    -entree_x : int
+    -entree_y : int
+    -longeur : int
+    -largeur : int
+    -cases : ArrayList<Case>
+
+    + Labyrinthe()
+    + Labyrinthe(longeur : int, largeur : int)
+
+    + genererRecursivement() : void
+    + getEntreeX() : int
+    + getEntreeY() : int
+    + getEntreeLongeur() : int
+    + getEntreeLargeur() : int
+    + getCase(int x, int y) : Case
+}
+
+class Case {
+    -x : int
+    -y : int
+    -type : int
+    -traversable : booleen
+
+    + Case()
+    + getType() : Type
+    + getX() : int
+    + getY() : int
+    + estTraversable() : booleen
+}
+
+class CaseAEffet{
+   + CaseAEffet(int x, int y, int type)
+   + activerEffet(Entite e): void
+}
+
+class CasePiege {
+   - active : boolean
+   + CasePiege(int x,int y,int type)
+   + activerEffet(Entite e) : void
+   + estActive(): boolean
+}
+
+
+class Fantome{
+   + Fantome(String nom)
+   + seDeplacer(int x, int y): void
+}
+
+class Troll{
+   + Troll(String nom)
+   + seDeplacer(int x, int y): void
+}
+
+class MonstreImmobile{
+   + MonstreImmobile(String nom)
+}
+
+class DessinPartie {
+  - sprites : List<Sprite>
+  + DessinPartie.TAILLE_CASE : int
+
+  + dessiner(img: BufferedImage) : void
+}
+
+class UsineMonstre {
++ getMonstre(type : int) : Monstre
+}
+
+class UsineNiveau {
++ getNiveau(fichier : string) : Niveau
++ getNiveau(monstres : HashMap) : Niveau
++ getNiveauNbMonstresAlea() : Niveau
+}
+
+class Niveau {
++ Niveau(laby : Labyrinthe, monstres : List<Entite> )
++ getLabyrinthe() : Labyrinthe
++ getMonstres() : List<Entite>
+}
+
+class CaseSecrete {
+  + activerEffet(Entite e)
+}
+
+class Porte {
+  + ouvrirPorte()
+}
+
+class JeuPrincipal {
++ fini : boolean
++ JeuPrincipal.MODE_MENU : string
++ JeuPrincipal.MODE_PARTIE : string
++ JeuPrincipal.MODE_FIN : string
+
++ JeuPrincipal()
+- getNomNiveaux() : ArrayList
++ evoluer(clavier : CClavier, souris : CSouris) : String
++ etreFini() : boolean
+static main(args : String[]) : void
+}
+
+class DessinMenuAdaptateur {
++ DessinMenuAdaptateur(menu : MenuPrincipale)
++ dessiner(image : BufferedImage) : void
+}
+
+DessinMenuAdaptateur "*" - -> "1" MenuPrincipale : menu
+
+class AdaptateurJeuMenu {
++ AdaptateurJeuMenu()
++ evoluer(clavier : CClavier, souris : CSouris) : string
++ etreFini() : boolean
++ getMenu() : MenuPrincipale
+}
+
+JeuPrincipal "*" - -> "1" AdaptateurJeuMenu : menu
+JeuPrincipal "*" - -> "1" Jeu : partie
+
+
+class MenuPrincipale {
+- prochaine_etape : string
+- nom_niveau : string
++ MenuPrincipale()
++ getProchaineEtape() : string
++ setProchaineEtape(e : string) : void
++ getNomNiveau() : string
++ setNomNiveau(n : string)
++ getBoutons() : ArrayList
+
+}
+
+
+class DessinPrincipal {
++ DessinPrincipal(j : JeuPrincipal)
++ dessiner(img : BufferedImage): void
+}
+
+DessinPrincipal "*" -> "1" DessinMenuAdaptateur : dessinMenu
+DessinPrincipal "*" -> "1" DessinPartie : dessinPartie
+DessinPrincipal "*" -> "1" JeuPrincipal
+
+
+
+AdaptateurJeuMenu "*" - -> "1" MenuPrincipale : menu
+
+class Bouton {
+- etape : string
+- label : string
+- x : int
+- y : int
+- longeur : int
+- largeur : int
+
++ Bouton(label : string, etape: string, x: int, y: int, longeur: int, largeur: int)
++ collision(x: int, y : int) : boolean
+
++ setLabel(l : string)
++ getLabel() : string
++ getX() : int
++ getY() : int
++ getLongeur() : int
++ getLargeur() : int
+
+}
+
+MenuPrincipale "*" - -> "*" Bouton : boutons : ArrayList
+
+Niveau "*" - -> "1" Labyrinthe : labyrinthe
+Niveau "*" - -> "*" Entite : monstres
+
+Fantome - -^ Entite
+MonstreImmobile - -^ Entite
+Troll - -^ Entite
+CasePiege - -^ CaseAEffet
+CaseSecrete - -^ CaseAEffet
+Porte - -^ Case
+CaseAEffet - -^ Case
+
+'''relations
+DessinPartie "*" - -> "*" Sprite : -sprites
+Jeu "1" - -> "1" Joueur : - joueur
+Jeu "1" - -> "*" Entite: - entites
+Jeu "1" - -> "1" Labyrinthe : - laby
+Case "*" <-"1" Labyrinthe : - cases
+CaseSecrete "1" - -> "1" Porte : -porteLiee
+@enduml
+
+@startuml
+title Zeldiablo 4eme Itération
+
+class Jeu{
+  + Jeu()
+  + déplacer(int direction)
+  + getJoueur(): Joueur
+  + getLaby() : Labyrinthe
+
+
+}
+
+abstract class Sprite {
+  - nomImage : String
+
+  + Sprite(nom : String)
+  + dessiner(Graphics g) : void
+
+  + abstract getPosX() : int
+  + abstract getPosY() : int
+}
+
+class Entite{
+   # x : int
+   # y : int
+   # vie : int
+
+   + Entite(String nom)
+   + getPosX():int
+   + getPosY():int
+   + setPosX(int x): void
+   + setPosY(int y): void
+   + getVie(): int
+}
+
+class Joueur{
+  - xPos : int
+  - yPos : int
+  + Joueur()
+  + Joueur(int x, int y)
+  + seDéplacer(int x,y)
+  + getPosX() : int
+  + getPosY() : int
+  + setPosX(int x): void
+  + setPosY(int y) : void
+}
+Joueur - -^ Entite
+Entite - -^ Sprite
+
+class CaseGeneration {
+ + x : int
+ + y : int
+ + murs : boolean[4]
+
+ + murAlea() : int
+
+ + CaseGeneration.AUCUN_MUR : int
+}
+
+class Labyrinthe {
+    -entree_x : int
+    -entree_y : int
+    -longeur : int
+    -largeur : int
+    -cases : ArrayList<Case>
+
+    + Labyrinthe()
+    + Labyrinthe(longeur : int, largeur : int)
+
+    + genererRecursivement() : void
+    + getEntreeX() : int
+    + getEntreeY() : int
+    + getEntreeLongeur() : int
+    + getEntreeLargeur() : int
+    + getCase(int x, int y) : Case
+}
+
+class Case {
+    -x : int
+    -y : int
+    -type : int
+    -traversable : booleen
+
+    + Case()
+    + getType() : Type
+    + getX() : int
+    + getY() : int
+    + estTraversable() : booleen
+}
+
+class CaseAEffet{
+   + CaseAEffet(int x, int y, int type)
+   + activerEffet(Entite e): void
+}
+
+class CasePiege {
+   - active : boolean
+   + CasePiege(int x,int y,int type)
+   + activerEffet(Entite e) : void
+   + estActive(): boolean
+}
+
+
+class Fantome{
+   + Fantome(String nom)
+   + seDeplacer(int x, int y): void
+}
+
+class Troll{
+   + Troll(String nom)
+   + seDeplacer(int x, int y): void
+}
+
+class MonstreImmobile{
+   + MonstreImmobile(String nom)
+}
+
+class DessinPartie {
+  - sprites : List<Sprite>
+  + DessinPartie.TAILLE_CASE : int
+
+  + dessiner(img: BufferedImage) : void
+}
+
+class UsineMonstre {
++ getMonstre(type : int) : Monstre
+}
+
+class UsineNiveau {
++ getNiveau(fichier : string) : Niveau
++ getNiveau(monstres : HashMap) : Niveau
++ getNiveauNbMonstresAlea() : Niveau
+}
+
+class Niveau {
++ Niveau(laby : Labyrinthe, monstres : List<Entite> )
++ getLabyrinthe() : Labyrinthe
++ getMonstres() : List<Entite>
+}
+
+class CaseSecrete {
+  + activerEffet(Entite e)
+}
+
+class Porte {
+  + ouvrirPorte()
+}
+
+class JeuPrincipal {
++ fini : boolean
++ JeuPrincipal.MODE_MENU : string
++ JeuPrincipal.MODE_PARTIE : string
++ JeuPrincipal.MODE_FIN : string
+
++ JeuPrincipal()
+- getNomNiveaux() : ArrayList
++ evoluer(clavier : CClavier, souris : CSouris) : String
++ etreFini() : boolean
+static main(args : String[]) : void
+}
+
+class DessinMenuAdaptateur {
++ DessinMenuAdaptateur(menu : MenuPrincipale)
++ dessiner(image : BufferedImage) : void
+}
+
+DessinMenuAdaptateur "*" - -> "1" MenuPrincipale : menu
+
+class AdaptateurJeuMenu {
++ AdaptateurJeuMenu()
++ evoluer(clavier : CClavier, souris : CSouris) : string
++ etreFini() : boolean
++ getMenu() : MenuPrincipale
+}
+
+JeuPrincipal "*" - -> "1" AdaptateurJeuMenu : menu
+JeuPrincipal "*" - -> "1" Jeu : partie
+
+
+class MenuPrincipale {
+- prochaine_etape : string
+- nom_niveau : string
++ MenuPrincipale()
++ getProchaineEtape() : string
++ setProchaineEtape(e : string) : void
++ getNomNiveau() : string
++ setNomNiveau(n : string)
++ getBoutons() : ArrayList
+
+}
+
+
+class DessinPrincipal {
++ DessinPrincipal(j : JeuPrincipal)
++ dessiner(img : BufferedImage): void
+}
+
+DessinPrincipal "*" -> "1" DessinMenuAdaptateur : dessinMenu
+DessinPrincipal "*" -> "1" DessinPartie : dessinPartie
+DessinPrincipal "*" -> "1" JeuPrincipal
+
+
+
+AdaptateurJeuMenu "*" - -> "1" MenuPrincipale : menu
+
+class Bouton {
+- etape : string
+- label : string
+- x : int
+- y : int
+- longeur : int
+- largeur : int
+
++ Bouton(label : string, etape: string, x: int, y: int, longeur: int, largeur: int)
++ collision(x: int, y : int) : boolean
+
++ setLabel(l : string)
++ getLabel() : string
++ getX() : int
++ getY() : int
++ getLongeur() : int
++ getLargeur() : int
+
+}
+
+MenuPrincipale "*" - -> "*" Bouton : boutons : ArrayList
+
+Niveau "*" - -> "1" Labyrinthe : labyrinthe
+Niveau "*" - -> "*" Entite : monstres
+
+Fantome - -^ Entite
+MonstreImmobile - -^ Entite
+Troll - -^ Entite
+CasePiege - -^ CaseAEffet
+CaseSecrete - -^ CaseAEffet
+Porte - -^ Case
+CaseAEffet - -^ Case
+
+DessinPartie "*" - -> "*" Sprite : -sprites
+Jeu "1" - -> "1" Joueur : - joueur
+Jeu "1" - -> "*" Entite: - entites
+Jeu "1" - -> "1" Labyrinthe : - laby
+Case "*" <-"1" Labyrinthe : - cases
+CaseSecrete "1" - -> "1" Porte : -porteLiee
+@enduml
+
+PlantUML version 1.2020.17beta5(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

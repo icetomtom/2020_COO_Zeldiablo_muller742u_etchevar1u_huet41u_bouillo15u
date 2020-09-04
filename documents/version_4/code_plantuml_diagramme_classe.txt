@@ -147,6 +147,85 @@ class Porte {
   + ouvrirPorte()
 }
 
+class JeuPrincipal {
++ fini : boolean
++ JeuPrincipal.MODE_MENU : string
++ JeuPrincipal.MODE_PARTIE : string
++ JeuPrincipal.MODE_FIN : string
+
++ JeuPrincipal()
+- getNomNiveaux() : ArrayList
++ evoluer(clavier : CClavier, souris : CSouris) : String
++ etreFini() : boolean
+static main(args : String[]) : void
+}
+
+class DessinMenuAdaptateur {
++ DessinMenuAdaptateur(menu : MenuPrincipale)
++ dessiner(image : BufferedImage) : void
+}
+
+DessinMenuAdaptateur "*" --> "1" MenuPrincipale : menu
+
+class AdaptateurJeuMenu {
++ AdaptateurJeuMenu()
++ evoluer(clavier : CClavier, souris : CSouris) : string
++ etreFini() : boolean
++ getMenu() : MenuPrincipale
+}
+
+JeuPrincipal "*" --> "1" AdaptateurJeuMenu : menu
+JeuPrincipal "*" --> "1" Jeu : partie
+
+
+class MenuPrincipale {
+- prochaine_etape : string
+- nom_niveau : string
++ MenuPrincipale()
++ getProchaineEtape() : string
++ setProchaineEtape(e : string) : void
++ getNomNiveau() : string
++ setNomNiveau(n : string)
++ getBoutons() : ArrayList
+
+}
+
+
+class DessinPrincipal {
++ DessinPrincipal(j : JeuPrincipal)
++ dessiner(img : BufferedImage): void
+}
+
+DessinPrincipal "*" -> "1" DessinMenuAdaptateur : dessinMenu
+DessinPrincipal "*" -> "1" DessinPartie : dessinPartie
+DessinPrincipal "*" -> "1" JeuPrincipal
+
+
+
+AdaptateurJeuMenu "*" --> "1" MenuPrincipale : menu
+
+class Bouton {
+- etape : string
+- label : string
+- x : int
+- y : int
+- longeur : int
+- largeur : int
+
++ Bouton(label : string, etape: string, x: int, y: int, longeur: int, largeur: int)
++ collision(x: int, y : int) : boolean
+
++ setLabel(l : string)
++ getLabel() : string
++ getX() : int
++ getY() : int
++ getLongeur() : int
++ getLargeur() : int
+
+}
+
+MenuPrincipale "*" --> "*" Bouton : boutons : ArrayList
+
 Niveau "*" --> "1" Labyrinthe : labyrinthe
 Niveau "*" --> "*" Entite : monstres
 

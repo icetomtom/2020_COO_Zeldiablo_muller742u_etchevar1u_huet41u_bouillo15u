@@ -9,6 +9,7 @@ import Usine.TYPE_MONSTRE;
 import Usine.UsineNiveau;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -63,5 +64,7 @@ public class TestUsineNiveau {
             assertEquals("Le type de monstre n'est pas le bon", m1.getClass(), m2.getClass());
             assertEquals("la position n'est pas la bonne : ", m1.getPosX()+" "+m1.getPosY(), m2.getPosX()+" "+m2.getPosY());
         }
+
+        (new File("niveaux/niveau_tmp.obj")).delete();
     }
 }

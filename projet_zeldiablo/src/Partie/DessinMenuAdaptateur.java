@@ -1,6 +1,6 @@
 package Partie;
 
-import GUI.Button;
+import GUI.Bouton;
 import GUI.MenuPrincipale;
 import moteurJeu.moteur.DessinAbstract;
 
@@ -31,7 +31,7 @@ public class DessinMenuAdaptateur implements DessinAbstract {
 
         g.setColor(Color.WHITE);
         g.drawRect(0, 0, image.getWidth(), image.getHeight());
-        for(Button b : menu.getButtons()) {
+        for(Bouton b : menu.getBoutons()) {
             g.setColor(Color.GRAY);
             g.fillRect(b.getX(), b.getY(), b.getLongeur(), b.getLargeur());
             g.setColor(Color.BLACK);

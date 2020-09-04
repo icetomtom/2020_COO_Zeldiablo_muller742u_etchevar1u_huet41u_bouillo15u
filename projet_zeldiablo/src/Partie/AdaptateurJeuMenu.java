@@ -1,6 +1,6 @@
 package Partie;
 
-import GUI.Button;
+import GUI.Bouton;
 import GUI.MenuPrincipale;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
@@ -25,7 +25,7 @@ public class AdaptateurJeuMenu implements JeuAbstract {
 
     @Override
     public String evoluer(CClavier clavier, CSouris souris) {
-        for(Button b : menu.getButtons()) {
+        for(Bouton b : menu.getBoutons()) {
             if(souris.isPressed() && b.collision(souris.getX(), souris.getY())) {
                 menu.setNomNiveau(b.getLabel());
                 menu.setProchaineEtape(b.getEtape());

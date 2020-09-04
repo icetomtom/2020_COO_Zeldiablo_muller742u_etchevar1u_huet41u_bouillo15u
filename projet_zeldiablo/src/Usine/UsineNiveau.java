@@ -57,7 +57,6 @@ public class UsineNiveau {
         Niveau n=null;
         try {
             n = (Niveau) ois.readObject();
-//            System.out.println(n.getLabyrinthe().getCase(2, 1).getType());
         } catch (ClassNotFoundException e) {
 
         }
@@ -69,7 +68,6 @@ public class UsineNiveau {
     }
 
     public static void saveNiveau(String fichier, Niveau n) throws IOException {
-//        System.out.println(n.getLabyrinthe().getCase(2, 1).getType());
         if(n == null)
             return;
 

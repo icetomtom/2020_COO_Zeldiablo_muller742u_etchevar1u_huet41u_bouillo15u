@@ -1,6 +1,6 @@
 package Partie;
 
-import GUI.Button;
+import GUI.Bouton;
 import Usine.UsineNiveau;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
@@ -59,7 +59,7 @@ public class JeuPrincipale implements JeuAbstract {
         menu = new AdaptateurJeuMenu();
         int y = 30;
         for(String niveau : chemins_niveaux) {
-            menu.getMenu().getButtons().add(new Button(niveau, JeuPrincipale.MODE_PARTIE, 30, y, 540, 70));
+            menu.getMenu().getBoutons().add(new Bouton(niveau, JeuPrincipale.MODE_PARTIE, 30, y, 540, 70));
             y += 90;
         }
         partie = new Jeu();

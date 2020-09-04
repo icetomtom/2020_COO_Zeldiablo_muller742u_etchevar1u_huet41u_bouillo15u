@@ -2,8 +2,6 @@ package GUI;
 
 import Partie.JeuPrincipale;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class MenuPrincipale {
@@ -11,7 +9,7 @@ public class MenuPrincipale {
     /**
      * Boutons disponibles
      */
-    ArrayList<Button> buttons;
+    ArrayList<Bouton> boutons;
 
     /**
      * String du nom de la prochaine etape, null signifie qu'on reste sur le menu
@@ -24,8 +22,8 @@ public class MenuPrincipale {
      * Constructeur du menu et ses boutons
      */
     public MenuPrincipale() {
-        buttons = new ArrayList<>();
-        buttons.add(new Button("Quitter", JeuPrincipale.MODE_FIN, 100, 450, 400, 100));
+        boutons = new ArrayList<>();
+        boutons.add(new Bouton("Quitter", JeuPrincipale.MODE_FIN, 100, 450, 400, 100));
     }
 
     /**
@@ -52,7 +50,7 @@ public class MenuPrincipale {
         return this.nom_niveau;
     }
 
-    public ArrayList<Button> getButtons() {
-        return buttons;
+    public ArrayList<Bouton> getBoutons() {
+        return boutons;
     }
 }
