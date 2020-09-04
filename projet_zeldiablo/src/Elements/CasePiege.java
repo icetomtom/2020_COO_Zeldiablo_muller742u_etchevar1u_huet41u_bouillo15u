@@ -33,7 +33,7 @@ public class CasePiege extends CaseAEffet {
 	 */
 	@Override
 	public void activerEffet(Entite e) {
-		e.vie -= 1;
+		e.subirDegats(1);
 		
 		if(!this.active) {
 			this.active = true;

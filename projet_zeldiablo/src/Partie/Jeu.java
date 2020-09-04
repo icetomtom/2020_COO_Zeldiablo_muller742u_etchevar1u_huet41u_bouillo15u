@@ -194,8 +194,7 @@ public class Jeu implements JeuAbstract {
 			}
 		}
 		;
-		long tempsEntre = System.currentTimeMillis() - start  ;
-
+		long tempsEntre = System.currentTimeMillis() - start;
 
 		if((tempsEntre/1000)>=1){
 			this.actionMonstre();
