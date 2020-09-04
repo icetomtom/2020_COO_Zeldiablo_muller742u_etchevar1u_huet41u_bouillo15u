@@ -39,6 +39,7 @@ public class Joueur extends Entite{
 		this.y=y;
 		this.inventaire = new ArrayList<Objet>();
         this.inventaire.add(new Epee());
+        barreDeVie.setVieMax(vie);
 
 	}
 

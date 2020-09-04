@@ -18,6 +18,7 @@ public class Troll extends Monstre {
 	public Troll() {
 		super("entities_1_10");
 		this.vie = 5;
+		barreDeVie.setVieMax(vie);
 		this.est_attaque=false;
 		this.maxPV=5;
 	}
@@ -34,6 +35,7 @@ public class Troll extends Monstre {
 			this.vivant=false;
 		}
 		this.est_attaque=true;
+		barreDeVie.setVie(vie);
 	}
 	
 	/**
@@ -46,6 +48,7 @@ public class Troll extends Monstre {
 			}
 		}
 		this.est_attaque=false;
+		barreDeVie.setVie(vie);
 	}
 
 }
