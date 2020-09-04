@@ -1,1 +1,26 @@
-fonctionnalite 1 :
+* Fonctionnalités version 5
+
+fonctionnalite 1 : Création barre de vie
+responsable : muller742u bouillo15u
+description : affiche une barre de vie visuelle sur les monstres et le personnage du joueur.
+critère de validation : 
+critère 1 : barre de vie qui suit les monstres et le personnage.
+critère 2 : lorsque le montre ou le personnage du joueur reçoit une attaque, la barre de vie diminue.
+
+
+* Réalisation 
+
+- Classe barre de vie 
+responsable : muller742u / Bouillo15u
+
+- Modification classe Jeu
+responsable : muller742u / bouillo15u
+
+-Modification niveau
+responsable : muller742u / bouillo15u
+
+modification taille labyrinthe 
+responsable : bouillo15u 
+
+- Correction javadoc 
+responsable : etchevar1u
