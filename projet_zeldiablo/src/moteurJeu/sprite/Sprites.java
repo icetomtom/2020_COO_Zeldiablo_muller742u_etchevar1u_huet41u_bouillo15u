@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
  * classe qui peut charger des images et les afficher
  * 
  * <pre>
- * Les images ne sont charg�es qu'une fois. On doit leur donner un nom au
+ * Les images ne sont chargees qu une fois. On doit leur donner un nom au
  * chargement
  * 
  * <pre>
@@ -35,12 +35,12 @@ public class Sprites {
 	 * methode de chargement d'une image.
 	 * 
 	 * <pre>
-	 * Charge completement l'image nomFichier et lui attribue le nom nom
+	 * Charge completement l image nomFichier et lui attribue le nom nom
 	 * 
 	 * @param nom
 	 *            nom de reference de l'image chargee
 	 * @param nomFichier
-	 *            nom du fichier � charger
+	 *            nom du fichier a charger
 	 */
 	public static void chargerImage(String nom, String nomFichier) {
 		// verifie nom est disponible
@@ -55,25 +55,25 @@ public class Sprites {
 			throw new Error("probleme de lecture de fichier " + nomFichier);
 		}
 
-		// ajoute l'image
+		// ajoute l image
 		images.put(nom, res);
 	}
 
 	/**
-	 * methode de chargement d'une image.
+	 * methode de chargement d une image.
 	 * 
 	 * <pre>
-	 * charge le morceau (x, y) -> (x+tx, y+ty) de l'image souhait�e nomFichier
+	 * charge le morceau (x, y) -> (x+tx, y+ty) de l image souhaitee nomFichier
 	 * et lui attribue le nom nom
 	 * 
 	 * @param nom
 	 *            nom de reference de l'image chargee
 	 * @param nomFichier
-	 *            nom du fichier � charger
+	 *            nom du fichier a charger
 	 * @param dx
-	 *            pos de d�part
+	 *            pos de depart
 	 * @param dy
-	 *            pos de d�part
+	 *            pos de depart
 	 * @param tx
 	 *            taille X
 	 * @param ty
@@ -102,7 +102,7 @@ public class Sprites {
 	}
 
 	/**
-	 * permet de charger une feuille de sprite r�guliere � partir de la feuille
+	 * permet de charger une feuille de sprite reguliere a partir de la feuille
 	 * et du nombre de ligne et de colonnes.
 	 * 
 	 * <pre>
@@ -142,7 +142,7 @@ public class Sprites {
 		int tx = res.getWidth() / nx;
 		int ty = res.getHeight() / ny;
 
-		// parcours l'image et en extrait les sprites
+		// parcours l image et en extrait les sprites
 		for (int i = 0; i < nx; i++)
 			for (int j = 0; j < ny; j++) {
 				BufferedImage extraite = res.getSubimage(i * tx, j * ty, tx, ty);
@@ -162,7 +162,7 @@ public class Sprites {
 	}
 
 	/**
-	 * permet de dessiner l'image sur le graphics
+	 * permet de dessiner l image sur le graphics
 	 * 
 	 * @param g
 	 *            graphics avec lequel dessiner
@@ -179,7 +179,7 @@ public class Sprites {
 	}
 	
 	/**
-	 * permet de dessiner l'image de ani�re centree sur le graphics
+	 * permet de dessiner l image de ani�re centree sur le graphics
 	 * 
 	 * @param g
 	 *            graphics avec lequel dessiner
