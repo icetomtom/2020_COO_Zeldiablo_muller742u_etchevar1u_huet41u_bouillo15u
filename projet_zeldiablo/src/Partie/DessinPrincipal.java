@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 /**
  * Classe qui se charge de l'affichage
  */
-public class DessinPrincipale implements DessinAbstract {
+public class DessinPrincipal implements DessinAbstract {
 
     /**
      * Classe qui dessine le menu
@@ -22,14 +22,14 @@ public class DessinPrincipale implements DessinAbstract {
     /**
      * Attribut qui reprente le Jeu dans tous ses etats
      */
-    private final JeuPrincipale j;
+    private final JeuPrincipal j;
 
     /**
      * Constructeur
      * @param j jeu
      */
-    public DessinPrincipale(JeuPrincipale j) {
-        dessinMenu = new DessinMenuAdaptateur(j.menu.menu);
+    public DessinPrincipal(JeuPrincipal j) {
+        dessinMenu = new DessinMenu(j.menu.menu);
         dessinJeu = new DessinPartie(j.partie.getSprites());
         this.j = j;
     }
@@ -37,13 +37,13 @@ public class DessinPrincipale implements DessinAbstract {
     @Override
     public void dessiner(BufferedImage image) {
         switch (this.j.getMode()) {
-            case JeuPrincipale.MODE_MENU:
+            case JeuPrincipal.MODE_MENU:
                 dessinMenu.dessiner(image);
                 break;
-            case JeuPrincipale.MODE_PARTIE:
+            case JeuPrincipal.MODE_PARTIE:
                 dessinJeu.dessiner(image);
                 break;
-            case JeuPrincipale.MODE_FIN:
+            case JeuPrincipal.MODE_FIN:
                 Graphics g = image.getGraphics();
                 FontMetrics metrics = g.getFontMetrics(g.getFont());
                 g.setColor(Color.BLACK);

@@ -169,7 +169,7 @@ public class Jeu implements JeuAbstract {
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
 		if (fini)
-			return JeuPrincipale.MODE_FIN;
+			return JeuPrincipal.MODE_FIN;
 
 		if(clavier.isPressed(KeyEvent.VK_UP)) {
 			this.deplacerEntite(joueur,UP);
@@ -206,9 +206,9 @@ public class Jeu implements JeuAbstract {
 		morts();
 
 		if(this.fini)
-			return JeuPrincipale.MODE_MENU;
+			return JeuPrincipal.MODE_MENU;
 
-		return JeuPrincipale.MODE_PARTIE;
+		return JeuPrincipal.MODE_PARTIE;
 	}
 
 	@Override

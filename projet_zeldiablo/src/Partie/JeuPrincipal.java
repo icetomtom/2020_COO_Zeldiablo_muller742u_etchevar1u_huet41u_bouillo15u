@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Represente le jeu dans tous les etats
  */
-public class JeuPrincipale implements JeuAbstract {
+public class JeuPrincipal implements JeuAbstract {
 
     /**
      * Menu principal
@@ -51,7 +51,7 @@ public class JeuPrincipale implements JeuAbstract {
     /**
      * Constructeur du Jeu
      */
-    public JeuPrincipale() throws IOException {
+    public JeuPrincipal() throws IOException {
         chemins_niveaux = this.getNomNiveaux();
         fini = chemins_niveaux.size() == 0;
 
@@ -59,7 +59,7 @@ public class JeuPrincipale implements JeuAbstract {
         menu = new AdaptateurJeuMenu();
         int y = 30;
         for(String niveau : chemins_niveaux) {
-            menu.getMenu().getBoutons().add(new Bouton(niveau, JeuPrincipale.MODE_PARTIE, 30, y, 540, 70));
+            menu.getMenu().getBoutons().add(new Bouton(niveau, JeuPrincipal.MODE_PARTIE, 30, y, 540, 70));
             y += 90;
         }
         partie = new Jeu();
@@ -137,8 +137,8 @@ public class JeuPrincipale implements JeuAbstract {
     public static void main(String[] args) throws IOException {
         Sprites.chargerFeuille("entities", "images/16x16DungeonTileset.v3.png", 16, 16);
 
-        JeuPrincipale j = new JeuPrincipale();
-        DessinPrincipale dessin = new DessinPrincipale(j);
+        JeuPrincipal j = new JeuPrincipal();
+        DessinPrincipal dessin = new DessinPrincipal(j);
 
         MoteurGraphique m = new MoteurGraphique(j, dessin);
         m.lancerJeu(600, 600, 8);

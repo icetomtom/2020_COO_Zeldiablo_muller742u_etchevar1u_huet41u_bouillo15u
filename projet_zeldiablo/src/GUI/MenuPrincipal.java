@@ -1,10 +1,10 @@
 package GUI;
 
-import Partie.JeuPrincipale;
+import Partie.JeuPrincipal;
 
 import java.util.ArrayList;
 
-public class MenuPrincipale {
+public class MenuPrincipal {
 
     /**
      * Boutons disponibles
@@ -14,16 +14,16 @@ public class MenuPrincipale {
     /**
      * String du nom de la prochaine etape, null signifie qu'on reste sur le menu
      */
-    String prochaine_etape = JeuPrincipale.MODE_MENU;
+    String prochaine_etape = JeuPrincipal.MODE_MENU;
 
     String nom_niveau = null;
 
     /**
      * Constructeur du menu et ses boutons
      */
-    public MenuPrincipale() {
+    public MenuPrincipal() {
         boutons = new ArrayList<>();
-        boutons.add(new Bouton("Quitter", JeuPrincipale.MODE_FIN, 100, 450, 400, 100));
+        boutons.add(new Bouton("Quitter", JeuPrincipal.MODE_FIN, 100, 450, 400, 100));
     }
 
     /**

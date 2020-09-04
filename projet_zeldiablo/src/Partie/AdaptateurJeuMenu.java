@@ -1,7 +1,7 @@
 package Partie;
 
 import GUI.Bouton;
-import GUI.MenuPrincipale;
+import GUI.MenuPrincipal;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
@@ -14,13 +14,13 @@ public class AdaptateurJeuMenu implements JeuAbstract {
     /**
      * Menu à adapter
      */
-    MenuPrincipale menu;
+    MenuPrincipal menu;
 
     /**
      * Constructeur
      */
     public AdaptateurJeuMenu() {
-        menu = new MenuPrincipale();
+        menu = new MenuPrincipal();
     }
 
     @Override
@@ -37,10 +37,10 @@ public class AdaptateurJeuMenu implements JeuAbstract {
 
     @Override
     public boolean etreFini() {
-        return !menu.getProchaineEtape().equals(JeuPrincipale.MODE_MENU);
+        return !menu.getProchaineEtape().equals(JeuPrincipal.MODE_MENU);
     }
 
-    public MenuPrincipale getMenu() {
+    public MenuPrincipal getMenu() {
         return menu;
     }
 }

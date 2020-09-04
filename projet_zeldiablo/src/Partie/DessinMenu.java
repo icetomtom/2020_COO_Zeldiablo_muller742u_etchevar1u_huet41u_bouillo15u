@@ -1,7 +1,7 @@
 package Partie;
 
 import GUI.Bouton;
-import GUI.MenuPrincipale;
+import GUI.MenuPrincipal;
 import moteurJeu.moteur.DessinAbstract;
 
 import java.awt.*;
@@ -10,18 +10,18 @@ import java.awt.image.BufferedImage;
 /**
  * Adpte un menu pour etre afficher
  */
-public class DessinMenuAdaptateur implements DessinAbstract {
+public class DessinMenu implements DessinAbstract {
 
     /**
      * Menu qu'il faut afficher
      */
-    private MenuPrincipale menu;
+    private MenuPrincipal menu;
 
     /**
      * Constructeur
      * @param menu à afficher
      */
-    public DessinMenuAdaptateur(MenuPrincipale menu) {
+    public DessinMenu(MenuPrincipal menu) {
         this.menu = menu;
     }
 

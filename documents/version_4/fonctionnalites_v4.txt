@@ -43,7 +43,29 @@ critere de validation :
 		retourne à l'entrée.
 
 
+Fonctionnalite 6 : Menu principal
+responsable : bouillo15u
+description texte : Acceder à un menu pour lancer la partie
+critere de validation :
+  - critere 1 : La partie ne se lance pas tant qu'on est dans le menu
+  - critere 2 : On peut retourner sur le menu à la fin d'une partie
+
 * realisation
+
+- Classe MenuPrincipal
+- responsable : bouillo15u
+
+- Classe AdaptateurMenuJeu
+- responsable : bouillo15u
+
+- Classe Bouton
+- responsable : bouillo15u
+
+- Classe DessinMenu
+- responsable : bouillo15u
+
+- Classe JeuPrincipal
+- responsable : bouillo15u
 
 - Classe CaseSecrete
 - reponsable : muller742u
