@@ -1,6 +1,7 @@
 package Partie;
 
 import Elements.*;
+import Monstre.Fantome;
 import Monstre.Monstre;
 import Monstre.Troll;
 import moteurJeu.moteur.CClavier;
@@ -132,7 +133,7 @@ public class Jeu implements JeuAbstract {
 		Case c = this.laby.getCase(xNewPos, yNewPos);
 
 		//le joueur ne peut avancer que si la case est traversable
-		if(c.estTraversable()) {
+		if(c.estTraversable() ) {
 			if(e.getClass().isInstance(joueur)) {
 				this.joueur.seDeplacer(xNewPos, yNewPos);
 				this.joueur.setDirection(direction);
@@ -148,6 +149,12 @@ public class Jeu implements JeuAbstract {
 			
 			if(c instanceof CaseAEffet) {
 				((CaseAEffet)c).activerEffet(e);
+			}
+		}else if(e instanceof Fantome){
+			if(e.getPosX()<laby.getLongeur() && e.getPosX()>0) {
+				if (e.getPosY()<laby.getLargeur() && e.getPosY()>0) {
+					e.seDeplacer(direction);
+				}
 			}
 		}
 	}
