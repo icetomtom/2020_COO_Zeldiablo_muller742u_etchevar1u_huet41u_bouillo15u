@@ -2,6 +2,7 @@ package Partie;
 
 import Elements.*;
 import Monstre.Monstre;
+import Monstre.Troll;
 import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
@@ -32,6 +33,7 @@ public class Jeu implements JeuAbstract {
 	 */
 	private Labyrinthe laby;
 	private long start=0;
+	private int i =0;
 
 
 
@@ -258,6 +260,9 @@ public class Jeu implements JeuAbstract {
 			}else {
 				this.deplacerEntite(entites.get(i), entites.get(i).deplacementAleatoire());
 			}
+			if(entites.get(i) instanceof Troll) {
+				((Troll) entites.get(i)).regeneration();
+			}
 		}
 	}
 	
@@ -271,7 +276,7 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	public void enleverSprite(Sprite s) {
-		
+		sprites.remove(s);
 	}
 	
 	/**
@@ -283,8 +288,18 @@ public class Jeu implements JeuAbstract {
 
 		if(joueur.etreMort()) {
 			this.fini=true;
+		}else {
+			for(int i=entites.size()-1;i>0;i--) {
+				if(entites.get(i).etreMort()) {
+					enleverSprite(entites.get(i));
+					entites.remove(entites.get(i));
+					
+				}
+				
+			}
 		}
-		entites.removeIf(Entite::etreMort);
+		
+		
 	}
 
 	public List<Sprite> getSprites() {

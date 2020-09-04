@@ -24,13 +24,20 @@ public class Troll extends Monstre {
 	
 	/**
 	 * methode subirdegats speciale au troll
-	 */
+	 */s
 	@Override
 	public void subirDegats(int n) {
-		super.subirDegats(n);
+		vie = vie - n;
+		if (vie<=0) {
+			vie =0;
+			this.vivant=false;
+		}
 		this.est_attaque=true;
 	}
 	
+	/**
+	 * permet au troll de se regenerer s'il ne s'est pas fait attaque
+	 */
 	public void regeneration() {
 		if(!est_attaque) {
 			if(vie<this.maxPV) {
