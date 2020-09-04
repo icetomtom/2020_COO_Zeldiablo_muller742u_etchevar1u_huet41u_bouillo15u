@@ -5,7 +5,7 @@ import moteurJeu.sprite.Sprite;
 import java.io.Serializable;
 
 /**
- * Classe représentant une case
+ * Classe representant une case
  */
 public class Case extends Sprite implements Serializable {
 
@@ -30,11 +30,11 @@ public class Case extends Sprite implements Serializable {
     private boolean traversable;
 
     /**
-     * Type représentant un vide
+     * Type representant un vide
      */
     public static final int TYPE_VIDE = 1;
     /**
-     * Type représentant un mur
+     * Type representant un mur
      */
     public static final int TYPE_MUR = 2;
     

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Classe représentant un labyrinthe
+ * Classe representant un labyrinthe
  */
 public class Labyrinthe implements Serializable {
 
@@ -18,7 +18,7 @@ public class Labyrinthe implements Serializable {
     private int longeur, largeur;
 
     /**
-     * Point d'appartion du joueur
+     * Point d appartion du joueur
      */
     private int entree_x, entree_y;
     
@@ -33,14 +33,14 @@ public class Labyrinthe implements Serializable {
     private ArrayList<Case> cases;
 
     /**
-     * Constructeur par défaut
+     * Constructeur par defaut
      */
     public Labyrinthe() {
         this(10, 10, true);
     }
 
     /**
-     * Constructeur ou on peu préciser la taille
+     * Constructeur ou on peu preciser la taille
      * @param longeur
      * @param largeur
      */
@@ -49,10 +49,10 @@ public class Labyrinthe implements Serializable {
     }
 
     /**
-     * Constructeur ou on précise la taille et la méthode de génération
+     * Constructeur ou on precise la taille et la methode de generation
      * @param longeur
      * @param largeur
-     * @param defaut méthode de génération par défaut ou non
+     * @param defaut methode de generation par defaut ou non
      */
     public Labyrinthe(int longeur, int largeur, boolean defaut) {
         this.longeur = longeur;
@@ -74,7 +74,7 @@ public class Labyrinthe implements Serializable {
     }
 
     /**
-     * Per d'obtenir une case à une position
+     * Per d'obtenir une case a� une position
      * @param x abscisse de la case
      * @param y ordonnée de la case
      * @return case
@@ -88,7 +88,7 @@ public class Labyrinthe implements Serializable {
 
     /**
      * Remplace une Case par une autre, se base sur les coordonnees de la cases
-     * @param c la case qui remplace l'ancienne
+     * @param c la case qui remplace l ancienne
      */
     public void setCase(Case c) {
         int i = c.getPosX() + c.getPosY() * longeur;
@@ -99,15 +99,15 @@ public class Labyrinthe implements Serializable {
 
 
     /**
-     * Getter de l'attibut longeur
-     * @return longeur
+     * Getter de l attibut longueur
+     * @return longueur
      */
     public int getLongeur() {
         return longeur;
     }
 
     /**
-     * Getter de l'attibut largeur
+     * Getter de l attibut largeur
      * @return largeur
      */
     public int getLargeur() {
@@ -123,8 +123,8 @@ public class Labyrinthe implements Serializable {
     }
 
     /**
-     * Getter de l'attibut entree_y
-     * @return position y de l'entrée pour le joueur
+     * Getter de l attibut entree_y
+     * @return position y de l entree pour le joueur
      */
     public int getEntreeY() {
         return entree_y;
@@ -155,7 +155,7 @@ public class Labyrinthe implements Serializable {
     }
 
     /**
-     * Charge les cases du labyrinthe à partir d'un niveau par défaut
+     * Charge les cases du labyrinthe a partir d un niveau par defaut
      */
     private void chargerCasesParDefaut() {
         cases.clear();
@@ -181,7 +181,7 @@ public class Labyrinthe implements Serializable {
 
 //        System.out.println(w + " " + h);
 
-        // Cases pour la geneation du chemin
+        // Cases pour la generation du chemin
         CaseGeneration[][] cases = new CaseGeneration[w][];
         for (int i=0; i<w; i++)
             cases[i] = new CaseGeneration[h];
@@ -194,7 +194,7 @@ public class Labyrinthe implements Serializable {
             }
         }
 
-        // Chemin depuis le debut jusqu'a la position courrante
+        // Chemin depuis le debut jusqu a la position courrante
         Stack<CaseGeneration> openlist = new Stack<>();
         // Toutes les cases visites
         ArrayList<CaseGeneration> visited = new ArrayList<>();
@@ -212,7 +212,7 @@ public class Labyrinthe implements Serializable {
             // On la marque comme visitee
             visited.add(curr);
 
-            // On cherche quel mur il est possible d'ouvrir de sorte à ne pas aller sur une case deja
+            // On cherche quel mur il est possible d'ouvrir de sorte a ne pas aller sur une case deja
             // visitee et a ne pas sortir des limites
             possibles[0] = (curr.y > 0 && !visited.contains(cases[curr.x][curr.y-1])); // NORD
             possibles[1] = (curr.x < w-1 && !visited.contains(cases[curr.x+1][curr.y])); // EST
@@ -248,7 +248,7 @@ public class Labyrinthe implements Serializable {
             openlist.add(next);
         }
 
-        // Transform le labyrinthe genere avec des cases pour les murs
+        // Transforme le labyrinthe genere avec des cases pour les murs
         this.cases.clear();
         Case c = null;
         for(int j=0; j<largeur; j++) {
@@ -325,9 +325,9 @@ class CaseGeneration {
     }
 
     /**
-     * Trouve un cote alea ou il n'y a pas de mur
-     * @param possibles murs qui ne sont pas possible d'etre ouvert
-     * @return index du cote, AUCUN_MUR s'il y a pas de côte dispo
+     * Trouve un cote aleatoire ou il n y a pas de mur
+     * @param possibles murs qui ne sont pas possible d etre ouvert
+     * @return index du cote, AUCUN_MUR s il y a pas de cote dispo
      */
     public int murAlea(boolean[] possibles) {
         ArrayList<Integer> murs_dispos = new ArrayList<>(4);
