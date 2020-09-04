@@ -78,7 +78,6 @@ public class DessinPartie implements DessinAbstract {
         }
         for(Entite e: entities) {
             e.dessiner(g);
-            System.out.println(e.getBarreDeVie());
             e.getBarreDeVie().dessiner(g);
 
         }

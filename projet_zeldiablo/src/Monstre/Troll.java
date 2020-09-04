@@ -28,7 +28,6 @@ public class Troll extends Monstre {
 	 */
 	@Override
 	public void subirDegats(int n) {
-		System.out.println("subir "+ n + " reste + "+ vie);
 		vie = vie - n;
 		if (vie<=0) {
 			vie = 0;
