@@ -24,7 +24,7 @@ public class Troll extends Monstre {
 	
 	/**
 	 * methode subirdegats speciale au troll
-	 */s
+	 */
 	@Override
 	public void subirDegats(int n) {
 		vie = vie - n;
