@@ -2,21 +2,38 @@ package Elements;
 
 import moteurJeu.sprite.Sprite;
 
-public class Amulette extends Sprite implements Objet{
+/**
+ * classe representant une amulette
+ *
+ */
+public class Amulette extends Sprite implements Objet {
+
+	/**
+	 * abscisse et ordonnee de l'amulette
+	 */
+	private int x, y;
 	
+	/**
+	 * constructeur par defaut d'une amulette
+	 * 
+	 * @param nom sprite de l'amulette
+	 */
 	public Amulette(String nom) {
 		super(nom);
 	}
 	
+	/**
+	 * constructeur d'une amulette
+	 * 
+	 * @param nom sprite de l'amulette
+	 * @param x abscisse de l'amulette
+	 * @param y ordonnee de l'amulette
+	 */
 	public Amulette(String nom, int x, int y) {
 		super(nom);
 		this.x = x;
 		this.y = y;
-	}
-
-	private int x, y;
-	
-	
+	}	
 	
 	@Override
 	public String getNomObjet() {
