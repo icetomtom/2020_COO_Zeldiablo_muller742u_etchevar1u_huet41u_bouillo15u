@@ -41,15 +41,19 @@ public class Joueur extends Entite{
         this.inventaire.add(new Epee());
 
 	}
+
 	/**
-	 * methode qui sert a utiliser un objet
+	 * methode permettant d ajouter un objet
 	 * @param ob
 	 */
-	
 	public void ajouterObjet(Objet ob) {
 		this.inventaire.add(ob);
 	}
 	
+	/**
+	 * methode qui sert a utiliser un objet
+	 * @param ob
+	 */
 	public void utiliserObjet(int ob) {
 		if(this.inventaire.size() > ob) {
 			Objet obj = this.inventaire.get(ob);
@@ -66,10 +70,14 @@ public class Joueur extends Entite{
 			System.out.println(this.inventaire.get(i).getNomObjet());
 		}
 	}
-	
+	/**
+	 * methode permettant de ramasser un objet
+	 * @param o
+	 */
 	public void ramasser(Objet o) {
 		if(o != null) {
 			this.inventaire.add(o);
+			System.out.println("Le joueur a ramasse \"" + o.getNomObjet() + "\" !");
 			if(o instanceof Sprite) {
 				((Sprite)o).setNomImage("entities_2_3");
 			}

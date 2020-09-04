@@ -57,6 +57,9 @@ critere de validation :
 - Modification classe Joueur 
 - responsable : etchevar1u
 
+-Classe Epee, Bouclier, Objet
+- responsable : etchevar1u
+
 - modification classe Jeu, Monstres
 - responsable : huet41u
 
