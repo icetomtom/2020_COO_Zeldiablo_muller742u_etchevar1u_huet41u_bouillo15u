@@ -1,0 +1,34 @@
+@startuml
+create main
+activate main
+
+create "jeu: Jeu" as Jeu 
+
+main -> Jeu : new 
+
+activate Jeu
+
+create "joueur : Joueur" as Joueur
+
+Jeu -> Joueur : morts()
+
+activate Joueur
+
+
+alt if(joueur.etreMort())
+
+    Jeu -> Jeu :remove(joueur)
+
+end
+
+
+
+Joueur --> Jeu : boolean fini
+
+deactivate Joueur
+
+Jeu --> main 
+
+deactivate Jeu
+deactivate main
+@enduml

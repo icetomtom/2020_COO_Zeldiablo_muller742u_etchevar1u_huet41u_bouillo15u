@@ -1,0 +1,36 @@
+@startuml
+create main
+activate main
+
+create "jeu: Jeu" as Jeu 
+
+main -> Jeu : new 
+
+activate Jeu
+
+create "monstre : Entite" as Monstre
+
+Jeu -> Monstre : morts()
+
+activate Monstre
+
+loop 
+Jeu -> Monstre : getEntite(i)
+Monstre --> Jeu : Entite monstre
+alt if(monstre.etreMort())
+
+    Jeu -> Jeu :remove(monstre)
+
+end
+end
+
+
+Monstre --> Jeu
+
+deactivate Monstre
+
+Jeu --> main 
+
+deactivate Jeu
+deactivate main
+@enduml
