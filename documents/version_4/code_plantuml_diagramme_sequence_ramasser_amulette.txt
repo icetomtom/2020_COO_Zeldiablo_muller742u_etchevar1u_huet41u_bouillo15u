@@ -1,0 +1,18 @@
+@startuml
+
+alt si la touche E est pressee
+    alt si la position du joueur et celle de l'amulette sont identiques
+        activate "jeu : Jeu"
+        "jeu : Jeu" -> "laby : Labyrinthe" : getAmulette()
+        activate "laby : Labyrinthe"
+        "laby : Labyrinthe" --> "jeu : Jeu" : amulette : Amulette
+        deactivate "laby : Labyrinthe"
+        "jeu : Jeu" -> "joueur : Joueur" : ramasser(amulette)
+        activate "joueur : Joueur"
+        "joueur : Joueur" --> "jeu : Jeu"
+        deactivate "joueur : Joueur"
+        deactivate "jeu : Jeu"
+    end
+end
+
+@enduml

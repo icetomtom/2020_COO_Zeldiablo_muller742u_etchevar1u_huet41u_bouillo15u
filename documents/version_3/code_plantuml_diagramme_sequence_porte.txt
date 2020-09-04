@@ -1,31 +1,31 @@
 @startuml
 
-activate Jeu
+activate "j : Jeu"
 
-Jeu -> Labyrinthe : getCase()
-activate Labyrinthe
-Labyrinthe --> Jeu : c : Case
-deactivate Labyrinthe
+"j : Jeu" -> "laby : Labyrinthe" : getCase()
+activate "laby : Labyrinthe"
+"laby : Labyrinthe" --> "j : Jeu" : c : Case
+deactivate "laby : Labyrinthe"
 
-Jeu -> Case : getType()
-activate Case
-Case --> Jeu : type : int
-deactivate Case
+"j : Jeu" -> "case : Case" : getType()
+activate "case : Case"
+"case : Case" --> "j : Jeu" : type : int
+deactivate "case : Case"
 
 alt si c'est une porte
-    Jeu -> Porte : estOuverte()
-    activate Porte
-    Porte --> Jeu : ouverte : booleen
-    deactivate Porte
+    "j : Jeu" -> "p : Porte" : estOuverte()
+    activate "p : Porte"
+    "p : Porte" --> "j : Jeu" : ouverte : booleen
+    deactivate "p : Porte"
 end
 
 alt si la case est traversable
-    Jeu -> Joueur : deplacer(int x, int y)
-    activate Joueur
-    Joueur --> Jeu
-    deactivate Joueur
+    "j : Jeu" -> "joueur : Joueur" : deplacer(int x, int y)
+    activate "joueur : Joueur"
+    "joueur : Joueur" --> "j : Jeu"
+    deactivate "joueur : Joueur"
 end
 
-deactivate Jeu
+deactivate "j : Jeu"
 
 @enduml

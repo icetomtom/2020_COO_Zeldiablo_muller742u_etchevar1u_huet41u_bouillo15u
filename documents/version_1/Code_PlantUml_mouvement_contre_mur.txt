@@ -1,36 +1,36 @@
 @startuml
 
 activate Main
-Main -> Jeu : deplacerJoueur(int direction)
-activate Jeu
+Main -> "j : Jeu" : deplacer"joueur : Joueur"(int direction)
+activate "j : Jeu"
 
-Jeu -> Joueur : getPosX()
-activate Joueur
-Joueur --> Jeu : posX : int
-Jeu -> Joueur : getPosY()
-Joueur --> Jeu : posY : int
-deactivate Joueur
+"j : Jeu" -> "joueur : Joueur" : getPosX()
+activate "joueur : Joueur"
+"joueur : Joueur" --> "j : Jeu" : posX : int
+"j : Jeu" -> "joueur : Joueur" : getPosY()
+"joueur : Joueur" --> "j : Jeu" : posY : int
+deactivate "joueur : Joueur"
 
-Jeu -> Labyrinthe : getCase(int x, int y)
-activate Labyrinthe
+"j : Jeu" -> "laby : Labyrinthe" : getCase(int x, int y)
+activate "laby : Labyrinthe"
 
-Labyrinthe -> Case : getType()
-activate Case
-Case --> Labyrinthe : type : int
-deactivate Case
+"laby : Labyrinthe" -> "case : Case" : getType()
+activate "case : Case"
+"case : Case" --> "laby : Labyrinthe" : type : int
+deactivate "case : Case"
 
-Labyrinthe --> Jeu : type : int
-deactivate Labyrinthe
+"laby : Labyrinthe" --> "j : Jeu" : type : int
+deactivate "laby : Labyrinthe"
 
 alt if type == vide
-    Jeu -> Joueur : deplacer(int x, int y)
-    activate Joueur
-    Joueur --> Jeu
-    deactivate Joueur
+    "j : Jeu" -> "joueur : Joueur" : deplacer(int x, int y)
+    activate "joueur : Joueur"
+    "joueur : Joueur" --> "j : Jeu"
+    deactivate "joueur : Joueur"
 end
 
-Jeu --> Main
-deactivate Jeu
+"j : Jeu" --> Main
+deactivate "j : Jeu"
 deactivate Main
 
 @enduml

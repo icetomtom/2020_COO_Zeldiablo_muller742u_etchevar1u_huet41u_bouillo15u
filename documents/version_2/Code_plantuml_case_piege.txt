@@ -1,28 +1,28 @@
 @startuml
 
-activate Jeu
+activate "j : Jeu"
 
 alt if type != mur
-    Jeu -> Joueur : deplacer(int x, int y)
-    activate Joueur
-    Joueur --> Jeu
-    deactivate Joueur
+    "j : Jeu" -> "joueur : Joueur" : deplacer(int x, int y)
+    activate "joueur : Joueur"
+    "joueur : Joueur" --> "j : Jeu"
+    deactivate "joueur : Joueur"
     alt if type == effet
-    Jeu -> Labyrinthe : getCase(int x, int y)
-    activate Labyrinthe
-    Labyrinthe -> CaseAEffet : activerEffet(Entite e)
-    activate CaseAEffet
-    CaseAEffet -> CasePiege : activerEffet(Entite e)
-    activate CasePiege
-    CasePiege --> CaseAEffet
-    deactivate CasePiege
-    CaseAEffet --> Labyrinthe
-    deactivate CaseAEffet
-    Labyrinthe --> Jeu
-    deactivate Labyrinthe
+    "j : Jeu" -> "laby : Labyrinthe" : getCase(int x, int y)
+    activate "laby : Labyrinthe"
+    "laby : Labyrinthe" -> "caf : CaseAEffet" : activerEffet(Entite e)
+    activate "caf : CaseAEffet"
+    "caf : CaseAEffet" -> "cp : CasePiege" : activerEffet(Entite e)
+    activate "cp : CasePiege"
+    "cp : CasePiege" --> "caf : CaseAEffet"
+    deactivate "cp : CasePiege"
+    "caf : CaseAEffet" --> "laby : Labyrinthe"
+    deactivate "caf : CaseAEffet"
+    "laby : Labyrinthe" --> "j : Jeu"
+    deactivate "laby : Labyrinthe"
 end
 end
 
-deactivate Jeu
+deactivate "j : Jeu"
 
 @enduml

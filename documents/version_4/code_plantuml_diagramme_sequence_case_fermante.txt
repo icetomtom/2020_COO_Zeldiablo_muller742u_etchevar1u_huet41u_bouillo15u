@@ -1,29 +1,29 @@
 @startuml
 
-activate Jeu
-Jeu -> Labyrinthe : getCase()
-activate Labyrinthe
-Labyrinthe --> Jeu : case : Case
-deactivate Labyrinthe
+		activate "jeu : Jeu"
+		"jeu : Jeu" -> "laby : Labyrinthe" : getCase()
+		activate "laby : Labyrinthe"
+		"laby : Labyrinthe" --> "jeu : Jeu" : case : Case
+		deactivate "laby : Labyrinthe"
 
-Jeu -> Case : getType()
-activate Case
-Case --> Jeu : type : int
-deactivate Case
+		"jeu : Jeu" -> "c : Case" : getType()
+		activate "c : Case"
+		"c : Case" --> "jeu : Jeu" : type : int
+		deactivate "c : Case"
 
-alt si c'est une case a effet
-  Jeu -> CaseAEffet : activerEffet(Entite e)
-  activate CaseAEffet
-  CaseAEffet -> CaseSecrete : activerEffet(Entite e)
-  activate CaseSecrete
-  CaseSecrete -> Porte : changerEtat(false)
-  activate Porte
-  Porte --> CaseSecrete
-  deactivate Porte
-  CaseSecrete --> CaseAEffet
-  deactivate CaseSecrete
-  CaseAEffet --> Jeu
-  deactivate CaseAEffet
-end
+		alt si c'est une case a effet
+		  "jeu : Jeu" -> "caf : CaseAEffet" : activerEffet(Entite e)
+		  activate "caf : CaseAEffet"
+		  "caf : CaseAEffet" -> "cs : CaseSecrete" : activerEffet(Entite e)
+		  activate "cs : CaseSecrete"
+		  "cs : CaseSecrete" -> "p : Porte" : changerEtat(false)
+		  activate "p : Porte"
+		  "p : Porte" --> "cs : CaseSecrete"
+		  deactivate "p : Porte"
+		  "cs : CaseSecrete" --> "caf : CaseAEffet"
+		  deactivate "cs : CaseSecrete"
+		  "caf : CaseAEffet" --> "jeu : Jeu"
+		  deactivate "caf : CaseAEffet"
+		end
 
-@enduml
+@enduml 
