@@ -1,6 +1,5 @@
 package Elements;
 
-import sun.nio.cs.ext.MacArabic;
 
 import java.io.Serializable;
 import java.util.ArrayList;

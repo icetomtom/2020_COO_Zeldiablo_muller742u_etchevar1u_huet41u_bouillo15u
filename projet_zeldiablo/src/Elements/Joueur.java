@@ -70,6 +70,7 @@ public class Joueur extends Entite{
 	public void ramasser(Objet o) {
 		if(o != null) {
 			this.inventaire.add(o);
+			System.out.println("Le joueur a ramasse \"" + o.getNomObjet() + "\" !");
 			if(o instanceof Sprite) {
 				((Sprite)o).setNomImage("entities_2_3");
 			}
