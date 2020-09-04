@@ -27,6 +27,22 @@
   - critère 3 : Lorsqu'une case a été détectée comme un piège, elle s'ache diéremment dans le labyrinthe (en brun) ce qui permet au joueur d'en tenir compte
 		ensuite.
 
+- Fonctionnalites 4 : Fantomes
+- responsable : huet41u
+- description texte: le labyrinthe dispose d'un nouveau type de monstre: les fant�mes
+- critere de validation :
+  - critere 1:Les fantomes peuvent traverser des murs mais pas les autres personnages
+  - critere 2 : les autres monstres continuent a �tre bloqu�s par des murs 
+  - critere 3 : les attaques des fantomes fonctionnent de la meme mani�re que les attaques des monstres de base
+  
+  Fonctionnalites 5: troll
+  responsable : huet41u
+  description texte :les trolls sont un nouveau type de monstre. un troll se regenere au fur et a mesure
+  critere de validation:
+    - critere 1: un troll se deplace de la meme maniere qu'un monstre de base
+    - critere 2: si un troll ne prend aucun degat pendant un tour de jeu, il regagne un point de vie
+     -critere 3: les attaques des trolls fonctionnent de la meme maniere que les attaques des monstres de base
+     - critere 4: un troll a par defaut 5 points de vie
 
 * réalisation
 
