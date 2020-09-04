@@ -33,6 +33,11 @@ public class Entite extends Sprite {
 	 * Nombre maximum de points de vie d'une entit�
 	 */
 	protected int maxPV;
+	
+	/**
+	 * Sprite de la barre de vie
+	 */
+	protected BarreDeVie barreDeVie;
 
 	/**
 	 * creation du sprite
@@ -45,6 +50,7 @@ public class Entite extends Sprite {
 		this.vivant=true;
 		this.vie= 3;
 		this.maxPV=3;
+		this.barreDeVie = new BarreDeVie("entities_0_15");
 	}
 
 
@@ -154,6 +160,8 @@ public class Entite extends Sprite {
     		this.x++;
     		break;
     	}
+    	
+    	this.barreDeVie.updatePos(this.x, this.y);
     }
     
     /**
