@@ -36,7 +36,7 @@ public class TestCombat {
 		
 		j.combat();
 	
-		assertEquals("Le joueur n'a pas attaque",2,j.getEntite(1).getVie());
+		assertEquals("Le joueur n'a pas attaque",4,j.getEntite(1).getVie());
 	}
 	
 	/**
@@ -44,7 +44,8 @@ public class TestCombat {
 	 */
 	@Test
 	public void testCombatPlusieursMonstre() {
-		Jeu j= new Jeu();
+		Labyrinthe l = new Labyrinthe();
+		Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
 		
 		Entite troll = new Troll();
 		
@@ -59,7 +60,7 @@ public class TestCombat {
 		j.getEntite(2).setPosY(6);
 		j.combat();
 		
-		assertEquals("Le joueur n'a pas attaque",2,j.getEntite(1).getVie());
+		assertEquals("Le joueur n'a pas attaque",4,j.getEntite(1).getVie());
 		assertEquals("la direction n'est pas bonne",5,j.getEntite(2).getVie());
 		
 		j.deplacerEntite(j.getJoueur(),Jeu.DOWN);
@@ -73,8 +74,18 @@ public class TestCombat {
 	 */
 	@Test
 	public void testCombatMonstre() {
-		Jeu j = new Jeu();
+		Labyrinthe l = new Labyrinthe();
+		Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
 		
+		Troll t = new Troll();
+		Troll t2 = new Troll();
+		Troll t3 = new Troll();
+		Troll t4 = new Troll();
+		
+		j.ajouter(t);
+		j.ajouter(t2);
+		j.ajouter(t3);
+		j.ajouter(t4);
 		j.getEntite(1).setPosX(4);
 		j.getEntite(1).setPosY(5);
 		

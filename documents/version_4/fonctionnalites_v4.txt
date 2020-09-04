@@ -20,11 +20,11 @@ Fonctionnalite 3 : Inventaire
 responsable : etchevar1u
 description texte : lorsque le héros appuie sur la touche d'utilisation ("E" par défaut), il récupère les objets de la case où il se trouve et les ajoute dans son inventaire.
 - critere de validation : 
-  - L'inventaire est de taille innie.
+  - L'inventaire est de taille infinie.
   - Lorsque le joueur cherche à prendre un objet alors qu'il n'y a rien sur la case où il se trouve, rien ne se passe.
   - Lorsqu'un joueur prend un objet, l'objet disparait du labyrinthe (et n'est plus affiché) mais apparait dans son inventaire.
   - A chaque évolution du jeu, le jeu ache dans la console l'inventaire du héros.
-  - Les objets sont achés dans le labyrinthe tant qu'ils sont présents (sous la forme d'un cercle noir)
+  - Les objets sont cachés dans le labyrinthe tant qu'ils sont présents
 
 Fonctionnalite 4 : Amulette
 responsable : muller742u
