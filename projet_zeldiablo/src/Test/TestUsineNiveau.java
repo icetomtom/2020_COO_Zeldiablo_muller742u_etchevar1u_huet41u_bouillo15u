@@ -16,10 +16,14 @@ import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
+/**
+ * classe de test usine a niveau
+ *
+ */
 public class TestUsineNiveau {
     @Test
     public void test_monstres_alea() {
-        // Comme valeurs sont aléatoires, on teste plusieurs fois
+        // Comme valeurs sont aleatoires, on teste plusieurs fois
         for (int i = 0; i<10; i++) {
             Niveau n = UsineNiveau.getNiveauNbMonstresAlea();
             assertFalse("Le nombre de monstres ne peut pas être 0", n.getMonstres().isEmpty());

@@ -11,6 +11,10 @@ import moteurJeu.sprite.Sprites;
 
 import java.util.ArrayList;
 
+/**
+ * classe de test dessin
+ *
+ */
 public class TestDessin {
 
     public static void main(String[] args) {

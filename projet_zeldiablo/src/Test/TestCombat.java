@@ -70,7 +70,7 @@ public class TestCombat {
 	}
 	
 	/**
-	 * test qui permet de savoir si les monstres attaquent tous s'il le peuvent et dans toutes les directions
+	 * test qui permet de savoir si les monstres attaquent tous s il le peuvent et dans toutes les directions
 	 */
 	@Test
 	public void testCombatMonstre() {
