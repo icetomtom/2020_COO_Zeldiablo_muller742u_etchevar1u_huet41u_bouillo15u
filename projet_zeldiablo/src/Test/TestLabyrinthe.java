@@ -15,7 +15,7 @@ import org.junit.Test;
 public class TestLabyrinthe {
 
     /**
-     * Teste le constructeur et les valeurs par défaut du constructeur
+     * Teste le constructeur et les valeurs par defaut du constructeur
      */
     @Test
     public void test_ConstructeurDefaut() {

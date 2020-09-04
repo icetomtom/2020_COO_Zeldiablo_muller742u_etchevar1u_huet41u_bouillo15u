@@ -16,7 +16,7 @@ import Elements.Joueur;
 public class TestJoueur {
 	
 	/**
-	 * Methode qui permet de tester le contructeur vide d'un joueur
+	 * Methode qui permet de tester le contructeur vide d un joueur
 	 */
 	@Test
 	public void testConstructeurVide() {
@@ -27,7 +27,7 @@ public class TestJoueur {
 	}
 	
 	/**
-	 * Methode qui permet de tester le constructeur avec parametres d'un joueur
+	 * Methode qui permet de tester le constructeur avec parametres d un joueur
 	 */
 	@Test
 	public void testConstructeur() {

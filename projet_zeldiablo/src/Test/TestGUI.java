@@ -4,6 +4,10 @@ import Partie.DessinMenu;
 import Partie.AdaptateurJeuMenu;
 import moteurJeu.moteur.MoteurGraphique;
 
+/**
+ * classe de test gui
+ *
+ */
 public class TestGUI {
     public static void main(String[] args) {
 

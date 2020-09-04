@@ -51,7 +51,7 @@ public class TestCase {
 	}
 	
 	/**
-	 * test d'une porte fermee
+	 * test d une porte fermee
 	 */
 	@Test
 	public void test_Porte_fermee() {
@@ -80,7 +80,7 @@ public class TestCase {
 	}
 	
 	/**
-	 * test d'une porte ouverte
+	 * test d une porte ouverte
 	 */
 	@Test
 	public void test_Porte_ouverte() {
@@ -108,7 +108,7 @@ public class TestCase {
 	}
 	
 	/**
-	 * test de l'ouverture d'une porte
+	 * test de l ouverture d'une porte
 	 */
 	@Test
 	public void test_ouvrir_porte() {
@@ -128,7 +128,7 @@ public class TestCase {
 	}
 	
 	/**
-	 * test de la fermeture d'une porte
+	 * test de la fermeture d une porte
 	 */
 	@Test
 	public void test_fermer_porte() {
@@ -144,7 +144,7 @@ public class TestCase {
 		j.getLaby().setCase(p);
 		
 		//verif
-		j.deplacerEntite(j.getJoueur(),Jeu.LEFT); //la porte s'ouvre
+		j.deplacerEntite(j.getJoueur(),Jeu.LEFT); //la porte s ouvre
 		j.deplacerEntite(j.getJoueur(),Jeu.LEFT); //puis se ferme
 		
 		assertEquals("La porte doit etre fermee", false, p.estTraversable());

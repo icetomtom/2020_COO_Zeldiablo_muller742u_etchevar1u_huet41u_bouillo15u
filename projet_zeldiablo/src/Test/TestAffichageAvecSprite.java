@@ -17,6 +17,11 @@ import java.io.File;
 
 import static org.junit.Assert.*;
 
+/**
+ * classe de test affichage avec sprite
+ * @author hugo-
+ *
+ */
 public class TestAffichageAvecSprite {
 
     @Test

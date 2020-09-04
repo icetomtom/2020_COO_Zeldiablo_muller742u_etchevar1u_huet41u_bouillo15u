@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 /**
- * Classe qui se charge de l'affichage
+ * Classe qui se charge de l affichage
  */
 public class DessinPrincipal implements DessinAbstract {
 

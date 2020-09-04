@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import java.io.Serializable;
 
 /**
- * un sprite correspond � une image positionn�e � un endroit de la scene
+ * un sprite correspond a une image positionnee a un endroit de la scene
  * 
  * @author vthomas
  *
@@ -14,7 +14,7 @@ import java.io.Serializable;
 public abstract class Sprite implements Serializable {
 
 	/**
-	 * le nom de l'image stock�e dans Images
+	 * le nom de l image stockee dans Images
 	 */
 	String nomImage;
 
@@ -22,14 +22,14 @@ public abstract class Sprite implements Serializable {
 	 * creation du sprite
 	 * 
 	 * @param nom
-	 *            nom de l'imaeg
+	 *            nom de l image
 	 */
 	public Sprite(String nom) {
 		this.nomImage = nom;
 	}
 
 	/**
-	 * Permet de changer l'image du sprite
+	 * Permet de changer l image du sprite
 	 * @param nomImage
 	 */
 	public void setNomImage(String nomImage) {
@@ -48,7 +48,7 @@ public abstract class Sprite implements Serializable {
 	}
 
 	/**
-	 * Permet d'obtenir la position X du sprite dans le labyrinthe
+	 * Permet d obtenir la position X du sprite dans le labyrinthe
 	 */
 	public abstract int getPosX();
 

@@ -37,7 +37,7 @@ public class TestJeu {
 		Labyrinthe l = new Labyrinthe();
 		Jeu j = new Jeu(new Niveau(l,new ArrayList<>()));
 		
-		//test de la methode, on avance le personnage assez pour etre sur d'avoir rencontre un mur
+		//test de la methode, on avance le personnage assez pour etre sur d avoir rencontre un mur
 		for(int i = 0; i < 20; i++) {
 			j.deplacerEntite(j.getJoueur(),Jeu.LEFT);
 		}

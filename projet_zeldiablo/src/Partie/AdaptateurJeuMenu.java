@@ -7,12 +7,12 @@ import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
 
 /**
- * Permet d'adapter un Menu à un Jeu
+ * Permet d'adapter un Menu a� un Jeu
  */
 public class AdaptateurJeuMenu implements JeuAbstract {
 
     /**
-     * Menu à adapter
+     * Menu a adapter
      */
     MenuPrincipal menu;
 

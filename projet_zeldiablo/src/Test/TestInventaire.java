@@ -10,6 +10,10 @@ import Elements.Labyrinthe;
 import Elements.Niveau;
 import Partie.Jeu;
 
+/**
+ * classe de test inventaire
+ *
+ */
 public class TestInventaire {
 	
 	@Test
