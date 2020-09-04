@@ -143,10 +143,27 @@ public class Jeu implements JeuAbstract {
 			}
 
 		}else if(e instanceof Fantome){
-			if(e.getPosX()<laby.getLongeur() && e.getPosX()>0) {
-				if (e.getPosY()<laby.getLargeur() && e.getPosY()>0) {
-					e.seDeplacer(direction);
-				}
+			switch(direction) {
+				case 0:
+					if (e.getPosY()-1>0) {
+						e.seDeplacer(direction);
+					}
+					break;
+				case 1:
+					if(e.getPosY()+1<laby.getLargeur()) {
+						e.seDeplacer(direction);
+					}
+					break;
+				case 2:
+					if(e.getPosX()-1>0) {
+						e.seDeplacer(direction);
+					}
+					break;
+				case 3:
+					if(e.getPosX()+1<laby.getLongeur()) {
+						e.seDeplacer(direction);
+					}
+					break;
 			}
 		}
 
