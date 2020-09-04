@@ -40,12 +40,12 @@ public class Troll extends Monstre {
 	 * permet au troll de se regenerer s'il ne s'est pas fait attaque
 	 */
 	public void regeneration() {
-//		if(!est_attaque) {
-//			if(vie<this.maxPV) {
-//				this.vie++;
-//			}
-//		}
-//		this.est_attaque=false;
+		if(!est_attaque) {
+			if(vie<this.maxPV) {
+				this.vie++;
+			}
+		}
+		this.est_attaque=false;
 	}
 
 }
