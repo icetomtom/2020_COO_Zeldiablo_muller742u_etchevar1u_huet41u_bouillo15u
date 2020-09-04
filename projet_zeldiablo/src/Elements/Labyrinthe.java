@@ -96,6 +96,8 @@ public class Labyrinthe implements Serializable {
             cases.set(i, c);
     }
 
+
+
     /**
      * Getter de l'attibut longeur
      * @return longeur

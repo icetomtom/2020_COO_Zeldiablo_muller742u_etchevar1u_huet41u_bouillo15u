@@ -77,16 +77,6 @@ public class Jeu implements JeuAbstract {
 
 		entites.addAll(n.getMonstres());
 
-		CasePiege cp = new CasePiege(1, 1);
-		Porte p = new Porte(5, 6);
-		CaseSecrete o = new CaseSecrete(8, 8, p, Case.TYPE_OUVERTURE);
-		CaseSecrete f = new CaseSecrete(8, 7, p, Case.TYPE_FERMETURE);
-
-		this.laby.setCase(cp);
-		this.laby.setCase(p);
-		this.laby.setCase(o);
-		this.laby.setCase(f);
-
 		this.entites.add(joueur);
 
 		sprites.addAll(this.laby.getCases());
